@@ -1,0 +1,44 @@
+[0.077s] Invoking command in '/home/vox/Vox/build/vox': CMAKE_PREFIX_PATH=/opt/ros/iron /usr/bin/cmake --build /home/vox/Vox/build/vox -- -j4 -l4
+[0.242s] Invoked command in '/home/vox/Vox/build/vox' returned '0': CMAKE_PREFIX_PATH=/opt/ros/iron /usr/bin/cmake --build /home/vox/Vox/build/vox -- -j4 -l4
+[0.433s] Invoking command in '/home/vox/Vox/build/vox': CMAKE_PREFIX_PATH=/opt/ros/iron /usr/bin/cmake --install /home/vox/Vox/build/vox
+[0.484s] -- Install configuration: ""
+[0.488s] -- Execute custom install script
+[0.492s] -- Up-to-date symlink: /home/vox/Vox/install/vox/share/vox/config/gazebo_params.yaml
+[0.493s] -- Up-to-date symlink: /home/vox/Vox/install/vox/share/vox/config/joystick.yaml
+[0.495s] -- Up-to-date symlink: /home/vox/Vox/install/vox/share/vox/config/mapper_params_localization.yaml
+[0.498s] -- Up-to-date symlink: /home/vox/Vox/install/vox/share/vox/config/mapper_params_online_async.yaml
+[0.500s] -- Up-to-date symlink: /home/vox/Vox/install/vox/share/vox/config/my_controllers.yaml
+[0.502s] -- Up-to-date symlink: /home/vox/Vox/install/vox/share/vox/config/rviz_config.rviz
+[0.504s] -- Up-to-date symlink: /home/vox/Vox/install/vox/share/vox/config/twist_mux.yaml
+[0.517s] -- Up-to-date symlink: /home/vox/Vox/install/vox/share/vox/description/.robot_core.xacro.swp
+[0.519s] -- Up-to-date symlink: /home/vox/Vox/install/vox/share/vox/description/camera.xacro
+[0.520s] -- Up-to-date symlink: /home/vox/Vox/install/vox/share/vox/description/colors.xacro
+[0.522s] -- Up-to-date symlink: /home/vox/Vox/install/vox/share/vox/description/gazebo_controls.xacro
+[0.524s] -- Up-to-date symlink: /home/vox/Vox/install/vox/share/vox/description/laser.xacro
+[0.526s] -- Up-to-date symlink: /home/vox/Vox/install/vox/share/vox/description/robot.urdf.xacro
+[0.528s] -- Up-to-date symlink: /home/vox/Vox/install/vox/share/vox/description/robot_core.xacro
+[0.530s] -- Up-to-date symlink: /home/vox/Vox/install/vox/share/vox/description/ros2_control.xacro
+[0.533s] -- Up-to-date symlink: /home/vox/Vox/install/vox/share/vox/launch/camera.launch.py
+[0.548s] -- Up-to-date symlink: /home/vox/Vox/install/vox/share/vox/launch/joystick.launch.py
+[0.550s] -- Up-to-date symlink: /home/vox/Vox/install/vox/share/vox/launch/launch_robot_no_joystick.launch.py
+[0.553s] -- Up-to-date symlink: /home/vox/Vox/install/vox/share/vox/launch/launch_sim.launch.py
+[0.555s] -- Up-to-date symlink: /home/vox/Vox/install/vox/share/vox/launch/launch_sim_no_joystick.launch.py
+[0.558s] -- Up-to-date symlink: /home/vox/Vox/install/vox/share/vox/launch/lidar.launch.py
+[0.561s] -- Up-to-date symlink: /home/vox/Vox/install/vox/share/vox/launch/rsp.launch.py
+[0.564s] -- Up-to-date symlink: /home/vox/Vox/install/vox/share/vox/worlds/sim.world
+[0.567s] -- Up-to-date symlink: /home/vox/Vox/install/vox/share/ament_index/resource_index/package_run_dependencies/vox
+[0.569s] -- Up-to-date symlink: /home/vox/Vox/install/vox/share/ament_index/resource_index/parent_prefix_path/vox
+[0.572s] -- Up-to-date symlink: /home/vox/Vox/install/vox/share/vox/environment/ament_prefix_path.sh
+[0.572s] -- Up-to-date symlink: /home/vox/Vox/install/vox/share/vox/environment/ament_prefix_path.dsv
+[0.573s] -- Up-to-date symlink: /home/vox/Vox/install/vox/share/vox/environment/path.sh
+[0.575s] -- Up-to-date symlink: /home/vox/Vox/install/vox/share/vox/environment/path.dsv
+[0.576s] -- Up-to-date symlink: /home/vox/Vox/install/vox/share/vox/local_setup.bash
+[0.577s] -- Up-to-date symlink: /home/vox/Vox/install/vox/share/vox/local_setup.sh
+[0.578s] -- Up-to-date symlink: /home/vox/Vox/install/vox/share/vox/local_setup.zsh
+[0.579s] -- Up-to-date symlink: /home/vox/Vox/install/vox/share/vox/local_setup.dsv
+[0.592s] -- Symlinking: /home/vox/Vox/install/vox/share/vox/package.dsv
+[0.650s] -- Up-to-date symlink: /home/vox/Vox/install/vox/share/ament_index/resource_index/packages/vox
+[0.651s] -- Up-to-date symlink: /home/vox/Vox/install/vox/share/vox/cmake/voxConfig.cmake
+[0.652s] -- Up-to-date symlink: /home/vox/Vox/install/vox/share/vox/cmake/voxConfig-version.cmake
+[0.653s] -- Up-to-date symlink: /home/vox/Vox/install/vox/share/vox/package.xml
+[0.667s] Invoked command in '/home/vox/Vox/build/vox' returned '0': CMAKE_PREFIX_PATH=/opt/ros/iron /usr/bin/cmake --install /home/vox/Vox/build/vox

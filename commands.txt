@@ -1,0 +1,34 @@
+### run commands
+
+colcon build --symlink-install
+source install/setup.bash
+ros2 launch vox launch_sim.launch.py
+
+### command to control the robot from keyboard DIFFERENT TERMINAL
+
+ros2 run teleop_twist_keyboard teleop_twist_keyboard --ros-args -r /cmd_vel:=/diff_cont/cmd_vel_unstamped
+
+### run the slam toolbox simulation DIFFERENT TERMINAL
+CHECK LINE 23 IN CONFIG/MAPPER_PARAMS_ONLINE AND CHANGE THE DIRECTORY NAME
+
+ros2 launch slam_toolbox online_async_launch.py slam_params_file:=./src/config/mapper_params_online_async.yaml use_sim_time:=true
+
+### run nav2 DIFFERENT TERMINAL
+ros2 run nav2_map_server map_server --ros-args -p yaml_filename:=my_map_save.yaml -p use_sim_time:=true
+ros2 run nav2_util lifecycle_bringup map_server
+
+TO RUN THIS YOU NEED TO SAVE THE MAP CREATED FROM RUNNING THE PREV COMMAND IN RVIZ. IN RVIZ YOU ADD THE SLAM TOOLBOX ADDON AND SAVE IT FROM THE APP. MIN 14:05
+IN VIDEO "EASY SLAM WITH ROS..."
+
+### run amcl for localization
+
+ros2 run nav2_amcl amcl --ros-args -p use_sim_time:=true
+
+
+
+INSTALLATION
+
+sudo apt install joystick jstest-gtk evtest
+sudo apt install ros-iron-slam-toolbox
+sudo apt install ros-iron-navigation2 ros-iron-nav2-bringup ros-iron-turtlebot3*
+sudo apt install ros-iron-twist-mux

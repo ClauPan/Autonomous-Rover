@@ -1,0 +1,47 @@
+In file included from [01m[K/opt/ros/iron/include/rclcpp/rclcpp/logging.hpp:24[m[K,
+                 from [01m[K/opt/ros/iron/include/rclcpp/rclcpp/client.hpp:43[m[K,
+                 from [01m[K/opt/ros/iron/include/rclcpp/rclcpp/callback_group.hpp:24[m[K,
+                 from [01m[K/opt/ros/iron/include/rclcpp/rclcpp/any_executable.hpp:20[m[K,
+                 from [01m[K/opt/ros/iron/include/rclcpp/rclcpp/memory_strategy.hpp:25[m[K,
+                 from [01m[K/opt/ros/iron/include/rclcpp/rclcpp/memory_strategies.hpp:18[m[K,
+                 from [01m[K/opt/ros/iron/include/rclcpp/rclcpp/executor_options.hpp:20[m[K,
+                 from [01m[K/opt/ros/iron/include/rclcpp/rclcpp/executor.hpp:37[m[K,
+                 from [01m[K/opt/ros/iron/include/rclcpp/rclcpp/executors/multi_threaded_executor.hpp:25[m[K,
+                 from [01m[K/opt/ros/iron/include/rclcpp/rclcpp/executors.hpp:21[m[K,
+                 from [01m[K/opt/ros/iron/include/rclcpp/rclcpp/rclcpp.hpp:167[m[K,
+                 from [01m[K/home/vox/Vox/src/diffdrive_arduino/hardware/diffbot_system.cpp:24[m[K:
+[01m[K/home/vox/Vox/src/diffdrive_arduino/hardware/diffbot_system.cpp:[m[K In member function ‘[01m[Kvirtual hardware_interface::return_type diffdrive_arduino::DiffDriveArduinoHardware::read(const rclcpp::Time&, const rclcpp::Duration&)[m[K’:
+[01m[K/home/vox/Vox/src/diffdrive_arduino/hardware/diffbot_system.cpp:239:63:[m[K [01;35m[Kwarning: [m[Kformat ‘[01m[K%d[m[K’ expects argument of type ‘[01m[Kint[m[K’, but argument 5 has type ‘[01m[Kdouble[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wformat=-Wformat=]8;;[m[K]
+  239 |   RCLCPP_INFO(rclcpp::get_logger("DiffDriveArduinoHardware"), [01;35m[K"reading... left: %d, right: %d"[m[K, [32m[Kwheel_fl_.vel[m[K, wheel_fr_.vel);
+      |                                                               [01;35m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K  [32m[K~~~~~~~~~~~~~[m[K
+      |                                                                                                           [32m[K|[m[K
+      |                                                                                                           [32m[Kdouble[m[K
+[01m[K/home/vox/Vox/src/diffdrive_arduino/hardware/diffbot_system.cpp:239:82:[m[K [01;36m[Knote: [m[Kformat string is defined here
+  239 |   RCLCPP_INFO(rclcpp::get_logger("DiffDriveArduinoHardware"), "reading... left: [01;36m[K%d[m[K, right: %d", wheel_fl_.vel, wheel_fr_.vel);
+      |                                                                                 [01;36m[K~^[m[K
+      |                                                                                  [01;36m[K|[m[K
+      |                                                                                  [01;36m[Kint[m[K
+      |                                                                                 [32m[K%f[m[K
+In file included from [01m[K/opt/ros/iron/include/rclcpp/rclcpp/logging.hpp:24[m[K,
+                 from [01m[K/opt/ros/iron/include/rclcpp/rclcpp/client.hpp:43[m[K,
+                 from [01m[K/opt/ros/iron/include/rclcpp/rclcpp/callback_group.hpp:24[m[K,
+                 from [01m[K/opt/ros/iron/include/rclcpp/rclcpp/any_executable.hpp:20[m[K,
+                 from [01m[K/opt/ros/iron/include/rclcpp/rclcpp/memory_strategy.hpp:25[m[K,
+                 from [01m[K/opt/ros/iron/include/rclcpp/rclcpp/memory_strategies.hpp:18[m[K,
+                 from [01m[K/opt/ros/iron/include/rclcpp/rclcpp/executor_options.hpp:20[m[K,
+                 from [01m[K/opt/ros/iron/include/rclcpp/rclcpp/executor.hpp:37[m[K,
+                 from [01m[K/opt/ros/iron/include/rclcpp/rclcpp/executors/multi_threaded_executor.hpp:25[m[K,
+                 from [01m[K/opt/ros/iron/include/rclcpp/rclcpp/executors.hpp:21[m[K,
+                 from [01m[K/opt/ros/iron/include/rclcpp/rclcpp/rclcpp.hpp:167[m[K,
+                 from [01m[K/home/vox/Vox/src/diffdrive_arduino/hardware/diffbot_system.cpp:24[m[K:
+[01m[K/home/vox/Vox/src/diffdrive_arduino/hardware/diffbot_system.cpp:239:63:[m[K [01;35m[Kwarning: [m[Kformat ‘[01m[K%d[m[K’ expects argument of type ‘[01m[Kint[m[K’, but argument 6 has type ‘[01m[Kdouble[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wformat=-Wformat=]8;;[m[K]
+  239 |   RCLCPP_INFO(rclcpp::get_logger("DiffDriveArduinoHardware"), [01;35m[K"reading... left: %d, right: %d"[m[K, wheel_fl_.vel, [32m[Kwheel_fr_.vel[m[K);
+      |                                                               [01;35m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K                 [32m[K~~~~~~~~~~~~~[m[K
+      |                                                                                                                          [32m[K|[m[K
+      |                                                                                                                          [32m[Kdouble[m[K
+[01m[K/home/vox/Vox/src/diffdrive_arduino/hardware/diffbot_system.cpp:239:93:[m[K [01;36m[Knote: [m[Kformat string is defined here
+  239 |   RCLCPP_INFO(rclcpp::get_logger("DiffDriveArduinoHardware"), "reading... left: %d, right: [01;36m[K%d[m[K", wheel_fl_.vel, wheel_fr_.vel);
+      |                                                                                            [01;36m[K~^[m[K
+      |                                                                                             [01;36m[K|[m[K
+      |                                                                                             [01;36m[Kint[m[K
+      |                                                                                            [32m[K%f[m[K

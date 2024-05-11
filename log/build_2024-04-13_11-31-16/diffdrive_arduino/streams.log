@@ -1,0 +1,76 @@
+[0.071s] Invoking command in '/home/vox/Vox/build/diffdrive_arduino': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/vox/Vox/install/serial_motor_demo:/opt/ros/iron /usr/bin/cmake /home/vox/Vox/src/diffdrive_arduino -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/vox/Vox/install/diffdrive_arduino
+[6.151s] -- The CXX compiler identification is GNU 11.4.0
+[6.212s] -- Detecting CXX compiler ABI info
+[7.043s] -- Detecting CXX compiler ABI info - done
+[7.071s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[7.076s] -- Detecting CXX compile features
+[7.081s] -- Detecting CXX compile features - done
+[7.182s] -- Found ament_cmake: 2.0.4 (/opt/ros/iron/share/ament_cmake/cmake)
+[8.954s] -- Found Python3: /usr/bin/python3.10 (found version "3.10.12") found components: Interpreter 
+[9.334s] -- Override CMake install command with custom implementation using symlinks instead of copying resources
+[9.610s] -- Found hardware_interface: 3.24.0 (/opt/ros/iron/share/hardware_interface/cmake)
+[10.031s] -- Found rosidl_generator_c: 4.0.1 (/opt/ros/iron/share/rosidl_generator_c/cmake)
+[10.151s] -- Found rosidl_generator_cpp: 4.0.1 (/opt/ros/iron/share/rosidl_generator_cpp/cmake)
+[10.290s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[10.432s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[14.782s] -- Found rmw_implementation_cmake: 7.1.0 (/opt/ros/iron/share/rmw_implementation_cmake/cmake)
+[14.810s] -- Found rmw_fastrtps_cpp: 7.1.3 (/opt/ros/iron/share/rmw_fastrtps_cpp/cmake)
+[15.153s] -- Found TinyXML2 via Config file: TinyXML2_DIR-NOTFOUND
+[15.429s] -- Found OpenSSL: /usr/lib/aarch64-linux-gnu/libcrypto.so (found version "3.0.2")  
+[15.454s] -- Found TinyXML2 via Config file: TinyXML2_DIR-NOTFOUND
+[15.512s] -- Found FastRTPS: /opt/ros/iron/include  
+[15.547s] -- Found TinyXML2 via Config file: TinyXML2_DIR-NOTFOUND
+[15.585s] -- Found TinyXML2 via Config file: TinyXML2_DIR-NOTFOUND
+[15.622s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[16.986s] -- Found ament_cmake_gtest: 2.0.4 (/opt/ros/iron/share/ament_cmake_gtest/cmake)
+[17.433s] -- Configuring done
+[17.519s] -- Generating done
+[17.528s] -- Build files have been written to: /home/vox/Vox/build/diffdrive_arduino
+[17.571s] Invoked command in '/home/vox/Vox/build/diffdrive_arduino' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/vox/Vox/install/serial_motor_demo:/opt/ros/iron /usr/bin/cmake /home/vox/Vox/src/diffdrive_arduino -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/vox/Vox/install/diffdrive_arduino
+[17.578s] Invoking command in '/home/vox/Vox/build/diffdrive_arduino': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/vox/Vox/install/serial_motor_demo:/opt/ros/iron /usr/bin/cmake --build /home/vox/Vox/build/diffdrive_arduino -- -j4 -l4
+[17.803s] [ 50%] [32mBuilding CXX object CMakeFiles/diffdrive_arduino.dir/hardware/diffbot_system.cpp.o[0m
+[58.007s] [100%] [32m[1mLinking CXX shared library libdiffdrive_arduino.so[0m
+[59.615s] [100%] Built target diffdrive_arduino
+[59.677s] Invoked command in '/home/vox/Vox/build/diffdrive_arduino' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/vox/Vox/install/serial_motor_demo:/opt/ros/iron /usr/bin/cmake --build /home/vox/Vox/build/diffdrive_arduino -- -j4 -l4
+[59.807s] Invoking command in '/home/vox/Vox/build/diffdrive_arduino': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/vox/Vox/install/serial_motor_demo:/opt/ros/iron /usr/bin/cmake --install /home/vox/Vox/build/diffdrive_arduino
+[59.833s] -- Install configuration: ""
+[59.836s] -- Execute custom install script
+[59.837s] -- Symlinking: /home/vox/Vox/install/diffdrive_arduino/share/diffdrive_arduino//diffdrive_arduino.xml
+[59.872s] -- Symlinking: /home/vox/Vox/install/diffdrive_arduino/include/diffdrive_arduino/diffdrive_arduino/arduino_comms.hpp
+[59.904s] -- Symlinking: /home/vox/Vox/install/diffdrive_arduino/include/diffdrive_arduino/diffdrive_arduino/diffbot_system.hpp
+[59.938s] -- Symlinking: /home/vox/Vox/install/diffdrive_arduino/include/diffdrive_arduino/diffdrive_arduino/visibility_control.h
+[59.971s] -- Symlinking: /home/vox/Vox/install/diffdrive_arduino/include/diffdrive_arduino/diffdrive_arduino/wheel.hpp
+[60.114s] -- Symlinking: /home/vox/Vox/install/diffdrive_arduino/share/diffdrive_arduino/launch/view_robot.launch.py
+[60.150s] -- Symlinking: /home/vox/Vox/install/diffdrive_arduino/share/diffdrive_arduino/ros2_control/diffbot.ros2_control.xacro
+[60.186s] -- Symlinking: /home/vox/Vox/install/diffdrive_arduino/share/diffdrive_arduino/urdf/diffbot.materials.xacro
+[60.220s] -- Symlinking: /home/vox/Vox/install/diffdrive_arduino/share/diffdrive_arduino/urdf/diffbot.urdf.xacro
+[60.251s] -- Symlinking: /home/vox/Vox/install/diffdrive_arduino/share/diffdrive_arduino/urdf/diffbot_description.urdf.xacro
+[60.287s] -- Symlinking: /home/vox/Vox/install/diffdrive_arduino/share/diffdrive_arduino/rviz/diffbot.rviz
+[60.322s] -- Symlinking: /home/vox/Vox/install/diffdrive_arduino/share/diffdrive_arduino/rviz/diffbot_view.rviz
+[60.359s] -- Symlinking: /home/vox/Vox/install/diffdrive_arduino/share/diffdrive_arduino/launch/diffbot.launch.py
+[60.396s] -- Symlinking: /home/vox/Vox/install/diffdrive_arduino/share/diffdrive_arduino/config/diffbot_controllers.yaml
+[60.429s] -- Symlinking: /home/vox/Vox/install/diffdrive_arduino/share/diffdrive_arduino/environment/library_path.sh
+[60.464s] -- Symlinking: /home/vox/Vox/install/diffdrive_arduino/share/diffdrive_arduino/environment/library_path.dsv
+[60.500s] -- Symlinking: /home/vox/Vox/install/diffdrive_arduino/share/ament_index/resource_index/package_run_dependencies/diffdrive_arduino
+[60.534s] -- Symlinking: /home/vox/Vox/install/diffdrive_arduino/share/ament_index/resource_index/parent_prefix_path/diffdrive_arduino
+[60.569s] -- Symlinking: /home/vox/Vox/install/diffdrive_arduino/share/diffdrive_arduino/environment/ament_prefix_path.sh
+[60.604s] -- Symlinking: /home/vox/Vox/install/diffdrive_arduino/share/diffdrive_arduino/environment/ament_prefix_path.dsv
+[60.640s] -- Symlinking: /home/vox/Vox/install/diffdrive_arduino/share/diffdrive_arduino/environment/path.sh
+[60.674s] -- Symlinking: /home/vox/Vox/install/diffdrive_arduino/share/diffdrive_arduino/environment/path.dsv
+[60.708s] -- Symlinking: /home/vox/Vox/install/diffdrive_arduino/share/diffdrive_arduino/local_setup.bash
+[60.743s] -- Symlinking: /home/vox/Vox/install/diffdrive_arduino/share/diffdrive_arduino/local_setup.sh
+[60.776s] -- Symlinking: /home/vox/Vox/install/diffdrive_arduino/share/diffdrive_arduino/local_setup.zsh
+[60.811s] -- Symlinking: /home/vox/Vox/install/diffdrive_arduino/share/diffdrive_arduino/local_setup.dsv
+[60.845s] -- Symlinking: /home/vox/Vox/install/diffdrive_arduino/share/diffdrive_arduino/package.dsv
+[60.879s] -- Symlinking: /home/vox/Vox/install/diffdrive_arduino/share/ament_index/resource_index/packages/diffdrive_arduino
+[60.913s] -- Symlinking: /home/vox/Vox/install/diffdrive_arduino/share/ament_index/resource_index/hardware_interface__pluginlib__plugin/diffdrive_arduino
+[60.948s] -- Symlinking: /home/vox/Vox/install/diffdrive_arduino/share/diffdrive_arduino/cmake/ament_cmake_export_targets-extras.cmake
+[60.981s] -- Symlinking: /home/vox/Vox/install/diffdrive_arduino/share/diffdrive_arduino/cmake/ament_cmake_export_dependencies-extras.cmake
+[61.017s] -- Symlinking: /home/vox/Vox/install/diffdrive_arduino/share/diffdrive_arduino/cmake/diffdrive_arduinoConfig.cmake
+[61.051s] -- Symlinking: /home/vox/Vox/install/diffdrive_arduino/share/diffdrive_arduino/cmake/diffdrive_arduinoConfig-version.cmake
+[61.087s] -- Symlinking: /home/vox/Vox/install/diffdrive_arduino/share/diffdrive_arduino/package.xml
+[61.123s] -- Installing: /home/vox/Vox/install/diffdrive_arduino/lib/libdiffdrive_arduino.so
+[61.130s] -- Set runtime path of "/home/vox/Vox/install/diffdrive_arduino/lib/libdiffdrive_arduino.so" to ""
+[61.131s] -- Installing: /home/vox/Vox/install/diffdrive_arduino/share/diffdrive_arduino/cmake/export_diffdrive_arduinoExport.cmake
+[61.132s] -- Installing: /home/vox/Vox/install/diffdrive_arduino/share/diffdrive_arduino/cmake/export_diffdrive_arduinoExport-noconfig.cmake
+[61.142s] Invoked command in '/home/vox/Vox/build/diffdrive_arduino' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/vox/Vox/install/serial_motor_demo:/opt/ros/iron /usr/bin/cmake --install /home/vox/Vox/build/diffdrive_arduino

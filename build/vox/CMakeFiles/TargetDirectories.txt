@@ -1,0 +1,9 @@
+/home/vox/Vox/build/vox/CMakeFiles/uninstall.dir
+/home/vox/Vox/build/vox/CMakeFiles/vox_uninstall.dir
+/home/vox/Vox/build/vox/CMakeFiles/test.dir
+/home/vox/Vox/build/vox/CMakeFiles/edit_cache.dir
+/home/vox/Vox/build/vox/CMakeFiles/rebuild_cache.dir
+/home/vox/Vox/build/vox/CMakeFiles/list_install_components.dir
+/home/vox/Vox/build/vox/CMakeFiles/install.dir
+/home/vox/Vox/build/vox/CMakeFiles/install/local.dir
+/home/vox/Vox/build/vox/CMakeFiles/install/strip.dir

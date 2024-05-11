@@ -1,0 +1,361 @@
+[0.422s] DEBUG:colcon:Command line arguments: ['/usr/bin/colcon', 'build', '--symlink-install']
+[0.422s] DEBUG:colcon:Parsed command line arguments: Namespace(log_base=None, log_level=None, verb_name='build', build_base='build', install_base='install', merge_install=False, symlink_install=True, test_result_base=None, continue_on_error=False, executor='parallel', parallel_workers=4, event_handlers=None, ignore_user_meta=False, metas=['./colcon.meta'], base_paths=['.'], packages_ignore=None, packages_ignore_regex=None, paths=None, packages_up_to=None, packages_up_to_regex=None, packages_above=None, packages_above_and_dependencies=None, packages_above_depth=None, packages_select_by_dep=None, packages_skip_by_dep=None, packages_skip_up_to=None, packages_select_build_failed=False, packages_skip_build_finished=False, packages_select_test_failures=False, packages_skip_test_passed=False, packages_select=None, packages_skip=None, packages_select_regex=None, packages_skip_regex=None, packages_start=None, packages_end=None, allow_overriding=[], cmake_args=None, cmake_target=None, cmake_target_skip_unavailable=False, cmake_clean_cache=False, cmake_clean_first=False, cmake_force_configure=False, ament_cmake_args=None, catkin_cmake_args=None, catkin_skip_building_tests=False, verb_parser=<colcon_defaults.argument_parser.defaults.DefaultArgumentsDecorator object at 0xffff83a0b8e0>, verb_extension=<colcon_core.verb.build.BuildVerb object at 0xffff83b7c4f0>, main=<bound method BuildVerb.main of <colcon_core.verb.build.BuildVerb object at 0xffff83b7c4f0>>)
+[1.129s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) check parameters
+[1.130s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) check parameters
+[1.130s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) check parameters
+[1.130s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) check parameters
+[1.130s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) discover
+[1.130s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) discover
+[1.130s] INFO:colcon.colcon_core.package_discovery:Crawling recursively for packages in '/home/vox/Vox'
+[1.131s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ignore', 'ignore_ament_install']
+[1.131s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore'
+[1.131s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore_ament_install'
+[1.132s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_pkg']
+[1.132s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_pkg'
+[1.132s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_meta']
+[1.132s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_meta'
+[1.132s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ros']
+[1.132s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ros'
+[1.180s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['cmake', 'python']
+[1.180s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'cmake'
+[1.181s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python'
+[1.181s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['python_setup_py']
+[1.181s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python_setup_py'
+[1.181s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extensions ['ignore', 'ignore_ament_install']
+[1.182s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extension 'ignore'
+[1.182s] Level 1:colcon.colcon_core.package_identification:_identify(build) ignored
+[1.183s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extensions ['ignore', 'ignore_ament_install']
+[1.183s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extension 'ignore'
+[1.183s] Level 1:colcon.colcon_core.package_identification:_identify(install) ignored
+[1.184s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extensions ['ignore', 'ignore_ament_install']
+[1.184s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extension 'ignore'
+[1.184s] Level 1:colcon.colcon_core.package_identification:_identify(log) ignored
+[1.184s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['ignore', 'ignore_ament_install']
+[1.185s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ignore'
+[1.185s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ignore_ament_install'
+[1.185s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['colcon_pkg']
+[1.185s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'colcon_pkg'
+[1.185s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['colcon_meta']
+[1.185s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'colcon_meta'
+[1.186s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['ros']
+[1.186s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ros'
+[1.186s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['cmake', 'python']
+[1.186s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'cmake'
+[1.186s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'python'
+[1.186s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['python_setup_py']
+[1.187s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'python_setup_py'
+[1.187s] Level 1:colcon.colcon_core.package_identification:_identify(src/diffdrive_arduino) by extensions ['ignore', 'ignore_ament_install']
+[1.187s] Level 1:colcon.colcon_core.package_identification:_identify(src/diffdrive_arduino) by extension 'ignore'
+[1.188s] Level 1:colcon.colcon_core.package_identification:_identify(src/diffdrive_arduino) by extension 'ignore_ament_install'
+[1.188s] Level 1:colcon.colcon_core.package_identification:_identify(src/diffdrive_arduino) by extensions ['colcon_pkg']
+[1.188s] Level 1:colcon.colcon_core.package_identification:_identify(src/diffdrive_arduino) by extension 'colcon_pkg'
+[1.188s] Level 1:colcon.colcon_core.package_identification:_identify(src/diffdrive_arduino) by extensions ['colcon_meta']
+[1.188s] Level 1:colcon.colcon_core.package_identification:_identify(src/diffdrive_arduino) by extension 'colcon_meta'
+[1.188s] Level 1:colcon.colcon_core.package_identification:_identify(src/diffdrive_arduino) by extensions ['ros']
+[1.188s] Level 1:colcon.colcon_core.package_identification:_identify(src/diffdrive_arduino) by extension 'ros'
+[1.198s] DEBUG:colcon.colcon_core.package_identification:Package 'src/diffdrive_arduino' with type 'ros.ament_cmake' and name 'diffdrive_arduino'
+[1.199s] Level 1:colcon.colcon_core.package_identification:_identify(src/serial_motor_demo) by extensions ['ignore', 'ignore_ament_install']
+[1.199s] Level 1:colcon.colcon_core.package_identification:_identify(src/serial_motor_demo) by extension 'ignore'
+[1.200s] Level 1:colcon.colcon_core.package_identification:_identify(src/serial_motor_demo) by extension 'ignore_ament_install'
+[1.200s] Level 1:colcon.colcon_core.package_identification:_identify(src/serial_motor_demo) by extensions ['colcon_pkg']
+[1.200s] Level 1:colcon.colcon_core.package_identification:_identify(src/serial_motor_demo) by extension 'colcon_pkg'
+[1.200s] Level 1:colcon.colcon_core.package_identification:_identify(src/serial_motor_demo) by extensions ['colcon_meta']
+[1.200s] Level 1:colcon.colcon_core.package_identification:_identify(src/serial_motor_demo) by extension 'colcon_meta'
+[1.201s] Level 1:colcon.colcon_core.package_identification:_identify(src/serial_motor_demo) by extensions ['ros']
+[1.201s] Level 1:colcon.colcon_core.package_identification:_identify(src/serial_motor_demo) by extension 'ros'
+[1.201s] Level 1:colcon.colcon_core.package_identification:_identify(src/serial_motor_demo) by extensions ['cmake', 'python']
+[1.201s] Level 1:colcon.colcon_core.package_identification:_identify(src/serial_motor_demo) by extension 'cmake'
+[1.202s] Level 1:colcon.colcon_core.package_identification:_identify(src/serial_motor_demo) by extension 'python'
+[1.202s] Level 1:colcon.colcon_core.package_identification:_identify(src/serial_motor_demo) by extensions ['python_setup_py']
+[1.202s] Level 1:colcon.colcon_core.package_identification:_identify(src/serial_motor_demo) by extension 'python_setup_py'
+[1.202s] Level 1:colcon.colcon_core.package_identification:_identify(src/serial_motor_demo/serial_motor_demo) by extensions ['ignore', 'ignore_ament_install']
+[1.203s] Level 1:colcon.colcon_core.package_identification:_identify(src/serial_motor_demo/serial_motor_demo) by extension 'ignore'
+[1.203s] Level 1:colcon.colcon_core.package_identification:_identify(src/serial_motor_demo/serial_motor_demo) by extension 'ignore_ament_install'
+[1.203s] Level 1:colcon.colcon_core.package_identification:_identify(src/serial_motor_demo/serial_motor_demo) by extensions ['colcon_pkg']
+[1.203s] Level 1:colcon.colcon_core.package_identification:_identify(src/serial_motor_demo/serial_motor_demo) by extension 'colcon_pkg'
+[1.203s] Level 1:colcon.colcon_core.package_identification:_identify(src/serial_motor_demo/serial_motor_demo) by extensions ['colcon_meta']
+[1.203s] Level 1:colcon.colcon_core.package_identification:_identify(src/serial_motor_demo/serial_motor_demo) by extension 'colcon_meta'
+[1.204s] Level 1:colcon.colcon_core.package_identification:_identify(src/serial_motor_demo/serial_motor_demo) by extensions ['ros']
+[1.204s] Level 1:colcon.colcon_core.package_identification:_identify(src/serial_motor_demo/serial_motor_demo) by extension 'ros'
+[1.206s] DEBUG:colcon.colcon_core.package_identification:Package 'src/serial_motor_demo/serial_motor_demo' with type 'ros.ament_python' and name 'serial_motor_demo'
+[1.207s] Level 1:colcon.colcon_core.package_identification:_identify(src/serial_motor_demo/serial_motor_demo_msgs) by extensions ['ignore', 'ignore_ament_install']
+[1.207s] Level 1:colcon.colcon_core.package_identification:_identify(src/serial_motor_demo/serial_motor_demo_msgs) by extension 'ignore'
+[1.207s] Level 1:colcon.colcon_core.package_identification:_identify(src/serial_motor_demo/serial_motor_demo_msgs) by extension 'ignore_ament_install'
+[1.207s] Level 1:colcon.colcon_core.package_identification:_identify(src/serial_motor_demo/serial_motor_demo_msgs) by extensions ['colcon_pkg']
+[1.208s] Level 1:colcon.colcon_core.package_identification:_identify(src/serial_motor_demo/serial_motor_demo_msgs) by extension 'colcon_pkg'
+[1.208s] Level 1:colcon.colcon_core.package_identification:_identify(src/serial_motor_demo/serial_motor_demo_msgs) by extensions ['colcon_meta']
+[1.208s] Level 1:colcon.colcon_core.package_identification:_identify(src/serial_motor_demo/serial_motor_demo_msgs) by extension 'colcon_meta'
+[1.208s] Level 1:colcon.colcon_core.package_identification:_identify(src/serial_motor_demo/serial_motor_demo_msgs) by extensions ['ros']
+[1.208s] Level 1:colcon.colcon_core.package_identification:_identify(src/serial_motor_demo/serial_motor_demo_msgs) by extension 'ros'
+[1.210s] DEBUG:colcon.colcon_core.package_identification:Package 'src/serial_motor_demo/serial_motor_demo_msgs' with type 'ros.ament_cmake' and name 'serial_motor_demo_msgs'
+[1.211s] Level 1:colcon.colcon_core.package_identification:_identify(src/vox) by extensions ['ignore', 'ignore_ament_install']
+[1.211s] Level 1:colcon.colcon_core.package_identification:_identify(src/vox) by extension 'ignore'
+[1.211s] Level 1:colcon.colcon_core.package_identification:_identify(src/vox) by extension 'ignore_ament_install'
+[1.211s] Level 1:colcon.colcon_core.package_identification:_identify(src/vox) by extensions ['colcon_pkg']
+[1.211s] Level 1:colcon.colcon_core.package_identification:_identify(src/vox) by extension 'colcon_pkg'
+[1.212s] Level 1:colcon.colcon_core.package_identification:_identify(src/vox) by extensions ['colcon_meta']
+[1.212s] Level 1:colcon.colcon_core.package_identification:_identify(src/vox) by extension 'colcon_meta'
+[1.212s] Level 1:colcon.colcon_core.package_identification:_identify(src/vox) by extensions ['ros']
+[1.212s] Level 1:colcon.colcon_core.package_identification:_identify(src/vox) by extension 'ros'
+[1.214s] DEBUG:colcon.colcon_core.package_identification:Package 'src/vox' with type 'ros.ament_cmake' and name 'vox'
+[1.214s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) using defaults
+[1.214s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) discover
+[1.214s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) using defaults
+[1.214s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) discover
+[1.214s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) using defaults
+[1.290s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) check parameters
+[1.290s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) discover
+[1.298s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 4 installed packages in /home/vox/Vox/install
+[1.307s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 272 installed packages in /opt/ros/iron
+[1.313s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) using defaults
+[1.513s] Level 5:colcon.colcon_core.verb:set package 'diffdrive_arduino' build argument 'cmake_args' from command line to 'None'
+[1.513s] Level 5:colcon.colcon_core.verb:set package 'diffdrive_arduino' build argument 'cmake_target' from command line to 'None'
+[1.513s] Level 5:colcon.colcon_core.verb:set package 'diffdrive_arduino' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[1.513s] Level 5:colcon.colcon_core.verb:set package 'diffdrive_arduino' build argument 'cmake_clean_cache' from command line to 'False'
+[1.514s] Level 5:colcon.colcon_core.verb:set package 'diffdrive_arduino' build argument 'cmake_clean_first' from command line to 'False'
+[1.514s] Level 5:colcon.colcon_core.verb:set package 'diffdrive_arduino' build argument 'cmake_force_configure' from command line to 'False'
+[1.514s] Level 5:colcon.colcon_core.verb:set package 'diffdrive_arduino' build argument 'ament_cmake_args' from command line to 'None'
+[1.514s] Level 5:colcon.colcon_core.verb:set package 'diffdrive_arduino' build argument 'catkin_cmake_args' from command line to 'None'
+[1.514s] Level 5:colcon.colcon_core.verb:set package 'diffdrive_arduino' build argument 'catkin_skip_building_tests' from command line to 'False'
+[1.514s] DEBUG:colcon.colcon_core.verb:Building package 'diffdrive_arduino' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/vox/Vox/build/diffdrive_arduino', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/vox/Vox/install/diffdrive_arduino', 'merge_install': False, 'path': '/home/vox/Vox/src/diffdrive_arduino', 'symlink_install': True, 'test_result_base': None}
+[1.515s] Level 5:colcon.colcon_core.verb:set package 'serial_motor_demo_msgs' build argument 'cmake_args' from command line to 'None'
+[1.516s] Level 5:colcon.colcon_core.verb:set package 'serial_motor_demo_msgs' build argument 'cmake_target' from command line to 'None'
+[1.516s] Level 5:colcon.colcon_core.verb:set package 'serial_motor_demo_msgs' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[1.516s] Level 5:colcon.colcon_core.verb:set package 'serial_motor_demo_msgs' build argument 'cmake_clean_cache' from command line to 'False'
+[1.516s] Level 5:colcon.colcon_core.verb:set package 'serial_motor_demo_msgs' build argument 'cmake_clean_first' from command line to 'False'
+[1.516s] Level 5:colcon.colcon_core.verb:set package 'serial_motor_demo_msgs' build argument 'cmake_force_configure' from command line to 'False'
+[1.516s] Level 5:colcon.colcon_core.verb:set package 'serial_motor_demo_msgs' build argument 'ament_cmake_args' from command line to 'None'
+[1.516s] Level 5:colcon.colcon_core.verb:set package 'serial_motor_demo_msgs' build argument 'catkin_cmake_args' from command line to 'None'
+[1.516s] Level 5:colcon.colcon_core.verb:set package 'serial_motor_demo_msgs' build argument 'catkin_skip_building_tests' from command line to 'False'
+[1.516s] DEBUG:colcon.colcon_core.verb:Building package 'serial_motor_demo_msgs' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/vox/Vox/build/serial_motor_demo_msgs', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/vox/Vox/install/serial_motor_demo_msgs', 'merge_install': False, 'path': '/home/vox/Vox/src/serial_motor_demo/serial_motor_demo_msgs', 'symlink_install': True, 'test_result_base': None}
+[1.518s] Level 5:colcon.colcon_core.verb:set package 'vox' build argument 'cmake_args' from command line to 'None'
+[1.518s] Level 5:colcon.colcon_core.verb:set package 'vox' build argument 'cmake_target' from command line to 'None'
+[1.518s] Level 5:colcon.colcon_core.verb:set package 'vox' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[1.518s] Level 5:colcon.colcon_core.verb:set package 'vox' build argument 'cmake_clean_cache' from command line to 'False'
+[1.518s] Level 5:colcon.colcon_core.verb:set package 'vox' build argument 'cmake_clean_first' from command line to 'False'
+[1.518s] Level 5:colcon.colcon_core.verb:set package 'vox' build argument 'cmake_force_configure' from command line to 'False'
+[1.518s] Level 5:colcon.colcon_core.verb:set package 'vox' build argument 'ament_cmake_args' from command line to 'None'
+[1.519s] Level 5:colcon.colcon_core.verb:set package 'vox' build argument 'catkin_cmake_args' from command line to 'None'
+[1.519s] Level 5:colcon.colcon_core.verb:set package 'vox' build argument 'catkin_skip_building_tests' from command line to 'False'
+[1.519s] DEBUG:colcon.colcon_core.verb:Building package 'vox' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/vox/Vox/build/vox', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/vox/Vox/install/vox', 'merge_install': False, 'path': '/home/vox/Vox/src/vox', 'symlink_install': True, 'test_result_base': None}
+[1.520s] Level 5:colcon.colcon_core.verb:set package 'serial_motor_demo' build argument 'cmake_args' from command line to 'None'
+[1.520s] Level 5:colcon.colcon_core.verb:set package 'serial_motor_demo' build argument 'cmake_target' from command line to 'None'
+[1.520s] Level 5:colcon.colcon_core.verb:set package 'serial_motor_demo' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[1.520s] Level 5:colcon.colcon_core.verb:set package 'serial_motor_demo' build argument 'cmake_clean_cache' from command line to 'False'
+[1.520s] Level 5:colcon.colcon_core.verb:set package 'serial_motor_demo' build argument 'cmake_clean_first' from command line to 'False'
+[1.521s] Level 5:colcon.colcon_core.verb:set package 'serial_motor_demo' build argument 'cmake_force_configure' from command line to 'False'
+[1.521s] Level 5:colcon.colcon_core.verb:set package 'serial_motor_demo' build argument 'ament_cmake_args' from command line to 'None'
+[1.521s] Level 5:colcon.colcon_core.verb:set package 'serial_motor_demo' build argument 'catkin_cmake_args' from command line to 'None'
+[1.521s] Level 5:colcon.colcon_core.verb:set package 'serial_motor_demo' build argument 'catkin_skip_building_tests' from command line to 'False'
+[1.521s] DEBUG:colcon.colcon_core.verb:Building package 'serial_motor_demo' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/vox/Vox/build/serial_motor_demo', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/vox/Vox/install/serial_motor_demo', 'merge_install': False, 'path': '/home/vox/Vox/src/serial_motor_demo/serial_motor_demo', 'symlink_install': True, 'test_result_base': None}
+[1.522s] INFO:colcon.colcon_core.executor:Executing jobs using 'parallel' executor
+[1.525s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete
+[1.526s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/vox/Vox/src/serial_motor_demo/serial_motor_demo_msgs' with build type 'ament_cmake'
+[1.526s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/vox/Vox/src/serial_motor_demo/serial_motor_demo_msgs'
+[1.535s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_core.shell.bat': Not used on non-Windows systems
+[1.536s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[1.536s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[1.556s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/vox/Vox/src/diffdrive_arduino' with build type 'ament_cmake'
+[1.556s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/vox/Vox/src/diffdrive_arduino'
+[1.558s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[1.558s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[1.842s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/vox/Vox/src/vox' with build type 'ament_cmake'
+[1.843s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/vox/Vox/src/vox'
+[1.845s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[1.846s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[1.882s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/vox/Vox/build/serial_motor_demo_msgs': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/vox/Vox/install/serial_motor_demo:/opt/ros/iron /usr/bin/cmake --build /home/vox/Vox/build/serial_motor_demo_msgs -- -j4 -l4
+[1.903s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/vox/Vox/build/diffdrive_arduino': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/vox/Vox/install/serial_motor_demo:/opt/ros/iron /usr/bin/cmake --build /home/vox/Vox/build/diffdrive_arduino -- -j4 -l4
+[1.920s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/vox/Vox/build/vox': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/vox/Vox/install/serial_motor_demo:/opt/ros/iron /usr/bin/cmake --build /home/vox/Vox/build/vox -- -j4 -l4
+[2.101s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/vox/Vox/build/vox' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/vox/Vox/install/serial_motor_demo:/opt/ros/iron /usr/bin/cmake --build /home/vox/Vox/build/vox -- -j4 -l4
+[2.310s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/vox/Vox/build/vox': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/vox/Vox/install/serial_motor_demo:/opt/ros/iron /usr/bin/cmake --install /home/vox/Vox/build/vox
+[2.509s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(vox)
+[2.511s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/vox/Vox/build/vox' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/vox/Vox/install/serial_motor_demo:/opt/ros/iron /usr/bin/cmake --install /home/vox/Vox/build/vox
+[2.527s] Level 1:colcon.colcon_core.environment:checking '/home/vox/Vox/install/vox' for CMake module files
+[2.531s] Level 1:colcon.colcon_core.environment:checking '/home/vox/Vox/install/vox' for CMake config files
+[2.533s] Level 1:colcon.colcon_core.shell:create_environment_hook('vox', 'cmake_prefix_path')
+[2.534s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/vox/Vox/install/vox/share/vox/hook/cmake_prefix_path.ps1'
+[2.542s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/vox/Vox/install/vox/share/vox/hook/cmake_prefix_path.dsv'
+[2.546s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/vox/Vox/install/vox/share/vox/hook/cmake_prefix_path.sh'
+[2.552s] Level 1:colcon.colcon_core.environment:checking '/home/vox/Vox/install/vox/bin'
+[2.552s] Level 1:colcon.colcon_core.environment:checking '/home/vox/Vox/install/vox/lib/pkgconfig/vox.pc'
+[2.553s] Level 1:colcon.colcon_core.environment:checking '/home/vox/Vox/install/vox/lib/python3.10/site-packages'
+[2.555s] Level 1:colcon.colcon_core.environment:checking '/home/vox/Vox/install/vox/bin'
+[2.556s] INFO:colcon.colcon_core.shell:Creating package script '/home/vox/Vox/install/vox/share/vox/package.ps1'
+[2.561s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/vox/Vox/install/vox/share/vox/package.dsv'
+[2.565s] INFO:colcon.colcon_core.shell:Creating package script '/home/vox/Vox/install/vox/share/vox/package.sh'
+[2.571s] INFO:colcon.colcon_core.shell:Creating package script '/home/vox/Vox/install/vox/share/vox/package.bash'
+[2.575s] INFO:colcon.colcon_core.shell:Creating package script '/home/vox/Vox/install/vox/share/vox/package.zsh'
+[2.579s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/vox/Vox/install/vox/share/colcon-core/packages/vox)
+[2.717s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(vox)
+[2.718s] Level 1:colcon.colcon_core.environment:checking '/home/vox/Vox/install/vox' for CMake module files
+[2.721s] Level 1:colcon.colcon_core.environment:checking '/home/vox/Vox/install/vox' for CMake config files
+[2.724s] Level 1:colcon.colcon_core.shell:create_environment_hook('vox', 'cmake_prefix_path')
+[2.725s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/vox/Vox/install/vox/share/vox/hook/cmake_prefix_path.ps1'
+[2.727s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/vox/Vox/install/vox/share/vox/hook/cmake_prefix_path.dsv'
+[2.729s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/vox/Vox/install/vox/share/vox/hook/cmake_prefix_path.sh'
+[2.732s] Level 1:colcon.colcon_core.environment:checking '/home/vox/Vox/install/vox/bin'
+[2.732s] Level 1:colcon.colcon_core.environment:checking '/home/vox/Vox/install/vox/lib/pkgconfig/vox.pc'
+[2.733s] Level 1:colcon.colcon_core.environment:checking '/home/vox/Vox/install/vox/lib/python3.10/site-packages'
+[2.735s] Level 1:colcon.colcon_core.environment:checking '/home/vox/Vox/install/vox/bin'
+[2.736s] INFO:colcon.colcon_core.shell:Creating package script '/home/vox/Vox/install/vox/share/vox/package.ps1'
+[2.764s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/vox/Vox/install/vox/share/vox/package.dsv'
+[2.767s] INFO:colcon.colcon_core.shell:Creating package script '/home/vox/Vox/install/vox/share/vox/package.sh'
+[2.769s] INFO:colcon.colcon_core.shell:Creating package script '/home/vox/Vox/install/vox/share/vox/package.bash'
+[2.772s] INFO:colcon.colcon_core.shell:Creating package script '/home/vox/Vox/install/vox/share/vox/package.zsh'
+[2.774s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/vox/Vox/install/vox/share/colcon-core/packages/vox)
+[3.682s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/vox/Vox/build/serial_motor_demo_msgs' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/vox/Vox/install/serial_motor_demo:/opt/ros/iron /usr/bin/cmake --build /home/vox/Vox/build/serial_motor_demo_msgs -- -j4 -l4
+[4.359s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/vox/Vox/build/serial_motor_demo_msgs': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/vox/Vox/install/serial_motor_demo:/opt/ros/iron /usr/bin/cmake --install /home/vox/Vox/build/serial_motor_demo_msgs
+[4.740s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(serial_motor_demo_msgs)
+[4.741s] Level 1:colcon.colcon_core.environment:checking '/home/vox/Vox/install/serial_motor_demo_msgs' for CMake module files
+[4.743s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/vox/Vox/build/serial_motor_demo_msgs' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/vox/Vox/install/serial_motor_demo:/opt/ros/iron /usr/bin/cmake --install /home/vox/Vox/build/serial_motor_demo_msgs
+[4.746s] Level 1:colcon.colcon_core.environment:checking '/home/vox/Vox/install/serial_motor_demo_msgs' for CMake config files
+[4.753s] Level 1:colcon.colcon_core.shell:create_environment_hook('serial_motor_demo_msgs', 'cmake_prefix_path')
+[4.754s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/vox/Vox/install/serial_motor_demo_msgs/share/serial_motor_demo_msgs/hook/cmake_prefix_path.ps1'
+[4.756s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/vox/Vox/install/serial_motor_demo_msgs/share/serial_motor_demo_msgs/hook/cmake_prefix_path.dsv'
+[4.758s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/vox/Vox/install/serial_motor_demo_msgs/share/serial_motor_demo_msgs/hook/cmake_prefix_path.sh'
+[4.760s] Level 1:colcon.colcon_core.environment:checking '/home/vox/Vox/install/serial_motor_demo_msgs/lib'
+[4.761s] Level 1:colcon.colcon_core.shell:create_environment_hook('serial_motor_demo_msgs', 'ld_library_path_lib')
+[4.762s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/vox/Vox/install/serial_motor_demo_msgs/share/serial_motor_demo_msgs/hook/ld_library_path_lib.ps1'
+[4.764s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/vox/Vox/install/serial_motor_demo_msgs/share/serial_motor_demo_msgs/hook/ld_library_path_lib.dsv'
+[4.766s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/vox/Vox/install/serial_motor_demo_msgs/share/serial_motor_demo_msgs/hook/ld_library_path_lib.sh'
+[4.767s] Level 1:colcon.colcon_core.environment:checking '/home/vox/Vox/install/serial_motor_demo_msgs/bin'
+[4.768s] Level 1:colcon.colcon_core.environment:checking '/home/vox/Vox/install/serial_motor_demo_msgs/lib/pkgconfig/serial_motor_demo_msgs.pc'
+[4.768s] Level 1:colcon.colcon_core.environment:checking '/home/vox/Vox/install/serial_motor_demo_msgs/lib/python3.10/site-packages'
+[4.769s] Level 1:colcon.colcon_core.shell:create_environment_hook('serial_motor_demo_msgs', 'pythonpath')
+[4.770s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/vox/Vox/install/serial_motor_demo_msgs/share/serial_motor_demo_msgs/hook/pythonpath.ps1'
+[4.771s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/vox/Vox/install/serial_motor_demo_msgs/share/serial_motor_demo_msgs/hook/pythonpath.dsv'
+[4.773s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/vox/Vox/install/serial_motor_demo_msgs/share/serial_motor_demo_msgs/hook/pythonpath.sh'
+[4.775s] Level 1:colcon.colcon_core.environment:checking '/home/vox/Vox/install/serial_motor_demo_msgs/bin'
+[4.776s] INFO:colcon.colcon_core.shell:Creating package script '/home/vox/Vox/install/serial_motor_demo_msgs/share/serial_motor_demo_msgs/package.ps1'
+[4.778s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/vox/Vox/install/serial_motor_demo_msgs/share/serial_motor_demo_msgs/package.dsv'
+[4.780s] INFO:colcon.colcon_core.shell:Creating package script '/home/vox/Vox/install/serial_motor_demo_msgs/share/serial_motor_demo_msgs/package.sh'
+[4.782s] INFO:colcon.colcon_core.shell:Creating package script '/home/vox/Vox/install/serial_motor_demo_msgs/share/serial_motor_demo_msgs/package.bash'
+[4.785s] INFO:colcon.colcon_core.shell:Creating package script '/home/vox/Vox/install/serial_motor_demo_msgs/share/serial_motor_demo_msgs/package.zsh'
+[4.787s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/vox/Vox/install/serial_motor_demo_msgs/share/colcon-core/packages/serial_motor_demo_msgs)
+[5.490s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(serial_motor_demo_msgs)
+[5.491s] Level 1:colcon.colcon_core.environment:checking '/home/vox/Vox/install/serial_motor_demo_msgs' for CMake module files
+[5.496s] Level 1:colcon.colcon_core.environment:checking '/home/vox/Vox/install/serial_motor_demo_msgs' for CMake config files
+[5.503s] Level 1:colcon.colcon_core.shell:create_environment_hook('serial_motor_demo_msgs', 'cmake_prefix_path')
+[5.504s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/vox/Vox/install/serial_motor_demo_msgs/share/serial_motor_demo_msgs/hook/cmake_prefix_path.ps1'
+[5.506s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/vox/Vox/install/serial_motor_demo_msgs/share/serial_motor_demo_msgs/hook/cmake_prefix_path.dsv'
+[5.508s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/vox/Vox/install/serial_motor_demo_msgs/share/serial_motor_demo_msgs/hook/cmake_prefix_path.sh'
+[5.510s] Level 1:colcon.colcon_core.environment:checking '/home/vox/Vox/install/serial_motor_demo_msgs/lib'
+[5.511s] Level 1:colcon.colcon_core.shell:create_environment_hook('serial_motor_demo_msgs', 'ld_library_path_lib')
+[5.512s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/vox/Vox/install/serial_motor_demo_msgs/share/serial_motor_demo_msgs/hook/ld_library_path_lib.ps1'
+[5.513s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/vox/Vox/install/serial_motor_demo_msgs/share/serial_motor_demo_msgs/hook/ld_library_path_lib.dsv'
+[5.515s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/vox/Vox/install/serial_motor_demo_msgs/share/serial_motor_demo_msgs/hook/ld_library_path_lib.sh'
+[5.516s] Level 1:colcon.colcon_core.environment:checking '/home/vox/Vox/install/serial_motor_demo_msgs/bin'
+[5.516s] Level 1:colcon.colcon_core.environment:checking '/home/vox/Vox/install/serial_motor_demo_msgs/lib/pkgconfig/serial_motor_demo_msgs.pc'
+[5.517s] Level 1:colcon.colcon_core.environment:checking '/home/vox/Vox/install/serial_motor_demo_msgs/lib/python3.10/site-packages'
+[5.518s] Level 1:colcon.colcon_core.shell:create_environment_hook('serial_motor_demo_msgs', 'pythonpath')
+[5.518s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/vox/Vox/install/serial_motor_demo_msgs/share/serial_motor_demo_msgs/hook/pythonpath.ps1'
+[5.520s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/vox/Vox/install/serial_motor_demo_msgs/share/serial_motor_demo_msgs/hook/pythonpath.dsv'
+[5.521s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/vox/Vox/install/serial_motor_demo_msgs/share/serial_motor_demo_msgs/hook/pythonpath.sh'
+[5.523s] Level 1:colcon.colcon_core.environment:checking '/home/vox/Vox/install/serial_motor_demo_msgs/bin'
+[5.525s] INFO:colcon.colcon_core.shell:Creating package script '/home/vox/Vox/install/serial_motor_demo_msgs/share/serial_motor_demo_msgs/package.ps1'
+[5.527s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/vox/Vox/install/serial_motor_demo_msgs/share/serial_motor_demo_msgs/package.dsv'
+[5.530s] INFO:colcon.colcon_core.shell:Creating package script '/home/vox/Vox/install/serial_motor_demo_msgs/share/serial_motor_demo_msgs/package.sh'
+[5.531s] INFO:colcon.colcon_core.shell:Creating package script '/home/vox/Vox/install/serial_motor_demo_msgs/share/serial_motor_demo_msgs/package.bash'
+[5.533s] INFO:colcon.colcon_core.shell:Creating package script '/home/vox/Vox/install/serial_motor_demo_msgs/share/serial_motor_demo_msgs/package.zsh'
+[5.535s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/vox/Vox/install/serial_motor_demo_msgs/share/colcon-core/packages/serial_motor_demo_msgs)
+[5.536s] INFO:colcon.colcon_ros.task.ament_python.build:Building ROS package in '/home/vox/Vox/src/serial_motor_demo/serial_motor_demo' with build type 'ament_python'
+[5.537s] Level 1:colcon.colcon_core.shell:create_environment_hook('serial_motor_demo', 'ament_prefix_path')
+[5.538s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/vox/Vox/install/serial_motor_demo/share/serial_motor_demo/hook/ament_prefix_path.ps1'
+[5.540s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/vox/Vox/install/serial_motor_demo/share/serial_motor_demo/hook/ament_prefix_path.dsv'
+[5.542s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/vox/Vox/install/serial_motor_demo/share/serial_motor_demo/hook/ament_prefix_path.sh'
+[5.544s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[5.544s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[6.726s] INFO:colcon.colcon_core.task.python.build:Building Python package in '/home/vox/Vox/src/serial_motor_demo/serial_motor_demo'
+[6.818s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[6.820s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[8.345s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/vox/Vox/build/serial_motor_demo': CMAKE_PREFIX_PATH=/home/vox/Vox/install/serial_motor_demo_msgs:/home/vox/Vox/install/vox:/home/vox/Vox/install/diffdrive_arduino LD_LIBRARY_PATH=/home/vox/Vox/install/serial_motor_demo_msgs/lib:/home/vox/Vox/install/diffdrive_arduino/lib:/opt/ros/iron/opt/rviz_ogre_vendor/lib:/opt/ros/iron/lib/aarch64-linux-gnu:/opt/ros/iron/lib:/opt/vc/lib PYTHONPATH=/home/vox/Vox/build/serial_motor_demo/prefix_override:/home/vox/Vox/install/serial_motor_demo/lib/python3.10/site-packages:/home/vox/Vox/install/serial_motor_demo_msgs/lib/python3.10/site-packages:/home/vox/Vox/build/serial_motor_demo:/home/vox/Vox/install/serial_motor_demo/lib/python3.10/site-packages:/opt/ros/iron/lib/python3.10/site-packages /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py develop --editable --build-directory /home/vox/Vox/build/serial_motor_demo/build --no-deps symlink_data
+[10.710s] Level 1:colcon.colcon_core.shell:create_environment_hook('serial_motor_demo', 'pythonpath_develop')
+[10.712s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/vox/Vox/build/serial_motor_demo/share/serial_motor_demo/hook/pythonpath_develop.ps1'
+[10.713s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/vox/Vox/build/serial_motor_demo' returned '0': CMAKE_PREFIX_PATH=/home/vox/Vox/install/serial_motor_demo_msgs:/home/vox/Vox/install/vox:/home/vox/Vox/install/diffdrive_arduino LD_LIBRARY_PATH=/home/vox/Vox/install/serial_motor_demo_msgs/lib:/home/vox/Vox/install/diffdrive_arduino/lib:/opt/ros/iron/opt/rviz_ogre_vendor/lib:/opt/ros/iron/lib/aarch64-linux-gnu:/opt/ros/iron/lib:/opt/vc/lib PYTHONPATH=/home/vox/Vox/build/serial_motor_demo/prefix_override:/home/vox/Vox/install/serial_motor_demo/lib/python3.10/site-packages:/home/vox/Vox/install/serial_motor_demo_msgs/lib/python3.10/site-packages:/home/vox/Vox/build/serial_motor_demo:/home/vox/Vox/install/serial_motor_demo/lib/python3.10/site-packages:/opt/ros/iron/lib/python3.10/site-packages /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py develop --editable --build-directory /home/vox/Vox/build/serial_motor_demo/build --no-deps symlink_data
+[10.715s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/vox/Vox/build/serial_motor_demo/share/serial_motor_demo/hook/pythonpath_develop.dsv'
+[10.717s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/vox/Vox/build/serial_motor_demo/share/serial_motor_demo/hook/pythonpath_develop.sh'
+[10.720s] Level 1:colcon.colcon_core.environment:checking '/home/vox/Vox/install/serial_motor_demo' for CMake module files
+[10.723s] Level 1:colcon.colcon_core.environment:checking '/home/vox/Vox/install/serial_motor_demo' for CMake config files
+[10.726s] Level 1:colcon.colcon_core.environment:checking '/home/vox/Vox/install/serial_motor_demo/lib'
+[10.727s] Level 1:colcon.colcon_core.environment:checking '/home/vox/Vox/install/serial_motor_demo/bin'
+[10.727s] Level 1:colcon.colcon_core.environment:checking '/home/vox/Vox/install/serial_motor_demo/lib/pkgconfig/serial_motor_demo.pc'
+[10.728s] Level 1:colcon.colcon_core.environment:checking '/home/vox/Vox/install/serial_motor_demo/lib/python3.10/site-packages'
+[10.729s] Level 1:colcon.colcon_core.shell:create_environment_hook('serial_motor_demo', 'pythonpath')
+[10.730s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/vox/Vox/install/serial_motor_demo/share/serial_motor_demo/hook/pythonpath.ps1'
+[10.732s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/vox/Vox/install/serial_motor_demo/share/serial_motor_demo/hook/pythonpath.dsv'
+[10.734s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/vox/Vox/install/serial_motor_demo/share/serial_motor_demo/hook/pythonpath.sh'
+[10.736s] Level 1:colcon.colcon_core.environment:checking '/home/vox/Vox/install/serial_motor_demo/bin'
+[10.737s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(serial_motor_demo)
+[10.739s] INFO:colcon.colcon_core.shell:Creating package script '/home/vox/Vox/install/serial_motor_demo/share/serial_motor_demo/package.ps1'
+[10.741s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/vox/Vox/install/serial_motor_demo/share/serial_motor_demo/package.dsv'
+[10.744s] INFO:colcon.colcon_core.shell:Creating package script '/home/vox/Vox/install/serial_motor_demo/share/serial_motor_demo/package.sh'
+[10.747s] INFO:colcon.colcon_core.shell:Creating package script '/home/vox/Vox/install/serial_motor_demo/share/serial_motor_demo/package.bash'
+[10.750s] INFO:colcon.colcon_core.shell:Creating package script '/home/vox/Vox/install/serial_motor_demo/share/serial_motor_demo/package.zsh'
+[10.752s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/vox/Vox/install/serial_motor_demo/share/colcon-core/packages/serial_motor_demo)
+[27.189s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/vox/Vox/build/diffdrive_arduino' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/vox/Vox/install/serial_motor_demo:/opt/ros/iron /usr/bin/cmake --build /home/vox/Vox/build/diffdrive_arduino -- -j4 -l4
+[27.345s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/vox/Vox/build/diffdrive_arduino': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/vox/Vox/install/serial_motor_demo:/opt/ros/iron /usr/bin/cmake --install /home/vox/Vox/build/diffdrive_arduino
+[27.460s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(diffdrive_arduino)
+[27.461s] Level 1:colcon.colcon_core.environment:checking '/home/vox/Vox/install/diffdrive_arduino' for CMake module files
+[27.463s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/vox/Vox/build/diffdrive_arduino' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/vox/Vox/install/serial_motor_demo:/opt/ros/iron /usr/bin/cmake --install /home/vox/Vox/build/diffdrive_arduino
+[27.466s] Level 1:colcon.colcon_core.environment:checking '/home/vox/Vox/install/diffdrive_arduino' for CMake config files
+[27.470s] Level 1:colcon.colcon_core.shell:create_environment_hook('diffdrive_arduino', 'cmake_prefix_path')
+[27.471s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/vox/Vox/install/diffdrive_arduino/share/diffdrive_arduino/hook/cmake_prefix_path.ps1'
+[27.474s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/vox/Vox/install/diffdrive_arduino/share/diffdrive_arduino/hook/cmake_prefix_path.dsv'
+[27.476s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/vox/Vox/install/diffdrive_arduino/share/diffdrive_arduino/hook/cmake_prefix_path.sh'
+[27.478s] Level 1:colcon.colcon_core.environment:checking '/home/vox/Vox/install/diffdrive_arduino/lib'
+[27.478s] Level 1:colcon.colcon_core.shell:create_environment_hook('diffdrive_arduino', 'ld_library_path_lib')
+[27.479s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/vox/Vox/install/diffdrive_arduino/share/diffdrive_arduino/hook/ld_library_path_lib.ps1'
+[27.481s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/vox/Vox/install/diffdrive_arduino/share/diffdrive_arduino/hook/ld_library_path_lib.dsv'
+[27.482s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/vox/Vox/install/diffdrive_arduino/share/diffdrive_arduino/hook/ld_library_path_lib.sh'
+[27.484s] Level 1:colcon.colcon_core.environment:checking '/home/vox/Vox/install/diffdrive_arduino/bin'
+[27.484s] Level 1:colcon.colcon_core.environment:checking '/home/vox/Vox/install/diffdrive_arduino/lib/pkgconfig/diffdrive_arduino.pc'
+[27.485s] Level 1:colcon.colcon_core.environment:checking '/home/vox/Vox/install/diffdrive_arduino/lib/python3.10/site-packages'
+[27.486s] Level 1:colcon.colcon_core.environment:checking '/home/vox/Vox/install/diffdrive_arduino/bin'
+[27.487s] INFO:colcon.colcon_core.shell:Creating package script '/home/vox/Vox/install/diffdrive_arduino/share/diffdrive_arduino/package.ps1'
+[27.489s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/vox/Vox/install/diffdrive_arduino/share/diffdrive_arduino/package.dsv'
+[27.491s] INFO:colcon.colcon_core.shell:Creating package script '/home/vox/Vox/install/diffdrive_arduino/share/diffdrive_arduino/package.sh'
+[27.493s] INFO:colcon.colcon_core.shell:Creating package script '/home/vox/Vox/install/diffdrive_arduino/share/diffdrive_arduino/package.bash'
+[27.494s] INFO:colcon.colcon_core.shell:Creating package script '/home/vox/Vox/install/diffdrive_arduino/share/diffdrive_arduino/package.zsh'
+[27.496s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/vox/Vox/install/diffdrive_arduino/share/colcon-core/packages/diffdrive_arduino)
+[27.640s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(diffdrive_arduino)
+[27.641s] Level 1:colcon.colcon_core.environment:checking '/home/vox/Vox/install/diffdrive_arduino' for CMake module files
+[27.646s] Level 1:colcon.colcon_core.environment:checking '/home/vox/Vox/install/diffdrive_arduino' for CMake config files
+[27.650s] Level 1:colcon.colcon_core.shell:create_environment_hook('diffdrive_arduino', 'cmake_prefix_path')
+[27.651s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/vox/Vox/install/diffdrive_arduino/share/diffdrive_arduino/hook/cmake_prefix_path.ps1'
+[27.653s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/vox/Vox/install/diffdrive_arduino/share/diffdrive_arduino/hook/cmake_prefix_path.dsv'
+[27.655s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/vox/Vox/install/diffdrive_arduino/share/diffdrive_arduino/hook/cmake_prefix_path.sh'
+[27.658s] Level 1:colcon.colcon_core.environment:checking '/home/vox/Vox/install/diffdrive_arduino/lib'
+[27.658s] Level 1:colcon.colcon_core.shell:create_environment_hook('diffdrive_arduino', 'ld_library_path_lib')
+[27.659s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/vox/Vox/install/diffdrive_arduino/share/diffdrive_arduino/hook/ld_library_path_lib.ps1'
+[27.661s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/vox/Vox/install/diffdrive_arduino/share/diffdrive_arduino/hook/ld_library_path_lib.dsv'
+[27.662s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/vox/Vox/install/diffdrive_arduino/share/diffdrive_arduino/hook/ld_library_path_lib.sh'
+[27.664s] Level 1:colcon.colcon_core.environment:checking '/home/vox/Vox/install/diffdrive_arduino/bin'
+[27.664s] Level 1:colcon.colcon_core.environment:checking '/home/vox/Vox/install/diffdrive_arduino/lib/pkgconfig/diffdrive_arduino.pc'
+[27.665s] Level 1:colcon.colcon_core.environment:checking '/home/vox/Vox/install/diffdrive_arduino/lib/python3.10/site-packages'
+[27.666s] Level 1:colcon.colcon_core.environment:checking '/home/vox/Vox/install/diffdrive_arduino/bin'
+[27.667s] INFO:colcon.colcon_core.shell:Creating package script '/home/vox/Vox/install/diffdrive_arduino/share/diffdrive_arduino/package.ps1'
+[27.670s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/vox/Vox/install/diffdrive_arduino/share/diffdrive_arduino/package.dsv'
+[27.672s] INFO:colcon.colcon_core.shell:Creating package script '/home/vox/Vox/install/diffdrive_arduino/share/diffdrive_arduino/package.sh'
+[27.675s] INFO:colcon.colcon_core.shell:Creating package script '/home/vox/Vox/install/diffdrive_arduino/share/diffdrive_arduino/package.bash'
+[27.676s] INFO:colcon.colcon_core.shell:Creating package script '/home/vox/Vox/install/diffdrive_arduino/share/diffdrive_arduino/package.zsh'
+[27.678s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/vox/Vox/install/diffdrive_arduino/share/colcon-core/packages/diffdrive_arduino)
+[27.679s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:closing loop
+[27.680s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:loop closed
+[27.681s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete finished with '0'
+[27.681s] DEBUG:colcon.colcon_core.event_reactor:joining thread
+[27.702s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.notify_send': Could not find 'notify-send'
+[27.702s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.terminal_notifier': Not used on non-Darwin systems
+[27.703s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.win32': Not used on non-Windows systems
+[27.703s] INFO:colcon.colcon_notification.desktop_notification:Sending desktop notification using 'notify2'
+[27.706s] DEBUG:colcon.colcon_notification.desktop_notification.notify2:Failed to initialize notify2: org.freedesktop.DBus.Error.ServiceUnknown: The name org.freedesktop.Notifications was not provided by any .service files
+[27.706s] DEBUG:colcon.colcon_core.event_reactor:joined thread
+[27.707s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/vox/Vox/install/local_setup.ps1'
+[27.710s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/vox/Vox/install/_local_setup_util_ps1.py'
+[27.715s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/vox/Vox/install/setup.ps1'
+[27.720s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/vox/Vox/install/local_setup.sh'
+[27.722s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/vox/Vox/install/_local_setup_util_sh.py'
+[27.724s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/vox/Vox/install/setup.sh'
+[27.730s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/vox/Vox/install/local_setup.bash'
+[27.732s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/vox/Vox/install/setup.bash'
+[27.737s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/vox/Vox/install/local_setup.zsh'
+[27.739s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/vox/Vox/install/setup.zsh'

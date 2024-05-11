@@ -1,0 +1,55 @@
+----------ROS2 IRON----------
+locale  # check for UTF-8
+sudo apt install software-properties-common
+sudo add-apt-repository universe
+sudo apt update && sudo apt install curl -y
+sudo curl -sSL https://raw.githubusercontent.com/ros/rosdistro/master/ros.key -o /usr/share/keyrings/ros-archive-keyring.gpg
+echo "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/ros-archive-keyring.gpg] http://packages.ros.org/ros2/ubuntu $(. /etc/os-release && echo $UBUNTU_CODENAME) main" | sudo tee /etc/apt/sources.list.d/ros2.list > /dev/null
+sudo apt update && sudo apt install ros-dev-tools
+sudo apt update
+sudo apt upgrade
+sudo apt install ros-iron-desktop
+sudo apt install ros-iron-xacro ros-iron-joint-state-publisher-gui
+sudo apt install ros-iron-gazebo-ros-pkgs
+
+----------ROS2 CONTROL----------
+sudo apt install ros-iron-ros2-control ros-iron-ros2-controllers ros-iron-gazebo-ros2-control
+
+----------SLAM & NAV2----------
+sudo apt install ros-iron-slam-toolbox
+sudo apt install ros-iron-navigation2 ros-iron-nav2-bringup ros-iron-turtlebot3*
+
+---------JOYSTICK-----------
+sudo apt install joystick jstest-gtk evtest
+sudo apt install ros-iron-twist-mux
+
+======================================== USAGE ===========================================
+
+1:
+	WITH JOYSTICK
+		terminal: bash sim.bash
+
+	WITHOUT JOYSTICK:
+		terminal: bash sim_no_joystick.bash
+		terminal: bash control.bash
+2:
+	WITH SLAM:
+		terminal: bash slam_online_async.bash
+
+
+	WITHOUT SLAM
+		terminal: bash load_map.bash
+		terminal: bash amcl.bash
+		terminal: 
+			bash map_server.bash
+			bash rviz.bash
+				- in rviz, click on "2D Pose Estimate" on the top bar and set it where the robot is, facing where the robot is facing. (click and hold where the robot is, then drag in the direction the robot is facing)
+				- in rviz, go to the Map component -> Update Topic -> Durability Policy -> Change from "Volatile" to "Transient Local"
+
+3:
+	NAV2:
+		terminal: bash nav2.bash
+			- in rviz, click on "2D Pose Goal" and click on where you want the robot to go and where you want it to face
+
+
+

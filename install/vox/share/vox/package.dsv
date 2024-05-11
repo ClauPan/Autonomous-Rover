@@ -1,0 +1,8 @@
+source;share/vox/hook/cmake_prefix_path.ps1
+source;share/vox/hook/cmake_prefix_path.dsv
+source;share/vox/hook/cmake_prefix_path.sh
+source;share/vox/local_setup.bash
+source;share/vox/local_setup.dsv
+source;share/vox/local_setup.ps1
+source;share/vox/local_setup.sh
+source;share/vox/local_setup.zsh

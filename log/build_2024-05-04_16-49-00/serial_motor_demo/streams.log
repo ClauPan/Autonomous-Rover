@@ -1,0 +1,22 @@
+[5.356s] Invoking command in '/home/vox/Vox/build/serial_motor_demo': CMAKE_PREFIX_PATH=/home/vox/Vox/install/serial_motor_demo_msgs:/home/vox/Vox/install/vox:/home/vox/Vox/install/diffdrive_arduino LD_LIBRARY_PATH=/home/vox/Vox/install/serial_motor_demo_msgs/lib:/home/vox/Vox/install/diffdrive_arduino/lib:/opt/ros/iron/opt/rviz_ogre_vendor/lib:/opt/ros/iron/lib/aarch64-linux-gnu:/opt/ros/iron/lib:/opt/vc/lib PYTHONPATH=/home/vox/Vox/build/serial_motor_demo/prefix_override:/home/vox/Vox/install/serial_motor_demo/lib/python3.10/site-packages:/home/vox/Vox/install/serial_motor_demo_msgs/lib/python3.10/site-packages:/home/vox/Vox/build/serial_motor_demo:/home/vox/Vox/install/serial_motor_demo/lib/python3.10/site-packages:/opt/ros/iron/lib/python3.10/site-packages /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py develop --editable --build-directory /home/vox/Vox/build/serial_motor_demo/build --no-deps symlink_data
+[6.279s] /usr/lib/python3/dist-packages/setuptools/dist.py:723: UserWarning: Usage of dash-separated 'script-dir' will not be supported in future versions. Please use the underscore name 'script_dir' instead
+[6.280s]   warnings.warn(
+[6.424s] running develop
+[6.478s] /usr/lib/python3/dist-packages/setuptools/command/easy_install.py:158: EasyInstallDeprecationWarning: easy_install command is deprecated. Use build and pip and other standards-based tools.
+[6.479s]   warnings.warn(
+[7.229s] running egg_info
+[7.229s] writing serial_motor_demo.egg-info/PKG-INFO
+[7.230s] writing dependency_links to serial_motor_demo.egg-info/dependency_links.txt
+[7.231s] writing entry points to serial_motor_demo.egg-info/entry_points.txt
+[7.232s] writing requirements to serial_motor_demo.egg-info/requires.txt
+[7.233s] writing top-level names to serial_motor_demo.egg-info/top_level.txt
+[7.334s] reading manifest file 'serial_motor_demo.egg-info/SOURCES.txt'
+[7.387s] writing manifest file 'serial_motor_demo.egg-info/SOURCES.txt'
+[7.396s] running build_ext
+[7.397s] Creating /home/vox/Vox/install/serial_motor_demo/lib/python3.10/site-packages/serial-motor-demo.egg-link (link to .)
+[7.400s] Installing driver script to /home/vox/Vox/install/serial_motor_demo/lib/serial_motor_demo
+[7.401s] Installing gui script to /home/vox/Vox/install/serial_motor_demo/lib/serial_motor_demo
+[7.402s] 
+[7.403s] Installed /home/vox/Vox/build/serial_motor_demo
+[7.403s] running symlink_data
+[7.571s] Invoked command in '/home/vox/Vox/build/serial_motor_demo' returned '0': CMAKE_PREFIX_PATH=/home/vox/Vox/install/serial_motor_demo_msgs:/home/vox/Vox/install/vox:/home/vox/Vox/install/diffdrive_arduino LD_LIBRARY_PATH=/home/vox/Vox/install/serial_motor_demo_msgs/lib:/home/vox/Vox/install/diffdrive_arduino/lib:/opt/ros/iron/opt/rviz_ogre_vendor/lib:/opt/ros/iron/lib/aarch64-linux-gnu:/opt/ros/iron/lib:/opt/vc/lib PYTHONPATH=/home/vox/Vox/build/serial_motor_demo/prefix_override:/home/vox/Vox/install/serial_motor_demo/lib/python3.10/site-packages:/home/vox/Vox/install/serial_motor_demo_msgs/lib/python3.10/site-packages:/home/vox/Vox/build/serial_motor_demo:/home/vox/Vox/install/serial_motor_demo/lib/python3.10/site-packages:/opt/ros/iron/lib/python3.10/site-packages /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py develop --editable --build-directory /home/vox/Vox/build/serial_motor_demo/build --no-deps symlink_data

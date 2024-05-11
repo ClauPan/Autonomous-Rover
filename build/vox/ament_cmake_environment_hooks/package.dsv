@@ -1,0 +1,4 @@
+source;share/vox/local_setup.bash
+source;share/vox/local_setup.dsv
+source;share/vox/local_setup.sh
+source;share/vox/local_setup.zsh
