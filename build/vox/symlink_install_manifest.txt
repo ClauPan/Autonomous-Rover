@@ -1,3 +1,5 @@
+/home/vox/Vox/install/vox/share/vox/config/ball_tracker_params.yaml
+/home/vox/Vox/install/vox/share/vox/config/ekf.yaml
 /home/vox/Vox/install/vox/share/vox/config/gazebo_params.yaml
 /home/vox/Vox/install/vox/share/vox/config/joystick.yaml
 /home/vox/Vox/install/vox/share/vox/config/mapper_params_localization.yaml
@@ -12,7 +14,9 @@
 /home/vox/Vox/install/vox/share/vox/description/robot.urdf.xacro
 /home/vox/Vox/install/vox/share/vox/description/robot_core.xacro
 /home/vox/Vox/install/vox/share/vox/description/ros2_control.xacro
+/home/vox/Vox/install/vox/share/vox/launch/ball_tracker.launch.py
 /home/vox/Vox/install/vox/share/vox/launch/camera.launch.py
+/home/vox/Vox/install/vox/share/vox/launch/ekf.launch.py
 /home/vox/Vox/install/vox/share/vox/launch/joystick.launch.py
 /home/vox/Vox/install/vox/share/vox/launch/launch_robot_no_joystick.launch.py
 /home/vox/Vox/install/vox/share/vox/launch/launch_sim.launch.py

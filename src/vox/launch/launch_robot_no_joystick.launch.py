@@ -16,7 +16,7 @@ def generate_launch_description():
 		launch_arguments={"use_sim_time": "false", "use_ros2_control": "true"}.items()
 	)
 
-	
+
 	robot_description = Command(['ros2 param get --hide-type /robot_state_publisher robot_description'])
 	controller_params_file = os.path.join(get_package_share_directory(package_name), "config", "my_controllers.yaml")
 
@@ -40,7 +40,7 @@ def generate_launch_description():
 			on_start=[diff_drive_spawner]
 		)
 	)
-	
+
 	joint_broad_spawner = Node(
 		package="controller_manager",
 		executable="spawner",
@@ -66,10 +66,26 @@ def generate_launch_description():
 		}]
 	)
 
+	imu = IncludeLaunchDescription(
+		PythonLaunchDescriptionSource([
+			os.path.join(get_package_share_directory("mpu9250driver"), "launch", "mpu9250driver_launch.py")
+		])
+	)
+
+	ekf = Node(
+		package='robot_localization',
+		executable='ekf_node',
+		name='ekf_filter_node',
+		output='screen',
+		parameters=[os.path.join(get_package_share_directory(package_name), 'config', 'ekf.yaml')]
+	)
+
 	return LaunchDescription([
 		rsp,
 		lidar,
 		delayed_controller_manager,
 		delayed_diff_drive_spawner,
-		delayed_joint_broad_spawner
+		delayed_joint_broad_spawner,
+		imu,
+		ekf
 	])

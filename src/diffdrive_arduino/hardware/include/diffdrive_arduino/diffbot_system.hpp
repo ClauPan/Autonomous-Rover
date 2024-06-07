@@ -39,21 +39,23 @@ namespace diffdrive_arduino
 class DiffDriveArduinoHardware : public hardware_interface::SystemInterface
 {
 
-struct Config
-{
-  std::string front_left_wheel_name = "";
-  std::string back_left_wheel_name = "";
-  std::string front_right_wheel_name = "";
-  std::string back_right_wheel_name = "";
-  float loop_rate = 0.0;
-  std::string device = "";
-  int baud_rate = 0;
-  int timeout_ms = 0;
-  int enc_counts_per_rev = 0;
-  int pid_p = 0;
-  int pid_d = 0;
-  int pid_i = 0;
-  int pid_o = 0;
+struct Config {
+	std::string front_left_wheel_name = "";
+  	std::string back_left_wheel_name = "";
+  	std::string front_right_wheel_name = "";
+  	std::string back_right_wheel_name = "";
+  	float loop_rate = 0.0;
+  	std::string device = "";
+  	int baud_rate = 0;
+  	int timeout_ms = 0;
+  	int enc_counts_per_rev_fw = 0;
+  	int enc_counts_per_rev_ba = 0;
+	float vel_mult_linear = 1.0;
+	float vel_mult_angular = 1.0;
+	int pid_p = 0;
+  	int pid_d = 0;
+  	int pid_i = 0;
+  	int pid_o = 0;
 };
 
 
