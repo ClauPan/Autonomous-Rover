@@ -1,0 +1,29 @@
+[3.490s] Invoking command in '/home/vox/Vox/build/serial_motor_demo': AMENT_PREFIX_PATH=/home/vox/Vox/install/serial_motor_demo_msgs:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/vox/Vox/install/serial_motor_demo_msgs LD_LIBRARY_PATH=/home/vox/Vox/install/serial_motor_demo_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/vox/Vox/build/serial_motor_demo/prefix_override:/home/vox/Vox/install/serial_motor_demo/lib/python3.10/site-packages:/home/vox/Vox/install/serial_motor_demo_msgs/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py develop --editable --build-directory /home/vox/Vox/build/serial_motor_demo/build --no-deps symlink_data
+[4.734s] /usr/lib/python3/dist-packages/setuptools/dist.py:723: UserWarning: Usage of dash-separated 'script-dir' will not be supported in future versions. Please use the underscore name 'script_dir' instead
+[4.735s]   warnings.warn(
+[4.915s] running develop
+[4.916s] /usr/lib/python3/dist-packages/setuptools/command/easy_install.py:158: EasyInstallDeprecationWarning: easy_install command is deprecated. Use build and pip and other standards-based tools.
+[4.917s]   warnings.warn(
+[5.883s] running egg_info
+[5.883s] creating serial_motor_demo.egg-info
+[5.884s] writing serial_motor_demo.egg-info/PKG-INFO
+[5.885s] writing dependency_links to serial_motor_demo.egg-info/dependency_links.txt
+[5.886s] writing entry points to serial_motor_demo.egg-info/entry_points.txt
+[5.887s] writing requirements to serial_motor_demo.egg-info/requires.txt
+[5.887s] writing top-level names to serial_motor_demo.egg-info/top_level.txt
+[5.888s] writing manifest file 'serial_motor_demo.egg-info/SOURCES.txt'
+[5.896s] reading manifest file 'serial_motor_demo.egg-info/SOURCES.txt'
+[5.899s] writing manifest file 'serial_motor_demo.egg-info/SOURCES.txt'
+[5.906s] running build_ext
+[5.906s] Creating /home/vox/Vox/install/serial_motor_demo/lib/python3.10/site-packages/serial-motor-demo.egg-link (link to .)
+[5.911s] Installing driver script to /home/vox/Vox/install/serial_motor_demo/lib/serial_motor_demo
+[5.912s] Installing gui script to /home/vox/Vox/install/serial_motor_demo/lib/serial_motor_demo
+[5.913s] 
+[5.914s] Installed /home/vox/Vox/build/serial_motor_demo
+[5.915s] running symlink_data
+[5.915s] creating /home/vox/Vox/install/serial_motor_demo/share/ament_index
+[5.916s] creating /home/vox/Vox/install/serial_motor_demo/share/ament_index/resource_index
+[5.917s] creating /home/vox/Vox/install/serial_motor_demo/share/ament_index/resource_index/packages
+[5.919s] symbolically linking /home/vox/Vox/build/serial_motor_demo/resource/serial_motor_demo -> /home/vox/Vox/install/serial_motor_demo/share/ament_index/resource_index/packages
+[5.921s] symbolically linking /home/vox/Vox/build/serial_motor_demo/package.xml -> /home/vox/Vox/install/serial_motor_demo/share/serial_motor_demo
+[6.066s] Invoked command in '/home/vox/Vox/build/serial_motor_demo' returned '0': AMENT_PREFIX_PATH=/home/vox/Vox/install/serial_motor_demo_msgs:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/vox/Vox/install/serial_motor_demo_msgs LD_LIBRARY_PATH=/home/vox/Vox/install/serial_motor_demo_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/vox/Vox/build/serial_motor_demo/prefix_override:/home/vox/Vox/install/serial_motor_demo/lib/python3.10/site-packages:/home/vox/Vox/install/serial_motor_demo_msgs/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py develop --editable --build-directory /home/vox/Vox/build/serial_motor_demo/build --no-deps symlink_data

@@ -1,4 +1,4 @@
-# Install script for directory: /home/vox/Vox/src/ros2_mpu9250_driver/lib/i2c
+# Install script for directory: /home/vox/Vox/src/imu/lib/i2c
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)

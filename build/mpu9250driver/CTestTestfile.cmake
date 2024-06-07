@@ -1,5 +1,5 @@
 # CMake generated Testfile for 
-# Source directory: /home/vox/Vox/src/ros2_mpu9250_driver
+# Source directory: /home/vox/Vox/src/imu
 # Build directory: /home/vox/Vox/build/mpu9250driver
 # 
 # This file includes the relevant testing commands required for 

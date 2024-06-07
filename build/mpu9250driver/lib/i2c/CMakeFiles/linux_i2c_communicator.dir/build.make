@@ -53,7 +53,7 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/vox/Vox/src/ros2_mpu9250_driver
+CMAKE_SOURCE_DIR = /home/vox/Vox/src/imu
 
 # The top-level build directory on which CMake was run.
 CMAKE_BINARY_DIR = /home/vox/Vox/build/mpu9250driver
@@ -70,18 +70,18 @@ include lib/i2c/CMakeFiles/linux_i2c_communicator.dir/progress.make
 include lib/i2c/CMakeFiles/linux_i2c_communicator.dir/flags.make
 
 lib/i2c/CMakeFiles/linux_i2c_communicator.dir/src/LinuxI2cCommunicator.cpp.o: lib/i2c/CMakeFiles/linux_i2c_communicator.dir/flags.make
-lib/i2c/CMakeFiles/linux_i2c_communicator.dir/src/LinuxI2cCommunicator.cpp.o: /home/vox/Vox/src/ros2_mpu9250_driver/lib/i2c/src/LinuxI2cCommunicator.cpp
+lib/i2c/CMakeFiles/linux_i2c_communicator.dir/src/LinuxI2cCommunicator.cpp.o: /home/vox/Vox/src/imu/lib/i2c/src/LinuxI2cCommunicator.cpp
 lib/i2c/CMakeFiles/linux_i2c_communicator.dir/src/LinuxI2cCommunicator.cpp.o: lib/i2c/CMakeFiles/linux_i2c_communicator.dir/compiler_depend.ts
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/vox/Vox/build/mpu9250driver/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object lib/i2c/CMakeFiles/linux_i2c_communicator.dir/src/LinuxI2cCommunicator.cpp.o"
-	cd /home/vox/Vox/build/mpu9250driver/lib/i2c && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT lib/i2c/CMakeFiles/linux_i2c_communicator.dir/src/LinuxI2cCommunicator.cpp.o -MF CMakeFiles/linux_i2c_communicator.dir/src/LinuxI2cCommunicator.cpp.o.d -o CMakeFiles/linux_i2c_communicator.dir/src/LinuxI2cCommunicator.cpp.o -c /home/vox/Vox/src/ros2_mpu9250_driver/lib/i2c/src/LinuxI2cCommunicator.cpp
+	cd /home/vox/Vox/build/mpu9250driver/lib/i2c && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT lib/i2c/CMakeFiles/linux_i2c_communicator.dir/src/LinuxI2cCommunicator.cpp.o -MF CMakeFiles/linux_i2c_communicator.dir/src/LinuxI2cCommunicator.cpp.o.d -o CMakeFiles/linux_i2c_communicator.dir/src/LinuxI2cCommunicator.cpp.o -c /home/vox/Vox/src/imu/lib/i2c/src/LinuxI2cCommunicator.cpp
 
 lib/i2c/CMakeFiles/linux_i2c_communicator.dir/src/LinuxI2cCommunicator.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/linux_i2c_communicator.dir/src/LinuxI2cCommunicator.cpp.i"
-	cd /home/vox/Vox/build/mpu9250driver/lib/i2c && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/vox/Vox/src/ros2_mpu9250_driver/lib/i2c/src/LinuxI2cCommunicator.cpp > CMakeFiles/linux_i2c_communicator.dir/src/LinuxI2cCommunicator.cpp.i
+	cd /home/vox/Vox/build/mpu9250driver/lib/i2c && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/vox/Vox/src/imu/lib/i2c/src/LinuxI2cCommunicator.cpp > CMakeFiles/linux_i2c_communicator.dir/src/LinuxI2cCommunicator.cpp.i
 
 lib/i2c/CMakeFiles/linux_i2c_communicator.dir/src/LinuxI2cCommunicator.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/linux_i2c_communicator.dir/src/LinuxI2cCommunicator.cpp.s"
-	cd /home/vox/Vox/build/mpu9250driver/lib/i2c && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/vox/Vox/src/ros2_mpu9250_driver/lib/i2c/src/LinuxI2cCommunicator.cpp -o CMakeFiles/linux_i2c_communicator.dir/src/LinuxI2cCommunicator.cpp.s
+	cd /home/vox/Vox/build/mpu9250driver/lib/i2c && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/vox/Vox/src/imu/lib/i2c/src/LinuxI2cCommunicator.cpp -o CMakeFiles/linux_i2c_communicator.dir/src/LinuxI2cCommunicator.cpp.s
 
 # Object files for target linux_i2c_communicator
 linux_i2c_communicator_OBJECTS = \
@@ -106,6 +106,6 @@ lib/i2c/CMakeFiles/linux_i2c_communicator.dir/clean:
 .PHONY : lib/i2c/CMakeFiles/linux_i2c_communicator.dir/clean
 
 lib/i2c/CMakeFiles/linux_i2c_communicator.dir/depend:
-	cd /home/vox/Vox/build/mpu9250driver && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/vox/Vox/src/ros2_mpu9250_driver /home/vox/Vox/src/ros2_mpu9250_driver/lib/i2c /home/vox/Vox/build/mpu9250driver /home/vox/Vox/build/mpu9250driver/lib/i2c /home/vox/Vox/build/mpu9250driver/lib/i2c/CMakeFiles/linux_i2c_communicator.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/vox/Vox/build/mpu9250driver && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/vox/Vox/src/imu /home/vox/Vox/src/imu/lib/i2c /home/vox/Vox/build/mpu9250driver /home/vox/Vox/build/mpu9250driver/lib/i2c /home/vox/Vox/build/mpu9250driver/lib/i2c/CMakeFiles/linux_i2c_communicator.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : lib/i2c/CMakeFiles/linux_i2c_communicator.dir/depend
 

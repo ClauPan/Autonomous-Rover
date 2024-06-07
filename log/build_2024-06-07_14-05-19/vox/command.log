@@ -1,0 +1,6 @@
+Invoking command in '/home/vox/Vox/build/vox': CMAKE_PREFIX_PATH=/opt/ros/iron /usr/bin/cmake /home/vox/Vox/src/vox -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/vox/Vox/install/vox
+Invoked command in '/home/vox/Vox/build/vox' returned '0': CMAKE_PREFIX_PATH=/opt/ros/iron /usr/bin/cmake /home/vox/Vox/src/vox -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/vox/Vox/install/vox
+Invoking command in '/home/vox/Vox/build/vox': CMAKE_PREFIX_PATH=/opt/ros/iron /usr/bin/cmake --build /home/vox/Vox/build/vox -- -j4 -l4
+Invoked command in '/home/vox/Vox/build/vox' returned '0': CMAKE_PREFIX_PATH=/opt/ros/iron /usr/bin/cmake --build /home/vox/Vox/build/vox -- -j4 -l4
+Invoking command in '/home/vox/Vox/build/vox': CMAKE_PREFIX_PATH=/opt/ros/iron /usr/bin/cmake --install /home/vox/Vox/build/vox
+Invoked command in '/home/vox/Vox/build/vox' returned '0': CMAKE_PREFIX_PATH=/opt/ros/iron /usr/bin/cmake --install /home/vox/Vox/build/vox

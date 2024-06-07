@@ -1,4 +1,4 @@
-# Install script for directory: /home/vox/Vox/src/ros2_mpu9250_driver/lib
+# Install script for directory: /home/vox/Vox/src/imu/lib
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)

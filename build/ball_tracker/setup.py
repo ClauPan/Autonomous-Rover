@@ -1,1 +1,1 @@
-/home/vox/Vox/src/ball_tracker/setup.py
+/home/vox/Vox/src/tracker/setup.py

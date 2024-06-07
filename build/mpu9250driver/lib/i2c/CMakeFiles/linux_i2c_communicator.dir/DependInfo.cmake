@@ -8,7 +8,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
-  "/home/vox/Vox/src/ros2_mpu9250_driver/lib/i2c/src/LinuxI2cCommunicator.cpp" "lib/i2c/CMakeFiles/linux_i2c_communicator.dir/src/LinuxI2cCommunicator.cpp.o" "gcc" "lib/i2c/CMakeFiles/linux_i2c_communicator.dir/src/LinuxI2cCommunicator.cpp.o.d"
+  "/home/vox/Vox/src/imu/lib/i2c/src/LinuxI2cCommunicator.cpp" "lib/i2c/CMakeFiles/linux_i2c_communicator.dir/src/LinuxI2cCommunicator.cpp.o" "gcc" "lib/i2c/CMakeFiles/linux_i2c_communicator.dir/src/LinuxI2cCommunicator.cpp.o.d"
   )
 
 # Targets to which this target links.

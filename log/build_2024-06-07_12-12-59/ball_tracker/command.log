@@ -1,1 +1,0 @@
-Invoking command in '/home/vox/Vox/build/ball_tracker': PYTHONPATH=/home/vox/Vox/build/ball_tracker/prefix_override:/home/vox/Vox/install/ball_tracker/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py develop --editable --build-directory /home/vox/Vox/build/ball_tracker/build --no-deps symlink_data
