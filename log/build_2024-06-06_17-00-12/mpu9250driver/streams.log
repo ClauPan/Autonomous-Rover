@@ -1,0 +1,27 @@
+[1.623s] Invoking command in '/home/vox/Vox/build/mpu9250driver': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/vox/Vox/install/serial_motor_demo:/home/vox/Vox/install/ball_tracker:/opt/ros/iron /usr/bin/cmake --build /home/vox/Vox/build/mpu9250driver -- -j4 -l4
+[1.965s] [ 33%] Built target mpu9250sensor
+[2.002s] [ 66%] Built target linux_i2c_communicator
+[2.139s] [100%] Built target mpu9250driver
+[2.211s] Invoked command in '/home/vox/Vox/build/mpu9250driver' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/vox/Vox/install/serial_motor_demo:/home/vox/Vox/install/ball_tracker:/opt/ros/iron /usr/bin/cmake --build /home/vox/Vox/build/mpu9250driver -- -j4 -l4
+[2.404s] Invoking command in '/home/vox/Vox/build/mpu9250driver': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/vox/Vox/install/serial_motor_demo:/home/vox/Vox/install/ball_tracker:/opt/ros/iron /usr/bin/cmake --install /home/vox/Vox/build/mpu9250driver
+[2.446s] -- Install configuration: ""
+[2.448s] -- Execute custom install script
+[2.449s] -- Up-to-date symlink: /home/vox/Vox/install/mpu9250driver/lib/mpu9250driver/mpu9250driver
+[2.451s] -- Up-to-date symlink: /home/vox/Vox/install/mpu9250driver/share/mpu9250driver//launch/mpu9250driver_launch.py
+[2.453s] -- Up-to-date symlink: /home/vox/Vox/install/mpu9250driver/share/mpu9250driver//params/mpu9250.yaml
+[2.454s] -- Up-to-date symlink: /home/vox/Vox/install/mpu9250driver/share/ament_index/resource_index/package_run_dependencies/mpu9250driver
+[2.455s] -- Up-to-date symlink: /home/vox/Vox/install/mpu9250driver/share/ament_index/resource_index/parent_prefix_path/mpu9250driver
+[2.457s] -- Up-to-date symlink: /home/vox/Vox/install/mpu9250driver/share/mpu9250driver/environment/ament_prefix_path.sh
+[2.457s] -- Up-to-date symlink: /home/vox/Vox/install/mpu9250driver/share/mpu9250driver/environment/ament_prefix_path.dsv
+[2.458s] -- Up-to-date symlink: /home/vox/Vox/install/mpu9250driver/share/mpu9250driver/environment/path.sh
+[2.459s] -- Up-to-date symlink: /home/vox/Vox/install/mpu9250driver/share/mpu9250driver/environment/path.dsv
+[2.460s] -- Up-to-date symlink: /home/vox/Vox/install/mpu9250driver/share/mpu9250driver/local_setup.bash
+[2.462s] -- Up-to-date symlink: /home/vox/Vox/install/mpu9250driver/share/mpu9250driver/local_setup.sh
+[2.463s] -- Up-to-date symlink: /home/vox/Vox/install/mpu9250driver/share/mpu9250driver/local_setup.zsh
+[2.464s] -- Up-to-date symlink: /home/vox/Vox/install/mpu9250driver/share/mpu9250driver/local_setup.dsv
+[2.465s] -- Symlinking: /home/vox/Vox/install/mpu9250driver/share/mpu9250driver/package.dsv
+[2.504s] -- Up-to-date symlink: /home/vox/Vox/install/mpu9250driver/share/ament_index/resource_index/packages/mpu9250driver
+[2.505s] -- Up-to-date symlink: /home/vox/Vox/install/mpu9250driver/share/mpu9250driver/cmake/mpu9250driverConfig.cmake
+[2.506s] -- Up-to-date symlink: /home/vox/Vox/install/mpu9250driver/share/mpu9250driver/cmake/mpu9250driverConfig-version.cmake
+[2.507s] -- Up-to-date symlink: /home/vox/Vox/install/mpu9250driver/share/mpu9250driver/package.xml
+[2.526s] Invoked command in '/home/vox/Vox/build/mpu9250driver' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/vox/Vox/install/serial_motor_demo:/home/vox/Vox/install/ball_tracker:/opt/ros/iron /usr/bin/cmake --install /home/vox/Vox/build/mpu9250driver

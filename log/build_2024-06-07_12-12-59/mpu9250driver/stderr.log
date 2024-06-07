@@ -1,0 +1,8 @@
+In file included from [01m[K/home/vox/Vox/src/ros2_mpu9250_driver/src/mpu9250driver.cpp:1[m[K:
+[01m[K/home/vox/Vox/src/ros2_mpu9250_driver/include/mpu9250driver/mpu9250driver.h:7:10:[m[K [01;31m[Kfatal error: [m[Kgeomegry_msgs/msg/twist.hpp: No such file or directory
+    7 | #include [01;31m[K"geomegry_msgs/msg/twist.hpp"[m[K
+      |          [01;31m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+compilation terminated.
+gmake[2]: *** [CMakeFiles/mpu9250driver.dir/build.make:76: CMakeFiles/mpu9250driver.dir/src/mpu9250driver.cpp.o] Error 1
+gmake[1]: *** [CMakeFiles/Makefile2:188: CMakeFiles/mpu9250driver.dir/all] Error 2
+gmake: *** [Makefile:146: all] Error 2

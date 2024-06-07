@@ -1,0 +1,595 @@
+[0.000000] (-) TimerEvent: {}
+[0.001692] (ball_tracker) JobQueued: {'identifier': 'ball_tracker', 'dependencies': OrderedDict()}
+[0.001821] (diffdrive_arduino) JobQueued: {'identifier': 'diffdrive_arduino', 'dependencies': OrderedDict()}
+[0.002331] (mpu9250driver) JobQueued: {'identifier': 'mpu9250driver', 'dependencies': OrderedDict()}
+[0.002416] (serial_motor_demo_msgs) JobQueued: {'identifier': 'serial_motor_demo_msgs', 'dependencies': OrderedDict()}
+[0.002493] (vox) JobQueued: {'identifier': 'vox', 'dependencies': OrderedDict()}
+[0.002570] (serial_motor_demo) JobQueued: {'identifier': 'serial_motor_demo', 'dependencies': OrderedDict([('serial_motor_demo_msgs', '/home/vox/Vox/install/serial_motor_demo_msgs')])}
+[0.002656] (serial_motor_demo_msgs) JobStarted: {'identifier': 'serial_motor_demo_msgs'}
+[0.026829] (ball_tracker) JobStarted: {'identifier': 'ball_tracker'}
+[0.051856] (diffdrive_arduino) JobStarted: {'identifier': 'diffdrive_arduino'}
+[0.068941] (mpu9250driver) JobStarted: {'identifier': 'mpu9250driver'}
+[0.092289] (serial_motor_demo_msgs) JobProgress: {'identifier': 'serial_motor_demo_msgs', 'progress': 'cmake'}
+[0.095131] (serial_motor_demo_msgs) JobProgress: {'identifier': 'serial_motor_demo_msgs', 'progress': 'build'}
+[0.097702] (serial_motor_demo_msgs) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/vox/Vox/build/serial_motor_demo_msgs', '--', '-j4', '-l4'], 'cwd': '/home/vox/Vox/build/serial_motor_demo_msgs', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'vox'), ('SSH_CLIENT', '192.168.1.150 4737 22'), ('XDG_SESSION_TYPE', 'tty'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/opt/ros/iron/opt/rviz_ogre_vendor/lib:/opt/ros/iron/lib/aarch64-linux-gnu:/opt/ros/iron/lib'), ('MOTD_SHOWN', 'pam'), ('HOME', '/home/vox'), ('OLDPWD', '/home/vox'), ('SSH_TTY', '/dev/pts/0'), ('ROS_PYTHON_VERSION', '3'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('ROS_DISTRO', 'iron'), ('LOGNAME', 'vox'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('TERM', 'xterm-256color'), ('XDG_SESSION_ID', '1'), ('PATH', '/opt/ros/iron/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('LANG', 'C.UTF-8'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('ROS_DOMAIN_ID', '42'), ('AMENT_PREFIX_PATH', '/opt/ros/iron'), ('SHELL', '/bin/bash'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('ROS_AUTOMATIC_DISCOVERY_RANGE', 'SUBNET'), ('PWD', '/home/vox/Vox/build/serial_motor_demo_msgs'), ('SSH_CONNECTION', '192.168.1.150 4737 192.168.1.236 22'), ('XDG_DATA_DIRS', '/usr/local/share:/usr/share:/var/lib/snapd/desktop'), ('PYTHONPATH', '/opt/ros/iron/lib/python3.10/site-packages'), ('COLCON', '1'), ('CMAKE_PREFIX_PATH', '/opt/ros/iron')]), 'shell': False}
+[0.108088] (-) TimerEvent: {}
+[0.209826] (-) TimerEvent: {}
+[0.310763] (-) TimerEvent: {}
+[0.411897] (-) TimerEvent: {}
+[0.512834] (-) TimerEvent: {}
+[0.613793] (-) TimerEvent: {}
+[0.715221] (-) TimerEvent: {}
+[0.816860] (-) TimerEvent: {}
+[0.917750] (-) TimerEvent: {}
+[1.019418] (-) TimerEvent: {}
+[1.120915] (-) TimerEvent: {}
+[1.222348] (-) TimerEvent: {}
+[1.323074] (-) TimerEvent: {}
+[1.423831] (-) TimerEvent: {}
+[1.524624] (-) TimerEvent: {}
+[1.596622] (diffdrive_arduino) JobProgress: {'identifier': 'diffdrive_arduino', 'progress': 'cmake'}
+[1.599689] (diffdrive_arduino) JobProgress: {'identifier': 'diffdrive_arduino', 'progress': 'build'}
+[1.600953] (diffdrive_arduino) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/vox/Vox/build/diffdrive_arduino', '--', '-j4', '-l4'], 'cwd': '/home/vox/Vox/build/diffdrive_arduino', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'vox'), ('SSH_CLIENT', '192.168.1.150 4737 22'), ('XDG_SESSION_TYPE', 'tty'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/opt/ros/iron/opt/rviz_ogre_vendor/lib:/opt/ros/iron/lib/aarch64-linux-gnu:/opt/ros/iron/lib'), ('MOTD_SHOWN', 'pam'), ('HOME', '/home/vox'), ('OLDPWD', '/home/vox'), ('SSH_TTY', '/dev/pts/0'), ('ROS_PYTHON_VERSION', '3'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('ROS_DISTRO', 'iron'), ('LOGNAME', 'vox'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('TERM', 'xterm-256color'), ('XDG_SESSION_ID', '1'), ('PATH', '/opt/ros/iron/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('LANG', 'C.UTF-8'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('ROS_DOMAIN_ID', '42'), ('AMENT_PREFIX_PATH', '/opt/ros/iron'), ('SHELL', '/bin/bash'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('ROS_AUTOMATIC_DISCOVERY_RANGE', 'SUBNET'), ('PWD', '/home/vox/Vox/build/diffdrive_arduino'), ('SSH_CONNECTION', '192.168.1.150 4737 192.168.1.236 22'), ('XDG_DATA_DIRS', '/usr/local/share:/usr/share:/var/lib/snapd/desktop'), ('PYTHONPATH', '/opt/ros/iron/lib/python3.10/site-packages'), ('COLCON', '1'), ('CMAKE_PREFIX_PATH', '/opt/ros/iron')]), 'shell': False}
+[1.614751] (serial_motor_demo_msgs) StdoutLine: {'line': b'[  1%] Built target serial_motor_demo_msgs__rosidl_generator_type_description\n'}
+[1.615729] (serial_motor_demo_msgs) StdoutLine: {'line': b'[  1%] Built target ament_cmake_python_symlink_serial_motor_demo_msgs\n'}
+[1.616260] (serial_motor_demo_msgs) StdoutLine: {'line': b'[  3%] Built target serial_motor_demo_msgs__cpp\n'}
+[1.616675] (serial_motor_demo_msgs) StdoutLine: {'line': b'[ 24%] Built target serial_motor_demo_msgs__rosidl_generator_c\n'}
+[1.617131] (serial_motor_demo_msgs) StdoutLine: {'line': b'[ 33%] Built target serial_motor_demo_msgs__rosidl_typesupport_cpp\n'}
+[1.617618] (serial_motor_demo_msgs) StdoutLine: {'line': b'[ 42%] Built target serial_motor_demo_msgs__rosidl_typesupport_fastrtps_c\n'}
+[1.618075] (serial_motor_demo_msgs) StdoutLine: {'line': b'[ 51%] Built target serial_motor_demo_msgs__rosidl_typesupport_introspection_c\n'}
+[1.618535] (serial_motor_demo_msgs) StdoutLine: {'line': b'[ 61%] Built target serial_motor_demo_msgs__rosidl_typesupport_fastrtps_cpp\n'}
+[1.619025] (serial_motor_demo_msgs) StdoutLine: {'line': b'[ 70%] Built target serial_motor_demo_msgs__rosidl_typesupport_c\n'}
+[1.619674] (serial_motor_demo_msgs) StdoutLine: {'line': b'[ 79%] Built target serial_motor_demo_msgs__rosidl_typesupport_introspection_cpp\n'}
+[1.620303] (serial_motor_demo_msgs) StdoutLine: {'line': b'[ 79%] Built target serial_motor_demo_msgs\n'}
+[1.620834] (serial_motor_demo_msgs) StdoutLine: {'line': b'[ 81%] Built target serial_motor_demo_msgs__py\n'}
+[1.621297] (serial_motor_demo_msgs) StdoutLine: {'line': b'[ 88%] Built target serial_motor_demo_msgs__rosidl_generator_py\n'}
+[1.621761] (serial_motor_demo_msgs) StdoutLine: {'line': b'[ 92%] Built target serial_motor_demo_msgs__rosidl_typesupport_fastrtps_c__pyext\n'}
+[1.622148] (serial_motor_demo_msgs) StdoutLine: {'line': b'[ 96%] Built target serial_motor_demo_msgs__rosidl_typesupport_introspection_c__pyext\n'}
+[1.622592] (serial_motor_demo_msgs) StdoutLine: {'line': b'[100%] Built target serial_motor_demo_msgs__rosidl_typesupport_c__pyext\n'}
+[1.628501] (-) TimerEvent: {}
+[1.630955] (mpu9250driver) JobProgress: {'identifier': 'mpu9250driver', 'progress': 'cmake'}
+[1.634729] (mpu9250driver) JobProgress: {'identifier': 'mpu9250driver', 'progress': 'build'}
+[1.636319] (mpu9250driver) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/vox/Vox/build/mpu9250driver', '--', '-j4', '-l4'], 'cwd': '/home/vox/Vox/build/mpu9250driver', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'vox'), ('SSH_CLIENT', '192.168.1.150 4737 22'), ('XDG_SESSION_TYPE', 'tty'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/opt/ros/iron/opt/rviz_ogre_vendor/lib:/opt/ros/iron/lib/aarch64-linux-gnu:/opt/ros/iron/lib'), ('MOTD_SHOWN', 'pam'), ('HOME', '/home/vox'), ('OLDPWD', '/home/vox'), ('SSH_TTY', '/dev/pts/0'), ('ROS_PYTHON_VERSION', '3'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('ROS_DISTRO', 'iron'), ('LOGNAME', 'vox'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('TERM', 'xterm-256color'), ('XDG_SESSION_ID', '1'), ('PATH', '/opt/ros/iron/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('LANG', 'C.UTF-8'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('ROS_DOMAIN_ID', '42'), ('AMENT_PREFIX_PATH', '/opt/ros/iron'), ('SHELL', '/bin/bash'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('ROS_AUTOMATIC_DISCOVERY_RANGE', 'SUBNET'), ('PWD', '/home/vox/Vox/build/mpu9250driver'), ('SSH_CONNECTION', '192.168.1.150 4737 192.168.1.236 22'), ('XDG_DATA_DIRS', '/usr/local/share:/usr/share:/var/lib/snapd/desktop'), ('PYTHONPATH', '/opt/ros/iron/lib/python3.10/site-packages'), ('COLCON', '1'), ('CMAKE_PREFIX_PATH', '/opt/ros/iron')]), 'shell': False}
+[1.728725] (-) TimerEvent: {}
+[1.787650] (serial_motor_demo_msgs) StdoutLine: {'line': b'running egg_info\n'}
+[1.792660] (serial_motor_demo_msgs) StdoutLine: {'line': b'writing serial_motor_demo_msgs.egg-info/PKG-INFO\n'}
+[1.794741] (serial_motor_demo_msgs) StdoutLine: {'line': b'writing dependency_links to serial_motor_demo_msgs.egg-info/dependency_links.txt\n'}
+[1.796793] (serial_motor_demo_msgs) StdoutLine: {'line': b'writing top-level names to serial_motor_demo_msgs.egg-info/top_level.txt\n'}
+[1.810769] (serial_motor_demo_msgs) StdoutLine: {'line': b"reading manifest file 'serial_motor_demo_msgs.egg-info/SOURCES.txt'\n"}
+[1.815446] (serial_motor_demo_msgs) StdoutLine: {'line': b"writing manifest file 'serial_motor_demo_msgs.egg-info/SOURCES.txt'\n"}
+[1.829040] (-) TimerEvent: {}
+[1.931580] (-) TimerEvent: {}
+[1.948496] (diffdrive_arduino) StdoutLine: {'line': b'[100%] Built target diffdrive_arduino\n'}
+[1.972550] (mpu9250driver) StdoutLine: {'line': b'[ 33%] Built target linux_i2c_communicator\n'}
+[1.979916] (mpu9250driver) StdoutLine: {'line': b'[ 66%] Built target mpu9250sensor\n'}
+[2.006886] (diffdrive_arduino) CommandEnded: {'returncode': 0}
+[2.017998] (serial_motor_demo_msgs) StdoutLine: {'line': b'[100%] Built target ament_cmake_python_build_serial_motor_demo_msgs_egg\n'}
+[2.031795] (-) TimerEvent: {}
+[2.077197] (serial_motor_demo_msgs) CommandEnded: {'returncode': 0}
+[2.115629] (mpu9250driver) StdoutLine: {'line': b'[ 83%] \x1b[32mBuilding CXX object CMakeFiles/mpu9250driver.dir/src/mpu9250driver.cpp.o\x1b[0m\n'}
+[2.131950] (-) TimerEvent: {}
+[2.164259] (diffdrive_arduino) JobProgress: {'identifier': 'diffdrive_arduino', 'progress': 'install'}
+[2.205488] (diffdrive_arduino) Command: {'cmd': ['/usr/bin/cmake', '--install', '/home/vox/Vox/build/diffdrive_arduino'], 'cwd': '/home/vox/Vox/build/diffdrive_arduino', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'vox'), ('SSH_CLIENT', '192.168.1.150 4737 22'), ('XDG_SESSION_TYPE', 'tty'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/opt/ros/iron/opt/rviz_ogre_vendor/lib:/opt/ros/iron/lib/aarch64-linux-gnu:/opt/ros/iron/lib'), ('MOTD_SHOWN', 'pam'), ('HOME', '/home/vox'), ('OLDPWD', '/home/vox'), ('SSH_TTY', '/dev/pts/0'), ('ROS_PYTHON_VERSION', '3'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('ROS_DISTRO', 'iron'), ('LOGNAME', 'vox'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('TERM', 'xterm-256color'), ('XDG_SESSION_ID', '1'), ('PATH', '/opt/ros/iron/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('LANG', 'C.UTF-8'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('ROS_DOMAIN_ID', '42'), ('AMENT_PREFIX_PATH', '/opt/ros/iron'), ('SHELL', '/bin/bash'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('ROS_AUTOMATIC_DISCOVERY_RANGE', 'SUBNET'), ('PWD', '/home/vox/Vox/build/diffdrive_arduino'), ('SSH_CONNECTION', '192.168.1.150 4737 192.168.1.236 22'), ('XDG_DATA_DIRS', '/usr/local/share:/usr/share:/var/lib/snapd/desktop'), ('PYTHONPATH', '/opt/ros/iron/lib/python3.10/site-packages'), ('COLCON', '1'), ('CMAKE_PREFIX_PATH', '/opt/ros/iron')]), 'shell': False}
+[2.232154] (-) TimerEvent: {}
+[2.241215] (diffdrive_arduino) StdoutLine: {'line': b'-- Install configuration: ""\n'}
+[2.243621] (diffdrive_arduino) StdoutLine: {'line': b'-- Execute custom install script\n'}
+[2.245402] (diffdrive_arduino) StdoutLine: {'line': b'-- Up-to-date symlink: /home/vox/Vox/install/diffdrive_arduino/share/diffdrive_arduino//diffdrive_arduino.xml\n'}
+[2.248574] (diffdrive_arduino) StdoutLine: {'line': b'-- Up-to-date symlink: /home/vox/Vox/install/diffdrive_arduino/include/diffdrive_arduino/diffdrive_arduino/arduino_comms.hpp\n'}
+[2.249410] (diffdrive_arduino) StdoutLine: {'line': b'-- Up-to-date symlink: /home/vox/Vox/install/diffdrive_arduino/include/diffdrive_arduino/diffdrive_arduino/diffbot_system.hpp\n'}
+[2.250416] (diffdrive_arduino) StdoutLine: {'line': b'-- Up-to-date symlink: /home/vox/Vox/install/diffdrive_arduino/include/diffdrive_arduino/diffdrive_arduino/visibility_control.h\n'}
+[2.251879] (diffdrive_arduino) StdoutLine: {'line': b'-- Up-to-date symlink: /home/vox/Vox/install/diffdrive_arduino/include/diffdrive_arduino/diffdrive_arduino/wheel.hpp\n'}
+[2.254148] (diffdrive_arduino) StdoutLine: {'line': b'-- Up-to-date symlink: /home/vox/Vox/install/diffdrive_arduino/share/diffdrive_arduino/launch/view_robot.launch.py\n'}
+[2.255817] (diffdrive_arduino) StdoutLine: {'line': b'-- Up-to-date symlink: /home/vox/Vox/install/diffdrive_arduino/share/diffdrive_arduino/ros2_control/diffbot.ros2_control.xacro\n'}
+[2.257290] (diffdrive_arduino) StdoutLine: {'line': b'-- Up-to-date symlink: /home/vox/Vox/install/diffdrive_arduino/share/diffdrive_arduino/urdf/diffbot.materials.xacro\n'}
+[2.258008] (diffdrive_arduino) StdoutLine: {'line': b'-- Up-to-date symlink: /home/vox/Vox/install/diffdrive_arduino/share/diffdrive_arduino/urdf/diffbot.urdf.xacro\n'}
+[2.259177] (diffdrive_arduino) StdoutLine: {'line': b'-- Up-to-date symlink: /home/vox/Vox/install/diffdrive_arduino/share/diffdrive_arduino/urdf/diffbot_description.urdf.xacro\n'}
+[2.261101] (diffdrive_arduino) StdoutLine: {'line': b'-- Up-to-date symlink: /home/vox/Vox/install/diffdrive_arduino/share/diffdrive_arduino/rviz/diffbot.rviz\n'}
+[2.261742] (diffdrive_arduino) StdoutLine: {'line': b'-- Up-to-date symlink: /home/vox/Vox/install/diffdrive_arduino/share/diffdrive_arduino/rviz/diffbot_view.rviz\n'}
+[2.263846] (diffdrive_arduino) StdoutLine: {'line': b'-- Up-to-date symlink: /home/vox/Vox/install/diffdrive_arduino/share/diffdrive_arduino/launch/diffbot.launch.py\n'}
+[2.265354] (diffdrive_arduino) StdoutLine: {'line': b'-- Up-to-date symlink: /home/vox/Vox/install/diffdrive_arduino/share/diffdrive_arduino/config/diffbot_controllers.yaml\n'}
+[2.267091] (diffdrive_arduino) StdoutLine: {'line': b'-- Up-to-date symlink: /home/vox/Vox/install/diffdrive_arduino/share/diffdrive_arduino/environment/library_path.sh\n'}
+[2.268103] (diffdrive_arduino) StdoutLine: {'line': b'-- Up-to-date symlink: /home/vox/Vox/install/diffdrive_arduino/share/diffdrive_arduino/environment/library_path.dsv\n'}
+[2.269356] (diffdrive_arduino) StdoutLine: {'line': b'-- Up-to-date symlink: /home/vox/Vox/install/diffdrive_arduino/share/ament_index/resource_index/package_run_dependencies/diffdrive_arduino\n'}
+[2.271103] (diffdrive_arduino) StdoutLine: {'line': b'-- Up-to-date symlink: /home/vox/Vox/install/diffdrive_arduino/share/ament_index/resource_index/parent_prefix_path/diffdrive_arduino\n'}
+[2.272720] (diffdrive_arduino) StdoutLine: {'line': b'-- Up-to-date symlink: /home/vox/Vox/install/diffdrive_arduino/share/diffdrive_arduino/environment/ament_prefix_path.sh\n'}
+[2.273524] (diffdrive_arduino) StdoutLine: {'line': b'-- Up-to-date symlink: /home/vox/Vox/install/diffdrive_arduino/share/diffdrive_arduino/environment/ament_prefix_path.dsv\n'}
+[2.275022] (diffdrive_arduino) StdoutLine: {'line': b'-- Up-to-date symlink: /home/vox/Vox/install/diffdrive_arduino/share/diffdrive_arduino/environment/path.sh\n'}
+[2.276394] (diffdrive_arduino) StdoutLine: {'line': b'-- Up-to-date symlink: /home/vox/Vox/install/diffdrive_arduino/share/diffdrive_arduino/environment/path.dsv\n'}
+[2.277835] (diffdrive_arduino) StdoutLine: {'line': b'-- Up-to-date symlink: /home/vox/Vox/install/diffdrive_arduino/share/diffdrive_arduino/local_setup.bash\n'}
+[2.279239] (diffdrive_arduino) StdoutLine: {'line': b'-- Up-to-date symlink: /home/vox/Vox/install/diffdrive_arduino/share/diffdrive_arduino/local_setup.sh\n'}
+[2.279946] (diffdrive_arduino) StdoutLine: {'line': b'-- Up-to-date symlink: /home/vox/Vox/install/diffdrive_arduino/share/diffdrive_arduino/local_setup.zsh\n'}
+[2.281350] (diffdrive_arduino) StdoutLine: {'line': b'-- Up-to-date symlink: /home/vox/Vox/install/diffdrive_arduino/share/diffdrive_arduino/local_setup.dsv\n'}
+[2.282042] (diffdrive_arduino) StdoutLine: {'line': b'-- Symlinking: /home/vox/Vox/install/diffdrive_arduino/share/diffdrive_arduino/package.dsv\n'}
+[2.321275] (diffdrive_arduino) StdoutLine: {'line': b'-- Up-to-date symlink: /home/vox/Vox/install/diffdrive_arduino/share/ament_index/resource_index/packages/diffdrive_arduino\n'}
+[2.323123] (diffdrive_arduino) StdoutLine: {'line': b'-- Up-to-date symlink: /home/vox/Vox/install/diffdrive_arduino/share/ament_index/resource_index/hardware_interface__pluginlib__plugin/diffdrive_arduino\n'}
+[2.323814] (diffdrive_arduino) StdoutLine: {'line': b'-- Up-to-date symlink: /home/vox/Vox/install/diffdrive_arduino/share/diffdrive_arduino/cmake/ament_cmake_export_targets-extras.cmake\n'}
+[2.324770] (diffdrive_arduino) StdoutLine: {'line': b'-- Up-to-date symlink: /home/vox/Vox/install/diffdrive_arduino/share/diffdrive_arduino/cmake/ament_cmake_export_dependencies-extras.cmake\n'}
+[2.325766] (diffdrive_arduino) StdoutLine: {'line': b'-- Up-to-date symlink: /home/vox/Vox/install/diffdrive_arduino/share/diffdrive_arduino/cmake/diffdrive_arduinoConfig.cmake\n'}
+[2.326917] (diffdrive_arduino) StdoutLine: {'line': b'-- Up-to-date symlink: /home/vox/Vox/install/diffdrive_arduino/share/diffdrive_arduino/cmake/diffdrive_arduinoConfig-version.cmake\n'}
+[2.328896] (diffdrive_arduino) StdoutLine: {'line': b'-- Up-to-date symlink: /home/vox/Vox/install/diffdrive_arduino/share/diffdrive_arduino/package.xml\n'}
+[2.330052] (diffdrive_arduino) StdoutLine: {'line': b'-- Up-to-date: /home/vox/Vox/install/diffdrive_arduino/lib/libdiffdrive_arduino.so\n'}
+[2.333812] (diffdrive_arduino) StdoutLine: {'line': b'-- Up-to-date: /home/vox/Vox/install/diffdrive_arduino/share/diffdrive_arduino/cmake/export_diffdrive_arduinoExport.cmake\n'}
+[2.334528] (-) TimerEvent: {}
+[2.335386] (diffdrive_arduino) StdoutLine: {'line': b'-- Up-to-date: /home/vox/Vox/install/diffdrive_arduino/share/diffdrive_arduino/cmake/export_diffdrive_arduinoExport-noconfig.cmake\n'}
+[2.340468] (diffdrive_arduino) CommandEnded: {'returncode': 0}
+[2.435123] (-) TimerEvent: {}
+[2.536527] (-) TimerEvent: {}
+[2.596633] (diffdrive_arduino) JobEnded: {'identifier': 'diffdrive_arduino', 'rc': 0}
+[2.603483] (vox) JobStarted: {'identifier': 'vox'}
+[2.630017] (vox) JobProgress: {'identifier': 'vox', 'progress': 'cmake'}
+[2.633018] (vox) JobProgress: {'identifier': 'vox', 'progress': 'build'}
+[2.634208] (vox) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/vox/Vox/build/vox', '--', '-j4', '-l4'], 'cwd': '/home/vox/Vox/build/vox', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'vox'), ('SSH_CLIENT', '192.168.1.150 4737 22'), ('XDG_SESSION_TYPE', 'tty'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/opt/ros/iron/opt/rviz_ogre_vendor/lib:/opt/ros/iron/lib/aarch64-linux-gnu:/opt/ros/iron/lib'), ('MOTD_SHOWN', 'pam'), ('HOME', '/home/vox'), ('OLDPWD', '/home/vox'), ('SSH_TTY', '/dev/pts/0'), ('ROS_PYTHON_VERSION', '3'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('ROS_DISTRO', 'iron'), ('LOGNAME', 'vox'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('TERM', 'xterm-256color'), ('XDG_SESSION_ID', '1'), ('PATH', '/opt/ros/iron/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('LANG', 'C.UTF-8'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('ROS_DOMAIN_ID', '42'), ('AMENT_PREFIX_PATH', '/opt/ros/iron'), ('SHELL', '/bin/bash'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('ROS_AUTOMATIC_DISCOVERY_RANGE', 'SUBNET'), ('PWD', '/home/vox/Vox/build/vox'), ('SSH_CONNECTION', '192.168.1.150 4737 192.168.1.236 22'), ('XDG_DATA_DIRS', '/usr/local/share:/usr/share:/var/lib/snapd/desktop'), ('PYTHONPATH', '/opt/ros/iron/lib/python3.10/site-packages'), ('COLCON', '1'), ('CMAKE_PREFIX_PATH', '/opt/ros/iron')]), 'shell': False}
+[2.636964] (-) TimerEvent: {}
+[2.737639] (-) TimerEvent: {}
+[2.804270] (serial_motor_demo_msgs) JobProgress: {'identifier': 'serial_motor_demo_msgs', 'progress': 'install'}
+[2.804492] (serial_motor_demo_msgs) Command: {'cmd': ['/usr/bin/cmake', '--install', '/home/vox/Vox/build/serial_motor_demo_msgs'], 'cwd': '/home/vox/Vox/build/serial_motor_demo_msgs', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'vox'), ('SSH_CLIENT', '192.168.1.150 4737 22'), ('XDG_SESSION_TYPE', 'tty'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/opt/ros/iron/opt/rviz_ogre_vendor/lib:/opt/ros/iron/lib/aarch64-linux-gnu:/opt/ros/iron/lib'), ('MOTD_SHOWN', 'pam'), ('HOME', '/home/vox'), ('OLDPWD', '/home/vox'), ('SSH_TTY', '/dev/pts/0'), ('ROS_PYTHON_VERSION', '3'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('ROS_DISTRO', 'iron'), ('LOGNAME', 'vox'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('TERM', 'xterm-256color'), ('XDG_SESSION_ID', '1'), ('PATH', '/opt/ros/iron/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('LANG', 'C.UTF-8'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('ROS_DOMAIN_ID', '42'), ('AMENT_PREFIX_PATH', '/opt/ros/iron'), ('SHELL', '/bin/bash'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('ROS_AUTOMATIC_DISCOVERY_RANGE', 'SUBNET'), ('PWD', '/home/vox/Vox/build/serial_motor_demo_msgs'), ('SSH_CONNECTION', '192.168.1.150 4737 192.168.1.236 22'), ('XDG_DATA_DIRS', '/usr/local/share:/usr/share:/var/lib/snapd/desktop'), ('PYTHONPATH', '/opt/ros/iron/lib/python3.10/site-packages'), ('COLCON', '1'), ('CMAKE_PREFIX_PATH', '/opt/ros/iron')]), 'shell': False}
+[2.810036] (vox) CommandEnded: {'returncode': 0}
+[2.837230] (serial_motor_demo_msgs) StdoutLine: {'line': b'-- Install configuration: ""\n'}
+[2.837902] (-) TimerEvent: {}
+[2.841606] (serial_motor_demo_msgs) StdoutLine: {'line': b'-- Execute custom install script\n'}
+[2.844611] (serial_motor_demo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/vox/Vox/install/serial_motor_demo_msgs/share/ament_index/resource_index/rosidl_interfaces/serial_motor_demo_msgs\n'}
+[2.846772] (serial_motor_demo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/vox/Vox/install/serial_motor_demo_msgs/share/serial_motor_demo_msgs/msg/MotorCommand.json\n'}
+[2.848895] (serial_motor_demo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/vox/Vox/install/serial_motor_demo_msgs/share/serial_motor_demo_msgs/msg/MotorVels.json\n'}
+[2.850989] (serial_motor_demo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/vox/Vox/install/serial_motor_demo_msgs/share/serial_motor_demo_msgs/msg/EncoderVals.json\n'}
+[2.855959] (serial_motor_demo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/vox/Vox/install/serial_motor_demo_msgs/include/serial_motor_demo_msgs/serial_motor_demo_msgs/msg/detail/encoder_vals__functions.h\n'}
+[2.857973] (serial_motor_demo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/vox/Vox/install/serial_motor_demo_msgs/include/serial_motor_demo_msgs/serial_motor_demo_msgs/msg/detail/encoder_vals__struct.h\n'}
+[2.859956] (serial_motor_demo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/vox/Vox/install/serial_motor_demo_msgs/include/serial_motor_demo_msgs/serial_motor_demo_msgs/msg/detail/encoder_vals__type_support.h\n'}
+[2.861875] (serial_motor_demo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/vox/Vox/install/serial_motor_demo_msgs/include/serial_motor_demo_msgs/serial_motor_demo_msgs/msg/detail/motor_command__functions.h\n'}
+[2.863913] (serial_motor_demo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/vox/Vox/install/serial_motor_demo_msgs/include/serial_motor_demo_msgs/serial_motor_demo_msgs/msg/detail/motor_command__struct.h\n'}
+[2.865808] (serial_motor_demo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/vox/Vox/install/serial_motor_demo_msgs/include/serial_motor_demo_msgs/serial_motor_demo_msgs/msg/detail/motor_command__type_support.h\n'}
+[2.867697] (serial_motor_demo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/vox/Vox/install/serial_motor_demo_msgs/include/serial_motor_demo_msgs/serial_motor_demo_msgs/msg/detail/motor_vels__functions.h\n'}
+[2.869549] (serial_motor_demo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/vox/Vox/install/serial_motor_demo_msgs/include/serial_motor_demo_msgs/serial_motor_demo_msgs/msg/detail/motor_vels__struct.h\n'}
+[2.871536] (serial_motor_demo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/vox/Vox/install/serial_motor_demo_msgs/include/serial_motor_demo_msgs/serial_motor_demo_msgs/msg/detail/motor_vels__type_support.h\n'}
+[2.873303] (serial_motor_demo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/vox/Vox/install/serial_motor_demo_msgs/include/serial_motor_demo_msgs/serial_motor_demo_msgs/msg/encoder_vals.h\n'}
+[2.874255] (serial_motor_demo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/vox/Vox/install/serial_motor_demo_msgs/include/serial_motor_demo_msgs/serial_motor_demo_msgs/msg/motor_command.h\n'}
+[2.875344] (serial_motor_demo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/vox/Vox/install/serial_motor_demo_msgs/include/serial_motor_demo_msgs/serial_motor_demo_msgs/msg/motor_vels.h\n'}
+[2.876576] (serial_motor_demo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/vox/Vox/install/serial_motor_demo_msgs/include/serial_motor_demo_msgs/serial_motor_demo_msgs/msg/rosidl_generator_c__visibility_control.h\n'}
+[2.877768] (serial_motor_demo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/vox/Vox/install/serial_motor_demo_msgs/share/serial_motor_demo_msgs/environment/library_path.sh\n'}
+[2.878896] (serial_motor_demo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/vox/Vox/install/serial_motor_demo_msgs/share/serial_motor_demo_msgs/environment/library_path.dsv\n'}
+[2.882990] (serial_motor_demo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/vox/Vox/install/serial_motor_demo_msgs/include/serial_motor_demo_msgs/serial_motor_demo_msgs/msg/detail/encoder_vals__rosidl_typesupport_fastrtps_c.h\n'}
+[2.884604] (serial_motor_demo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/vox/Vox/install/serial_motor_demo_msgs/include/serial_motor_demo_msgs/serial_motor_demo_msgs/msg/detail/motor_command__rosidl_typesupport_fastrtps_c.h\n'}
+[2.885726] (serial_motor_demo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/vox/Vox/install/serial_motor_demo_msgs/include/serial_motor_demo_msgs/serial_motor_demo_msgs/msg/detail/motor_vels__rosidl_typesupport_fastrtps_c.h\n'}
+[2.886788] (serial_motor_demo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/vox/Vox/install/serial_motor_demo_msgs/include/serial_motor_demo_msgs/serial_motor_demo_msgs/msg/rosidl_typesupport_fastrtps_c__visibility_control.h\n'}
+[2.889911] (serial_motor_demo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/vox/Vox/install/serial_motor_demo_msgs/include/serial_motor_demo_msgs/serial_motor_demo_msgs/msg/detail/encoder_vals__rosidl_typesupport_introspection_c.h\n'}
+[2.891004] (serial_motor_demo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/vox/Vox/install/serial_motor_demo_msgs/include/serial_motor_demo_msgs/serial_motor_demo_msgs/msg/detail/motor_command__rosidl_typesupport_introspection_c.h\n'}
+[2.892216] (serial_motor_demo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/vox/Vox/install/serial_motor_demo_msgs/include/serial_motor_demo_msgs/serial_motor_demo_msgs/msg/detail/motor_vels__rosidl_typesupport_introspection_c.h\n'}
+[2.893314] (serial_motor_demo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/vox/Vox/install/serial_motor_demo_msgs/include/serial_motor_demo_msgs/serial_motor_demo_msgs/msg/rosidl_typesupport_introspection_c__visibility_control.h\n'}
+[2.896558] (serial_motor_demo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/vox/Vox/install/serial_motor_demo_msgs/include/serial_motor_demo_msgs/serial_motor_demo_msgs/msg/detail/encoder_vals__builder.hpp\n'}
+[2.897674] (serial_motor_demo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/vox/Vox/install/serial_motor_demo_msgs/include/serial_motor_demo_msgs/serial_motor_demo_msgs/msg/detail/encoder_vals__struct.hpp\n'}
+[2.898781] (serial_motor_demo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/vox/Vox/install/serial_motor_demo_msgs/include/serial_motor_demo_msgs/serial_motor_demo_msgs/msg/detail/encoder_vals__traits.hpp\n'}
+[2.900054] (serial_motor_demo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/vox/Vox/install/serial_motor_demo_msgs/include/serial_motor_demo_msgs/serial_motor_demo_msgs/msg/detail/motor_command__builder.hpp\n'}
+[2.901099] (serial_motor_demo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/vox/Vox/install/serial_motor_demo_msgs/include/serial_motor_demo_msgs/serial_motor_demo_msgs/msg/detail/motor_command__struct.hpp\n'}
+[2.902560] (serial_motor_demo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/vox/Vox/install/serial_motor_demo_msgs/include/serial_motor_demo_msgs/serial_motor_demo_msgs/msg/detail/motor_command__traits.hpp\n'}
+[2.903349] (serial_motor_demo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/vox/Vox/install/serial_motor_demo_msgs/include/serial_motor_demo_msgs/serial_motor_demo_msgs/msg/detail/motor_vels__builder.hpp\n'}
+[2.904522] (serial_motor_demo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/vox/Vox/install/serial_motor_demo_msgs/include/serial_motor_demo_msgs/serial_motor_demo_msgs/msg/detail/motor_vels__struct.hpp\n'}
+[2.905602] (serial_motor_demo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/vox/Vox/install/serial_motor_demo_msgs/include/serial_motor_demo_msgs/serial_motor_demo_msgs/msg/detail/motor_vels__traits.hpp\n'}
+[2.906917] (serial_motor_demo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/vox/Vox/install/serial_motor_demo_msgs/include/serial_motor_demo_msgs/serial_motor_demo_msgs/msg/encoder_vals.hpp\n'}
+[2.907756] (serial_motor_demo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/vox/Vox/install/serial_motor_demo_msgs/include/serial_motor_demo_msgs/serial_motor_demo_msgs/msg/motor_command.hpp\n'}
+[2.908755] (serial_motor_demo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/vox/Vox/install/serial_motor_demo_msgs/include/serial_motor_demo_msgs/serial_motor_demo_msgs/msg/motor_vels.hpp\n'}
+[2.913212] (serial_motor_demo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/vox/Vox/install/serial_motor_demo_msgs/include/serial_motor_demo_msgs/serial_motor_demo_msgs/msg/detail/encoder_vals__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[2.914359] (serial_motor_demo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/vox/Vox/install/serial_motor_demo_msgs/include/serial_motor_demo_msgs/serial_motor_demo_msgs/msg/detail/motor_command__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[2.915723] (serial_motor_demo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/vox/Vox/install/serial_motor_demo_msgs/include/serial_motor_demo_msgs/serial_motor_demo_msgs/msg/detail/motor_vels__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[2.916789] (serial_motor_demo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/vox/Vox/install/serial_motor_demo_msgs/include/serial_motor_demo_msgs/serial_motor_demo_msgs/msg/rosidl_typesupport_fastrtps_cpp__visibility_control.h\n'}
+[2.920052] (serial_motor_demo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/vox/Vox/install/serial_motor_demo_msgs/include/serial_motor_demo_msgs/serial_motor_demo_msgs/msg/detail/encoder_vals__rosidl_typesupport_introspection_cpp.hpp\n'}
+[2.927860] (vox) JobProgress: {'identifier': 'vox', 'progress': 'install'}
+[2.928004] (vox) Command: {'cmd': ['/usr/bin/cmake', '--install', '/home/vox/Vox/build/vox'], 'cwd': '/home/vox/Vox/build/vox', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'vox'), ('SSH_CLIENT', '192.168.1.150 4737 22'), ('XDG_SESSION_TYPE', 'tty'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/opt/ros/iron/opt/rviz_ogre_vendor/lib:/opt/ros/iron/lib/aarch64-linux-gnu:/opt/ros/iron/lib'), ('MOTD_SHOWN', 'pam'), ('HOME', '/home/vox'), ('OLDPWD', '/home/vox'), ('SSH_TTY', '/dev/pts/0'), ('ROS_PYTHON_VERSION', '3'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('ROS_DISTRO', 'iron'), ('LOGNAME', 'vox'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('TERM', 'xterm-256color'), ('XDG_SESSION_ID', '1'), ('PATH', '/opt/ros/iron/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('LANG', 'C.UTF-8'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('ROS_DOMAIN_ID', '42'), ('AMENT_PREFIX_PATH', '/opt/ros/iron'), ('SHELL', '/bin/bash'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('ROS_AUTOMATIC_DISCOVERY_RANGE', 'SUBNET'), ('PWD', '/home/vox/Vox/build/vox'), ('SSH_CONNECTION', '192.168.1.150 4737 192.168.1.236 22'), ('XDG_DATA_DIRS', '/usr/local/share:/usr/share:/var/lib/snapd/desktop'), ('PYTHONPATH', '/opt/ros/iron/lib/python3.10/site-packages'), ('COLCON', '1'), ('CMAKE_PREFIX_PATH', '/opt/ros/iron')]), 'shell': False}
+[2.929483] (serial_motor_demo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/vox/Vox/install/serial_motor_demo_msgs/include/serial_motor_demo_msgs/serial_motor_demo_msgs/msg/detail/motor_command__rosidl_typesupport_introspection_cpp.hpp\n'}
+[2.930195] (serial_motor_demo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/vox/Vox/install/serial_motor_demo_msgs/include/serial_motor_demo_msgs/serial_motor_demo_msgs/msg/detail/motor_vels__rosidl_typesupport_introspection_cpp.hpp\n'}
+[2.930889] (serial_motor_demo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/vox/Vox/install/serial_motor_demo_msgs/share/serial_motor_demo_msgs/environment/pythonpath.sh\n'}
+[2.931437] (serial_motor_demo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/vox/Vox/install/serial_motor_demo_msgs/share/serial_motor_demo_msgs/environment/pythonpath.dsv\n'}
+[2.931833] (serial_motor_demo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/vox/Vox/install/serial_motor_demo_msgs/lib/python3.10/site-packages/serial_motor_demo_msgs-0.0.0-py3.10.egg-info/PKG-INFO\n'}
+[2.932188] (serial_motor_demo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/vox/Vox/install/serial_motor_demo_msgs/lib/python3.10/site-packages/serial_motor_demo_msgs-0.0.0-py3.10.egg-info/SOURCES.txt\n'}
+[2.932525] (serial_motor_demo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/vox/Vox/install/serial_motor_demo_msgs/lib/python3.10/site-packages/serial_motor_demo_msgs-0.0.0-py3.10.egg-info/dependency_links.txt\n'}
+[2.932909] (serial_motor_demo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/vox/Vox/install/serial_motor_demo_msgs/lib/python3.10/site-packages/serial_motor_demo_msgs-0.0.0-py3.10.egg-info/top_level.txt\n'}
+[2.936707] (serial_motor_demo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/vox/Vox/install/serial_motor_demo_msgs/lib/python3.10/site-packages/serial_motor_demo_msgs/__init__.py\n'}
+[2.937653] (serial_motor_demo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/vox/Vox/install/serial_motor_demo_msgs/lib/python3.10/site-packages/serial_motor_demo_msgs/_serial_motor_demo_msgs_s.ep.rosidl_typesupport_c.c\n'}
+[2.938141] (-) TimerEvent: {}
+[2.941580] (serial_motor_demo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/vox/Vox/install/serial_motor_demo_msgs/lib/python3.10/site-packages/serial_motor_demo_msgs/_serial_motor_demo_msgs_s.ep.rosidl_typesupport_fastrtps_c.c\n'}
+[2.943376] (serial_motor_demo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/vox/Vox/install/serial_motor_demo_msgs/lib/python3.10/site-packages/serial_motor_demo_msgs/_serial_motor_demo_msgs_s.ep.rosidl_typesupport_introspection_c.c\n'}
+[2.944168] (serial_motor_demo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/vox/Vox/install/serial_motor_demo_msgs/lib/python3.10/site-packages/serial_motor_demo_msgs/libserial_motor_demo_msgs__rosidl_generator_py.so\n'}
+[2.944620] (serial_motor_demo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/vox/Vox/install/serial_motor_demo_msgs/lib/python3.10/site-packages/serial_motor_demo_msgs/msg/__init__.py\n'}
+[2.945247] (serial_motor_demo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/vox/Vox/install/serial_motor_demo_msgs/lib/python3.10/site-packages/serial_motor_demo_msgs/msg/_encoder_vals.py\n'}
+[2.945699] (serial_motor_demo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/vox/Vox/install/serial_motor_demo_msgs/lib/python3.10/site-packages/serial_motor_demo_msgs/msg/_encoder_vals_s.c\n'}
+[2.946376] (serial_motor_demo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/vox/Vox/install/serial_motor_demo_msgs/lib/python3.10/site-packages/serial_motor_demo_msgs/msg/_motor_command.py\n'}
+[2.947116] (serial_motor_demo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/vox/Vox/install/serial_motor_demo_msgs/lib/python3.10/site-packages/serial_motor_demo_msgs/msg/_motor_command_s.c\n'}
+[2.947834] (serial_motor_demo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/vox/Vox/install/serial_motor_demo_msgs/lib/python3.10/site-packages/serial_motor_demo_msgs/msg/_motor_vels.py\n'}
+[2.948581] (serial_motor_demo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/vox/Vox/install/serial_motor_demo_msgs/lib/python3.10/site-packages/serial_motor_demo_msgs/msg/_motor_vels_s.c\n'}
+[2.949404] (serial_motor_demo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/vox/Vox/install/serial_motor_demo_msgs/lib/python3.10/site-packages/serial_motor_demo_msgs/serial_motor_demo_msgs_s__rosidl_typesupport_c.cpython-310-aarch64-linux-gnu.so\n'}
+[2.950205] (serial_motor_demo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/vox/Vox/install/serial_motor_demo_msgs/lib/python3.10/site-packages/serial_motor_demo_msgs/serial_motor_demo_msgs_s__rosidl_typesupport_fastrtps_c.cpython-310-aarch64-linux-gnu.so\n'}
+[2.954697] (serial_motor_demo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/vox/Vox/install/serial_motor_demo_msgs/lib/python3.10/site-packages/serial_motor_demo_msgs/serial_motor_demo_msgs_s__rosidl_typesupport_introspection_c.cpython-310-aarch64-linux-gnu.so\n'}
+[2.955756] (serial_motor_demo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/vox/Vox/install/serial_motor_demo_msgs/lib/python3.10/site-packages/serial_motor_demo_msgs/serial_motor_demo_msgs_s__rosidl_typesupport_fastrtps_c.cpython-310-aarch64-linux-gnu.so\n'}
+[2.956402] (serial_motor_demo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/vox/Vox/install/serial_motor_demo_msgs/lib/python3.10/site-packages/serial_motor_demo_msgs/serial_motor_demo_msgs_s__rosidl_typesupport_introspection_c.cpython-310-aarch64-linux-gnu.so\n'}
+[2.957116] (serial_motor_demo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/vox/Vox/install/serial_motor_demo_msgs/lib/python3.10/site-packages/serial_motor_demo_msgs/serial_motor_demo_msgs_s__rosidl_typesupport_c.cpython-310-aarch64-linux-gnu.so\n'}
+[2.958188] (serial_motor_demo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/vox/Vox/install/serial_motor_demo_msgs/share/serial_motor_demo_msgs/msg/MotorCommand.idl\n'}
+[2.959627] (serial_motor_demo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/vox/Vox/install/serial_motor_demo_msgs/share/serial_motor_demo_msgs/msg/MotorVels.idl\n'}
+[2.961112] (serial_motor_demo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/vox/Vox/install/serial_motor_demo_msgs/share/serial_motor_demo_msgs/msg/EncoderVals.idl\n'}
+[2.963725] (serial_motor_demo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/vox/Vox/install/serial_motor_demo_msgs/share/serial_motor_demo_msgs/msg/MotorCommand.msg\n'}
+[2.964404] (serial_motor_demo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/vox/Vox/install/serial_motor_demo_msgs/share/serial_motor_demo_msgs/msg/MotorVels.msg\n'}
+[2.970435] (serial_motor_demo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/vox/Vox/install/serial_motor_demo_msgs/share/serial_motor_demo_msgs/msg/EncoderVals.msg\n'}
+[2.970934] (serial_motor_demo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/vox/Vox/install/serial_motor_demo_msgs/share/ament_index/resource_index/package_run_dependencies/serial_motor_demo_msgs\n'}
+[2.971893] (serial_motor_demo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/vox/Vox/install/serial_motor_demo_msgs/share/ament_index/resource_index/parent_prefix_path/serial_motor_demo_msgs\n'}
+[2.972750] (serial_motor_demo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/vox/Vox/install/serial_motor_demo_msgs/share/serial_motor_demo_msgs/environment/ament_prefix_path.sh\n'}
+[2.973277] (serial_motor_demo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/vox/Vox/install/serial_motor_demo_msgs/share/serial_motor_demo_msgs/environment/ament_prefix_path.dsv\n'}
+[2.974002] (serial_motor_demo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/vox/Vox/install/serial_motor_demo_msgs/share/serial_motor_demo_msgs/environment/path.sh\n'}
+[2.974909] (vox) StdoutLine: {'line': b'-- Install configuration: ""\n'}
+[2.975554] (serial_motor_demo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/vox/Vox/install/serial_motor_demo_msgs/share/serial_motor_demo_msgs/environment/path.dsv\n'}
+[2.976410] (serial_motor_demo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/vox/Vox/install/serial_motor_demo_msgs/share/serial_motor_demo_msgs/local_setup.bash\n'}
+[2.977297] (vox) StdoutLine: {'line': b'-- Execute custom install script\n'}
+[2.978571] (serial_motor_demo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/vox/Vox/install/serial_motor_demo_msgs/share/serial_motor_demo_msgs/local_setup.sh\n'}
+[2.979446] (serial_motor_demo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/vox/Vox/install/serial_motor_demo_msgs/share/serial_motor_demo_msgs/local_setup.zsh\n'}
+[2.980163] (vox) StdoutLine: {'line': b'-- Up-to-date symlink: /home/vox/Vox/install/vox/share/vox/config/ball_tracker_params.yaml\n'}
+[2.980898] (serial_motor_demo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/vox/Vox/install/serial_motor_demo_msgs/share/serial_motor_demo_msgs/local_setup.dsv\n'}
+[2.981594] (vox) StdoutLine: {'line': b'-- Up-to-date symlink: /home/vox/Vox/install/vox/share/vox/config/ekf.yaml\n'}
+[2.982282] (serial_motor_demo_msgs) StdoutLine: {'line': b'-- Symlinking: /home/vox/Vox/install/serial_motor_demo_msgs/share/serial_motor_demo_msgs/package.dsv\n'}
+[2.983113] (vox) StdoutLine: {'line': b'-- Up-to-date symlink: /home/vox/Vox/install/vox/share/vox/config/gazebo_params.yaml\n'}
+[2.983730] (vox) StdoutLine: {'line': b'-- Up-to-date symlink: /home/vox/Vox/install/vox/share/vox/config/joystick.yaml\n'}
+[2.984147] (vox) StdoutLine: {'line': b'-- Up-to-date symlink: /home/vox/Vox/install/vox/share/vox/config/mapper_params_localization.yaml\n'}
+[2.984797] (vox) StdoutLine: {'line': b'-- Up-to-date symlink: /home/vox/Vox/install/vox/share/vox/config/mapper_params_online_async.yaml\n'}
+[2.985319] (vox) StdoutLine: {'line': b'-- Up-to-date symlink: /home/vox/Vox/install/vox/share/vox/config/my_controllers.yaml\n'}
+[2.985998] (vox) StdoutLine: {'line': b'-- Up-to-date symlink: /home/vox/Vox/install/vox/share/vox/config/rviz_config.rviz\n'}
+[2.986675] (vox) StdoutLine: {'line': b'-- Up-to-date symlink: /home/vox/Vox/install/vox/share/vox/config/twist_mux.yaml\n'}
+[2.987443] (vox) StdoutLine: {'line': b'-- Up-to-date symlink: /home/vox/Vox/install/vox/share/vox/description/camera.xacro\n'}
+[2.988163] (vox) StdoutLine: {'line': b'-- Up-to-date symlink: /home/vox/Vox/install/vox/share/vox/description/colors.xacro\n'}
+[2.988733] (vox) StdoutLine: {'line': b'-- Up-to-date symlink: /home/vox/Vox/install/vox/share/vox/description/gazebo_controls.xacro\n'}
+[2.989419] (vox) StdoutLine: {'line': b'-- Up-to-date symlink: /home/vox/Vox/install/vox/share/vox/description/laser.xacro\n'}
+[2.989830] (vox) StdoutLine: {'line': b'-- Up-to-date symlink: /home/vox/Vox/install/vox/share/vox/description/robot.urdf.xacro\n'}
+[2.990354] (vox) StdoutLine: {'line': b'-- Up-to-date symlink: /home/vox/Vox/install/vox/share/vox/description/robot_core.xacro\n'}
+[2.990819] (vox) StdoutLine: {'line': b'-- Up-to-date symlink: /home/vox/Vox/install/vox/share/vox/description/ros2_control.xacro\n'}
+[2.992967] (vox) StdoutLine: {'line': b'-- Up-to-date symlink: /home/vox/Vox/install/vox/share/vox/launch/ball_tracker.launch.py\n'}
+[2.999068] (vox) StdoutLine: {'line': b'-- Up-to-date symlink: /home/vox/Vox/install/vox/share/vox/launch/camera.launch.py\n'}
+[2.999574] (vox) StdoutLine: {'line': b'-- Up-to-date symlink: /home/vox/Vox/install/vox/share/vox/launch/ekf.launch.py\n'}
+[3.000513] (vox) StdoutLine: {'line': b'-- Up-to-date symlink: /home/vox/Vox/install/vox/share/vox/launch/joystick.launch.py\n'}
+[3.001025] (vox) StdoutLine: {'line': b'-- Up-to-date symlink: /home/vox/Vox/install/vox/share/vox/launch/launch_robot_no_joystick.launch.py\n'}
+[3.001721] (vox) StdoutLine: {'line': b'-- Up-to-date symlink: /home/vox/Vox/install/vox/share/vox/launch/launch_sim.launch.py\n'}
+[3.002135] (vox) StdoutLine: {'line': b'-- Up-to-date symlink: /home/vox/Vox/install/vox/share/vox/launch/launch_sim_no_joystick.launch.py\n'}
+[3.002829] (vox) StdoutLine: {'line': b'-- Up-to-date symlink: /home/vox/Vox/install/vox/share/vox/launch/lidar.launch.py\n'}
+[3.003581] (vox) StdoutLine: {'line': b'-- Up-to-date symlink: /home/vox/Vox/install/vox/share/vox/launch/rsp.launch.py\n'}
+[3.004020] (vox) StdoutLine: {'line': b'-- Up-to-date symlink: /home/vox/Vox/install/vox/share/vox/worlds/sim.world\n'}
+[3.004747] (vox) StdoutLine: {'line': b'-- Up-to-date symlink: /home/vox/Vox/install/vox/share/ament_index/resource_index/package_run_dependencies/vox\n'}
+[3.005211] (vox) StdoutLine: {'line': b'-- Up-to-date symlink: /home/vox/Vox/install/vox/share/ament_index/resource_index/parent_prefix_path/vox\n'}
+[3.011541] (vox) StdoutLine: {'line': b'-- Up-to-date symlink: /home/vox/Vox/install/vox/share/vox/environment/ament_prefix_path.sh\n'}
+[3.012108] (vox) StdoutLine: {'line': b'-- Up-to-date symlink: /home/vox/Vox/install/vox/share/vox/environment/ament_prefix_path.dsv\n'}
+[3.012551] (vox) StdoutLine: {'line': b'-- Up-to-date symlink: /home/vox/Vox/install/vox/share/vox/environment/path.sh\n'}
+[3.012973] (vox) StdoutLine: {'line': b'-- Up-to-date symlink: /home/vox/Vox/install/vox/share/vox/environment/path.dsv\n'}
+[3.013417] (vox) StdoutLine: {'line': b'-- Up-to-date symlink: /home/vox/Vox/install/vox/share/vox/local_setup.bash\n'}
+[3.013881] (vox) StdoutLine: {'line': b'-- Up-to-date symlink: /home/vox/Vox/install/vox/share/vox/local_setup.sh\n'}
+[3.014380] (vox) StdoutLine: {'line': b'-- Up-to-date symlink: /home/vox/Vox/install/vox/share/vox/local_setup.zsh\n'}
+[3.015086] (vox) StdoutLine: {'line': b'-- Up-to-date symlink: /home/vox/Vox/install/vox/share/vox/local_setup.dsv\n'}
+[3.015867] (vox) StdoutLine: {'line': b'-- Symlinking: /home/vox/Vox/install/vox/share/vox/package.dsv\n'}
+[3.037261] (serial_motor_demo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/vox/Vox/install/serial_motor_demo_msgs/share/ament_index/resource_index/packages/serial_motor_demo_msgs\n'}
+[3.038306] (-) TimerEvent: {}
+[3.039771] (serial_motor_demo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/vox/Vox/install/serial_motor_demo_msgs/share/serial_motor_demo_msgs/cmake/rosidl_cmake-extras.cmake\n'}
+[3.042489] (serial_motor_demo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/vox/Vox/install/serial_motor_demo_msgs/share/serial_motor_demo_msgs/cmake/ament_cmake_export_include_directories-extras.cmake\n'}
+[3.044902] (serial_motor_demo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/vox/Vox/install/serial_motor_demo_msgs/share/serial_motor_demo_msgs/cmake/ament_cmake_export_libraries-extras.cmake\n'}
+[3.047424] (serial_motor_demo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/vox/Vox/install/serial_motor_demo_msgs/share/serial_motor_demo_msgs/cmake/ament_cmake_export_targets-extras.cmake\n'}
+[3.050047] (serial_motor_demo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/vox/Vox/install/serial_motor_demo_msgs/share/serial_motor_demo_msgs/cmake/rosidl_cmake_export_typesupport_targets-extras.cmake\n'}
+[3.052992] (serial_motor_demo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/vox/Vox/install/serial_motor_demo_msgs/share/serial_motor_demo_msgs/cmake/ament_cmake_export_dependencies-extras.cmake\n'}
+[3.055247] (serial_motor_demo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/vox/Vox/install/serial_motor_demo_msgs/share/serial_motor_demo_msgs/cmake/rosidl_cmake_export_typesupport_libraries-extras.cmake\n'}
+[3.055966] (vox) StdoutLine: {'line': b'-- Up-to-date symlink: /home/vox/Vox/install/vox/share/ament_index/resource_index/packages/vox\n'}
+[3.057466] (vox) StdoutLine: {'line': b'-- Up-to-date symlink: /home/vox/Vox/install/vox/share/vox/cmake/voxConfig.cmake\n'}
+[3.058174] (vox) StdoutLine: {'line': b'-- Up-to-date symlink: /home/vox/Vox/install/vox/share/vox/cmake/voxConfig-version.cmake\n'}
+[3.058948] (vox) StdoutLine: {'line': b'-- Up-to-date symlink: /home/vox/Vox/install/vox/share/vox/package.xml\n'}
+[3.060722] (serial_motor_demo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/vox/Vox/install/serial_motor_demo_msgs/share/serial_motor_demo_msgs/cmake/serial_motor_demo_msgsConfig.cmake\n'}
+[3.064411] (serial_motor_demo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/vox/Vox/install/serial_motor_demo_msgs/share/serial_motor_demo_msgs/cmake/serial_motor_demo_msgsConfig-version.cmake\n'}
+[3.076170] (serial_motor_demo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/vox/Vox/install/serial_motor_demo_msgs/share/serial_motor_demo_msgs/package.xml\n'}
+[3.076824] (vox) CommandEnded: {'returncode': 0}
+[3.078349] (serial_motor_demo_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/vox/Vox/install/serial_motor_demo_msgs/lib/libserial_motor_demo_msgs__rosidl_generator_c.so\n'}
+[3.078839] (serial_motor_demo_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/vox/Vox/install/serial_motor_demo_msgs/lib/libserial_motor_demo_msgs__rosidl_typesupport_fastrtps_c.so\n'}
+[3.079166] (serial_motor_demo_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/vox/Vox/install/serial_motor_demo_msgs/lib/libserial_motor_demo_msgs__rosidl_typesupport_introspection_c.so\n'}
+[3.079659] (serial_motor_demo_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/vox/Vox/install/serial_motor_demo_msgs/lib/libserial_motor_demo_msgs__rosidl_typesupport_c.so\n'}
+[3.080325] (serial_motor_demo_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/vox/Vox/install/serial_motor_demo_msgs/lib/libserial_motor_demo_msgs__rosidl_typesupport_fastrtps_cpp.so\n'}
+[3.080736] (serial_motor_demo_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/vox/Vox/install/serial_motor_demo_msgs/lib/libserial_motor_demo_msgs__rosidl_typesupport_introspection_cpp.so\n'}
+[3.081990] (serial_motor_demo_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/vox/Vox/install/serial_motor_demo_msgs/lib/libserial_motor_demo_msgs__rosidl_typesupport_cpp.so\n'}
+[3.138506] (-) TimerEvent: {}
+[3.240589] (-) TimerEvent: {}
+[3.252241] (serial_motor_demo_msgs) StdoutLine: {'line': b"Listing '/home/vox/Vox/install/serial_motor_demo_msgs/lib/python3.10/site-packages/serial_motor_demo_msgs'...\n"}
+[3.253809] (serial_motor_demo_msgs) StdoutLine: {'line': b"Listing '/home/vox/Vox/install/serial_motor_demo_msgs/lib/python3.10/site-packages/serial_motor_demo_msgs/msg'...\n"}
+[3.263063] (vox) JobEnded: {'identifier': 'vox', 'rc': 0}
+[3.281627] (serial_motor_demo_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/vox/Vox/install/serial_motor_demo_msgs/lib/libserial_motor_demo_msgs__rosidl_generator_py.so\n'}
+[3.283633] (serial_motor_demo_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/vox/Vox/install/serial_motor_demo_msgs/share/serial_motor_demo_msgs/cmake/export_serial_motor_demo_msgs__rosidl_generator_cExport.cmake\n'}
+[3.284411] (serial_motor_demo_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/vox/Vox/install/serial_motor_demo_msgs/share/serial_motor_demo_msgs/cmake/export_serial_motor_demo_msgs__rosidl_generator_cExport-noconfig.cmake\n'}
+[3.285507] (serial_motor_demo_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/vox/Vox/install/serial_motor_demo_msgs/share/serial_motor_demo_msgs/cmake/export_serial_motor_demo_msgs__rosidl_typesupport_fastrtps_cExport.cmake\n'}
+[3.286368] (serial_motor_demo_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/vox/Vox/install/serial_motor_demo_msgs/share/serial_motor_demo_msgs/cmake/export_serial_motor_demo_msgs__rosidl_typesupport_fastrtps_cExport-noconfig.cmake\n'}
+[3.287150] (serial_motor_demo_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/vox/Vox/install/serial_motor_demo_msgs/share/serial_motor_demo_msgs/cmake/serial_motor_demo_msgs__rosidl_typesupport_introspection_cExport.cmake\n'}
+[3.288033] (serial_motor_demo_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/vox/Vox/install/serial_motor_demo_msgs/share/serial_motor_demo_msgs/cmake/serial_motor_demo_msgs__rosidl_typesupport_introspection_cExport-noconfig.cmake\n'}
+[3.288818] (serial_motor_demo_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/vox/Vox/install/serial_motor_demo_msgs/share/serial_motor_demo_msgs/cmake/serial_motor_demo_msgs__rosidl_typesupport_cExport.cmake\n'}
+[3.289577] (serial_motor_demo_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/vox/Vox/install/serial_motor_demo_msgs/share/serial_motor_demo_msgs/cmake/serial_motor_demo_msgs__rosidl_typesupport_cExport-noconfig.cmake\n'}
+[3.290271] (serial_motor_demo_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/vox/Vox/install/serial_motor_demo_msgs/share/serial_motor_demo_msgs/cmake/export_serial_motor_demo_msgs__rosidl_generator_cppExport.cmake\n'}
+[3.291231] (serial_motor_demo_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/vox/Vox/install/serial_motor_demo_msgs/share/serial_motor_demo_msgs/cmake/export_serial_motor_demo_msgs__rosidl_typesupport_fastrtps_cppExport.cmake\n'}
+[3.292118] (serial_motor_demo_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/vox/Vox/install/serial_motor_demo_msgs/share/serial_motor_demo_msgs/cmake/export_serial_motor_demo_msgs__rosidl_typesupport_fastrtps_cppExport-noconfig.cmake\n'}
+[3.292933] (serial_motor_demo_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/vox/Vox/install/serial_motor_demo_msgs/share/serial_motor_demo_msgs/cmake/serial_motor_demo_msgs__rosidl_typesupport_introspection_cppExport.cmake\n'}
+[3.293756] (serial_motor_demo_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/vox/Vox/install/serial_motor_demo_msgs/share/serial_motor_demo_msgs/cmake/serial_motor_demo_msgs__rosidl_typesupport_introspection_cppExport-noconfig.cmake\n'}
+[3.294719] (serial_motor_demo_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/vox/Vox/install/serial_motor_demo_msgs/share/serial_motor_demo_msgs/cmake/serial_motor_demo_msgs__rosidl_typesupport_cppExport.cmake\n'}
+[3.295967] (serial_motor_demo_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/vox/Vox/install/serial_motor_demo_msgs/share/serial_motor_demo_msgs/cmake/serial_motor_demo_msgs__rosidl_typesupport_cppExport-noconfig.cmake\n'}
+[3.298714] (serial_motor_demo_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/vox/Vox/install/serial_motor_demo_msgs/share/serial_motor_demo_msgs/cmake/export_serial_motor_demo_msgs__rosidl_generator_pyExport.cmake\n'}
+[3.300294] (serial_motor_demo_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/vox/Vox/install/serial_motor_demo_msgs/share/serial_motor_demo_msgs/cmake/export_serial_motor_demo_msgs__rosidl_generator_pyExport-noconfig.cmake\n'}
+[3.305966] (serial_motor_demo_msgs) CommandEnded: {'returncode': 0}
+[3.341086] (-) TimerEvent: {}
+[3.442855] (-) TimerEvent: {}
+[3.543990] (-) TimerEvent: {}
+[3.645528] (-) TimerEvent: {}
+[3.748541] (-) TimerEvent: {}
+[3.816454] (ball_tracker) Command: {'cmd': ['/usr/bin/python3', '-W', 'ignore:setup.py install is deprecated', 'setup.py', 'develop', '--editable', '--build-directory', '/home/vox/Vox/build/ball_tracker/build', '--no-deps', 'symlink_data'], 'cwd': '/home/vox/Vox/build/ball_tracker', 'env': {'LESSOPEN': '| /usr/bin/lesspipe %s', 'USER': 'vox', 'SSH_CLIENT': '192.168.1.150 4737 22', 'XDG_SESSION_TYPE': 'tty', 'SHLVL': '1', 'LD_LIBRARY_PATH': '/opt/ros/iron/opt/rviz_ogre_vendor/lib:/opt/ros/iron/lib/aarch64-linux-gnu:/opt/ros/iron/lib', 'MOTD_SHOWN': 'pam', 'HOME': '/home/vox', 'OLDPWD': '/home/vox', 'SSH_TTY': '/dev/pts/0', 'ROS_PYTHON_VERSION': '3', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1000/bus', 'ROS_DISTRO': 'iron', 'LOGNAME': 'vox', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'XDG_SESSION_CLASS': 'user', 'TERM': 'xterm-256color', 'XDG_SESSION_ID': '1', 'PATH': '/opt/ros/iron/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin', 'XDG_RUNTIME_DIR': '/run/user/1000', 'LANG': 'C.UTF-8', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:', 'ROS_DOMAIN_ID': '42', 'AMENT_PREFIX_PATH': '/opt/ros/iron', 'SHELL': '/bin/bash', 'LESSCLOSE': '/usr/bin/lesspipe %s %s', 'ROS_AUTOMATIC_DISCOVERY_RANGE': 'SUBNET', 'PWD': '/home/vox/Vox/build/ball_tracker', 'SSH_CONNECTION': '192.168.1.150 4737 192.168.1.236 22', 'XDG_DATA_DIRS': '/usr/local/share:/usr/share:/var/lib/snapd/desktop', 'PYTHONPATH': '/home/vox/Vox/build/ball_tracker/prefix_override:/home/vox/Vox/install/ball_tracker/lib/python3.10/site-packages:/opt/ros/iron/lib/python3.10/site-packages', 'COLCON': '1'}, 'shell': False}
+[3.848705] (-) TimerEvent: {}
+[3.949568] (-) TimerEvent: {}
+[4.052367] (-) TimerEvent: {}
+[4.068478] (serial_motor_demo_msgs) JobEnded: {'identifier': 'serial_motor_demo_msgs', 'rc': 0}
+[4.073974] (serial_motor_demo) JobStarted: {'identifier': 'serial_motor_demo'}
+[4.152745] (-) TimerEvent: {}
+[4.253625] (-) TimerEvent: {}
+[4.354692] (-) TimerEvent: {}
+[4.455602] (-) TimerEvent: {}
+[4.556454] (-) TimerEvent: {}
+[4.657190] (-) TimerEvent: {}
+[4.758127] (-) TimerEvent: {}
+[4.858954] (-) TimerEvent: {}
+[4.959903] (-) TimerEvent: {}
+[4.995217] (ball_tracker) StderrLine: {'line': b"/usr/lib/python3/dist-packages/setuptools/dist.py:723: UserWarning: Usage of dash-separated 'script-dir' will not be supported in future versions. Please use the underscore name 'script_dir' instead\n"}
+[4.995909] (ball_tracker) StderrLine: {'line': b'  warnings.warn(\n'}
+[5.060097] (-) TimerEvent: {}
+[5.160908] (-) TimerEvent: {}
+[5.165917] (ball_tracker) StdoutLine: {'line': b'running develop\n'}
+[5.167754] (ball_tracker) StderrLine: {'line': b'/usr/lib/python3/dist-packages/setuptools/command/easy_install.py:158: EasyInstallDeprecationWarning: easy_install command is deprecated. Use build and pip and other standards-based tools.\n'}
+[5.168440] (ball_tracker) StderrLine: {'line': b'  warnings.warn(\n'}
+[5.261066] (-) TimerEvent: {}
+[5.362489] (-) TimerEvent: {}
+[5.464048] (-) TimerEvent: {}
+[5.565780] (-) TimerEvent: {}
+[5.666724] (-) TimerEvent: {}
+[5.767646] (-) TimerEvent: {}
+[5.868430] (-) TimerEvent: {}
+[5.969576] (-) TimerEvent: {}
+[6.070410] (-) TimerEvent: {}
+[6.171192] (-) TimerEvent: {}
+[6.273116] (-) TimerEvent: {}
+[6.328622] (ball_tracker) StdoutLine: {'line': b'running egg_info\n'}
+[6.329847] (ball_tracker) StdoutLine: {'line': b'writing ball_tracker.egg-info/PKG-INFO\n'}
+[6.331141] (ball_tracker) StdoutLine: {'line': b'writing dependency_links to ball_tracker.egg-info/dependency_links.txt\n'}
+[6.332832] (ball_tracker) StdoutLine: {'line': b'writing entry points to ball_tracker.egg-info/entry_points.txt\n'}
+[6.334357] (ball_tracker) StdoutLine: {'line': b'writing requirements to ball_tracker.egg-info/requires.txt\n'}
+[6.335435] (ball_tracker) StdoutLine: {'line': b'writing top-level names to ball_tracker.egg-info/top_level.txt\n'}
+[6.344199] (ball_tracker) StdoutLine: {'line': b"reading manifest file 'ball_tracker.egg-info/SOURCES.txt'\n"}
+[6.348405] (ball_tracker) StdoutLine: {'line': b"writing manifest file 'ball_tracker.egg-info/SOURCES.txt'\n"}
+[6.354686] (ball_tracker) StdoutLine: {'line': b'running build_ext\n'}
+[6.355865] (ball_tracker) StdoutLine: {'line': b'Creating /home/vox/Vox/install/ball_tracker/lib/python3.10/site-packages/ball-tracker.egg-link (link to .)\n'}
+[6.360567] (ball_tracker) StdoutLine: {'line': b'Installing detect_ball script to /home/vox/Vox/install/ball_tracker/lib/ball_tracker\n'}
+[6.361545] (ball_tracker) StdoutLine: {'line': b'Installing detect_ball_3d script to /home/vox/Vox/install/ball_tracker/lib/ball_tracker\n'}
+[6.362527] (ball_tracker) StdoutLine: {'line': b'Installing follow_ball script to /home/vox/Vox/install/ball_tracker/lib/ball_tracker\n'}
+[6.364131] (ball_tracker) StdoutLine: {'line': b'\n'}
+[6.365252] (ball_tracker) StdoutLine: {'line': b'Installed /home/vox/Vox/build/ball_tracker\n'}
+[6.365914] (ball_tracker) StdoutLine: {'line': b'running symlink_data\n'}
+[6.373393] (-) TimerEvent: {}
+[6.476435] (-) TimerEvent: {}
+[6.533669] (ball_tracker) CommandEnded: {'returncode': 0}
+[6.576601] (-) TimerEvent: {}
+[6.580282] (ball_tracker) JobEnded: {'identifier': 'ball_tracker', 'rc': 0}
+[6.676784] (-) TimerEvent: {}
+[6.777924] (-) TimerEvent: {}
+[6.879200] (-) TimerEvent: {}
+[6.980387] (-) TimerEvent: {}
+[7.081221] (-) TimerEvent: {}
+[7.181941] (-) TimerEvent: {}
+[7.282642] (-) TimerEvent: {}
+[7.383461] (-) TimerEvent: {}
+[7.484325] (-) TimerEvent: {}
+[7.568827] (serial_motor_demo) Command: {'cmd': ['/usr/bin/python3', '-W', 'ignore:setup.py install is deprecated', 'setup.py', 'develop', '--editable', '--build-directory', '/home/vox/Vox/build/serial_motor_demo/build', '--no-deps', 'symlink_data'], 'cwd': '/home/vox/Vox/build/serial_motor_demo', 'env': {'LESSOPEN': '| /usr/bin/lesspipe %s', 'USER': 'vox', 'SSH_CLIENT': '192.168.1.150 4737 22', 'XDG_SESSION_TYPE': 'tty', 'SHLVL': '1', 'LD_LIBRARY_PATH': '/home/vox/Vox/install/serial_motor_demo_msgs/lib:/opt/ros/iron/opt/rviz_ogre_vendor/lib:/opt/ros/iron/lib/aarch64-linux-gnu:/opt/ros/iron/lib', 'MOTD_SHOWN': 'pam', 'HOME': '/home/vox', 'OLDPWD': '/home/vox', 'SSH_TTY': '/dev/pts/0', 'ROS_PYTHON_VERSION': '3', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1000/bus', 'ROS_DISTRO': 'iron', 'LOGNAME': 'vox', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'XDG_SESSION_CLASS': 'user', 'TERM': 'xterm-256color', 'XDG_SESSION_ID': '1', 'PATH': '/opt/ros/iron/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin', 'XDG_RUNTIME_DIR': '/run/user/1000', 'LANG': 'C.UTF-8', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:', 'ROS_DOMAIN_ID': '42', 'AMENT_PREFIX_PATH': '/home/vox/Vox/install/serial_motor_demo_msgs:/opt/ros/iron', 'SHELL': '/bin/bash', 'LESSCLOSE': '/usr/bin/lesspipe %s %s', 'ROS_AUTOMATIC_DISCOVERY_RANGE': 'SUBNET', 'PWD': '/home/vox/Vox/build/serial_motor_demo', 'SSH_CONNECTION': '192.168.1.150 4737 192.168.1.236 22', 'XDG_DATA_DIRS': '/usr/local/share:/usr/share:/var/lib/snapd/desktop', 'PYTHONPATH': '/home/vox/Vox/build/serial_motor_demo/prefix_override:/home/vox/Vox/install/serial_motor_demo/lib/python3.10/site-packages:/home/vox/Vox/install/serial_motor_demo_msgs/lib/python3.10/site-packages:/opt/ros/iron/lib/python3.10/site-packages', 'COLCON': '1', 'CMAKE_PREFIX_PATH': '/home/vox/Vox/install/serial_motor_demo_msgs'}, 'shell': False}
+[7.584518] (-) TimerEvent: {}
+[7.685346] (-) TimerEvent: {}
+[7.786317] (-) TimerEvent: {}
+[7.887062] (-) TimerEvent: {}
+[7.988026] (-) TimerEvent: {}
+[8.088725] (-) TimerEvent: {}
+[8.189442] (-) TimerEvent: {}
+[8.290302] (-) TimerEvent: {}
+[8.391036] (-) TimerEvent: {}
+[8.491824] (-) TimerEvent: {}
+[8.592545] (-) TimerEvent: {}
+[8.693371] (-) TimerEvent: {}
+[8.794231] (-) TimerEvent: {}
+[8.879776] (serial_motor_demo) StderrLine: {'line': b"/usr/lib/python3/dist-packages/setuptools/dist.py:723: UserWarning: Usage of dash-separated 'script-dir' will not be supported in future versions. Please use the underscore name 'script_dir' instead\n"}
+[8.880698] (serial_motor_demo) StderrLine: {'line': b'  warnings.warn(\n'}
+[8.894476] (-) TimerEvent: {}
+[8.995402] (-) TimerEvent: {}
+[9.062388] (serial_motor_demo) StdoutLine: {'line': b'running develop\n'}
+[9.064072] (serial_motor_demo) StderrLine: {'line': b'/usr/lib/python3/dist-packages/setuptools/command/easy_install.py:158: EasyInstallDeprecationWarning: easy_install command is deprecated. Use build and pip and other standards-based tools.\n'}
+[9.064663] (serial_motor_demo) StderrLine: {'line': b'  warnings.warn(\n'}
+[9.095575] (-) TimerEvent: {}
+[9.196291] (-) TimerEvent: {}
+[9.296996] (-) TimerEvent: {}
+[9.397708] (-) TimerEvent: {}
+[9.498451] (-) TimerEvent: {}
+[9.599133] (-) TimerEvent: {}
+[9.699972] (-) TimerEvent: {}
+[9.800669] (-) TimerEvent: {}
+[9.901390] (-) TimerEvent: {}
+[10.002160] (-) TimerEvent: {}
+[10.040736] (serial_motor_demo) StdoutLine: {'line': b'running egg_info\n'}
+[10.041534] (serial_motor_demo) StdoutLine: {'line': b'writing serial_motor_demo.egg-info/PKG-INFO\n'}
+[10.042685] (serial_motor_demo) StdoutLine: {'line': b'writing dependency_links to serial_motor_demo.egg-info/dependency_links.txt\n'}
+[10.043885] (serial_motor_demo) StdoutLine: {'line': b'writing entry points to serial_motor_demo.egg-info/entry_points.txt\n'}
+[10.044815] (serial_motor_demo) StdoutLine: {'line': b'writing requirements to serial_motor_demo.egg-info/requires.txt\n'}
+[10.045631] (serial_motor_demo) StdoutLine: {'line': b'writing top-level names to serial_motor_demo.egg-info/top_level.txt\n'}
+[10.054399] (serial_motor_demo) StdoutLine: {'line': b"reading manifest file 'serial_motor_demo.egg-info/SOURCES.txt'\n"}
+[10.058099] (serial_motor_demo) StdoutLine: {'line': b"writing manifest file 'serial_motor_demo.egg-info/SOURCES.txt'\n"}
+[10.064422] (serial_motor_demo) StdoutLine: {'line': b'running build_ext\n'}
+[10.065320] (serial_motor_demo) StdoutLine: {'line': b'Creating /home/vox/Vox/install/serial_motor_demo/lib/python3.10/site-packages/serial-motor-demo.egg-link (link to .)\n'}
+[10.069898] (serial_motor_demo) StdoutLine: {'line': b'Installing driver script to /home/vox/Vox/install/serial_motor_demo/lib/serial_motor_demo\n'}
+[10.070880] (serial_motor_demo) StdoutLine: {'line': b'Installing gui script to /home/vox/Vox/install/serial_motor_demo/lib/serial_motor_demo\n'}
+[10.072433] (serial_motor_demo) StdoutLine: {'line': b'\n'}
+[10.073128] (serial_motor_demo) StdoutLine: {'line': b'Installed /home/vox/Vox/build/serial_motor_demo\n'}
+[10.073563] (serial_motor_demo) StdoutLine: {'line': b'running symlink_data\n'}
+[10.102405] (-) TimerEvent: {}
+[10.203571] (-) TimerEvent: {}
+[10.218545] (serial_motor_demo) CommandEnded: {'returncode': 0}
+[10.260853] (serial_motor_demo) JobEnded: {'identifier': 'serial_motor_demo', 'rc': 0}
+[10.303733] (-) TimerEvent: {}
+[10.404454] (-) TimerEvent: {}
+[10.505204] (-) TimerEvent: {}
+[10.605953] (-) TimerEvent: {}
+[10.706684] (-) TimerEvent: {}
+[10.807410] (-) TimerEvent: {}
+[10.908112] (-) TimerEvent: {}
+[11.008838] (-) TimerEvent: {}
+[11.109580] (-) TimerEvent: {}
+[11.210295] (-) TimerEvent: {}
+[11.311092] (-) TimerEvent: {}
+[11.411839] (-) TimerEvent: {}
+[11.512537] (-) TimerEvent: {}
+[11.613244] (-) TimerEvent: {}
+[11.713961] (-) TimerEvent: {}
+[11.814706] (-) TimerEvent: {}
+[11.915421] (-) TimerEvent: {}
+[12.016121] (-) TimerEvent: {}
+[12.116809] (-) TimerEvent: {}
+[12.217438] (-) TimerEvent: {}
+[12.318091] (-) TimerEvent: {}
+[12.418879] (-) TimerEvent: {}
+[12.519753] (-) TimerEvent: {}
+[12.620496] (-) TimerEvent: {}
+[12.721261] (-) TimerEvent: {}
+[12.821980] (-) TimerEvent: {}
+[12.922707] (-) TimerEvent: {}
+[13.023419] (-) TimerEvent: {}
+[13.124127] (-) TimerEvent: {}
+[13.224842] (-) TimerEvent: {}
+[13.325907] (-) TimerEvent: {}
+[13.426649] (-) TimerEvent: {}
+[13.527437] (-) TimerEvent: {}
+[13.628170] (-) TimerEvent: {}
+[13.728891] (-) TimerEvent: {}
+[13.829625] (-) TimerEvent: {}
+[13.930378] (-) TimerEvent: {}
+[14.031107] (-) TimerEvent: {}
+[14.131982] (-) TimerEvent: {}
+[14.232718] (-) TimerEvent: {}
+[14.333460] (-) TimerEvent: {}
+[14.434198] (-) TimerEvent: {}
+[14.534961] (-) TimerEvent: {}
+[14.635720] (-) TimerEvent: {}
+[14.736438] (-) TimerEvent: {}
+[14.837159] (-) TimerEvent: {}
+[14.937879] (-) TimerEvent: {}
+[15.038619] (-) TimerEvent: {}
+[15.139373] (-) TimerEvent: {}
+[15.240087] (-) TimerEvent: {}
+[15.340812] (-) TimerEvent: {}
+[15.441583] (-) TimerEvent: {}
+[15.542297] (-) TimerEvent: {}
+[15.643088] (-) TimerEvent: {}
+[15.743931] (-) TimerEvent: {}
+[15.844672] (-) TimerEvent: {}
+[15.945424] (-) TimerEvent: {}
+[16.046134] (-) TimerEvent: {}
+[16.146854] (-) TimerEvent: {}
+[16.247598] (-) TimerEvent: {}
+[16.348315] (-) TimerEvent: {}
+[16.449040] (-) TimerEvent: {}
+[16.549742] (-) TimerEvent: {}
+[16.650460] (-) TimerEvent: {}
+[16.751204] (-) TimerEvent: {}
+[16.851953] (-) TimerEvent: {}
+[16.952705] (-) TimerEvent: {}
+[17.053501] (-) TimerEvent: {}
+[17.154269] (-) TimerEvent: {}
+[17.255030] (-) TimerEvent: {}
+[17.355801] (-) TimerEvent: {}
+[17.456528] (-) TimerEvent: {}
+[17.557251] (-) TimerEvent: {}
+[17.657976] (-) TimerEvent: {}
+[17.758729] (-) TimerEvent: {}
+[17.859434] (-) TimerEvent: {}
+[17.960135] (-) TimerEvent: {}
+[18.060836] (-) TimerEvent: {}
+[18.161558] (-) TimerEvent: {}
+[18.262285] (-) TimerEvent: {}
+[18.363006] (-) TimerEvent: {}
+[18.463800] (-) TimerEvent: {}
+[18.564516] (-) TimerEvent: {}
+[18.665223] (-) TimerEvent: {}
+[18.765969] (-) TimerEvent: {}
+[18.866685] (-) TimerEvent: {}
+[18.967417] (-) TimerEvent: {}
+[19.068314] (-) TimerEvent: {}
+[19.169140] (-) TimerEvent: {}
+[19.269931] (-) TimerEvent: {}
+[19.370678] (-) TimerEvent: {}
+[19.471428] (-) TimerEvent: {}
+[19.572277] (-) TimerEvent: {}
+[19.673380] (-) TimerEvent: {}
+[19.774154] (-) TimerEvent: {}
+[19.874954] (-) TimerEvent: {}
+[19.975759] (-) TimerEvent: {}
+[20.076500] (-) TimerEvent: {}
+[20.177222] (-) TimerEvent: {}
+[20.277943] (-) TimerEvent: {}
+[20.378639] (-) TimerEvent: {}
+[20.479433] (-) TimerEvent: {}
+[20.580165] (-) TimerEvent: {}
+[20.680876] (-) TimerEvent: {}
+[20.781560] (-) TimerEvent: {}
+[20.882275] (-) TimerEvent: {}
+[20.983007] (-) TimerEvent: {}
+[21.083772] (-) TimerEvent: {}
+[21.184489] (-) TimerEvent: {}
+[21.285191] (-) TimerEvent: {}
+[21.385909] (-) TimerEvent: {}
+[21.486628] (-) TimerEvent: {}
+[21.587365] (-) TimerEvent: {}
+[21.688049] (-) TimerEvent: {}
+[21.788743] (-) TimerEvent: {}
+[21.889454] (-) TimerEvent: {}
+[21.990179] (-) TimerEvent: {}
+[22.090965] (-) TimerEvent: {}
+[22.191781] (-) TimerEvent: {}
+[22.292721] (-) TimerEvent: {}
+[22.393642] (-) TimerEvent: {}
+[22.494380] (-) TimerEvent: {}
+[22.595122] (-) TimerEvent: {}
+[22.695889] (-) TimerEvent: {}
+[22.796946] (-) TimerEvent: {}
+[22.898780] (-) TimerEvent: {}
+[22.987730] (mpu9250driver) StdoutLine: {'line': b'[100%] \x1b[32m\x1b[1mLinking CXX executable mpu9250driver\x1b[0m\n'}
+[22.998983] (-) TimerEvent: {}
+[23.099794] (-) TimerEvent: {}
+[23.200750] (-) TimerEvent: {}
+[23.301670] (-) TimerEvent: {}
+[23.402861] (-) TimerEvent: {}
+[23.503758] (-) TimerEvent: {}
+[23.604689] (-) TimerEvent: {}
+[23.705625] (-) TimerEvent: {}
+[23.806454] (-) TimerEvent: {}
+[23.907231] (-) TimerEvent: {}
+[24.007936] (-) TimerEvent: {}
+[24.108750] (-) TimerEvent: {}
+[24.159565] (mpu9250driver) StdoutLine: {'line': b'[100%] Built target mpu9250driver\n'}
+[24.196567] (mpu9250driver) CommandEnded: {'returncode': 0}
+[24.209004] (-) TimerEvent: {}
+[24.309729] (-) TimerEvent: {}
+[24.331514] (mpu9250driver) JobProgress: {'identifier': 'mpu9250driver', 'progress': 'install'}
+[24.332818] (mpu9250driver) Command: {'cmd': ['/usr/bin/cmake', '--install', '/home/vox/Vox/build/mpu9250driver'], 'cwd': '/home/vox/Vox/build/mpu9250driver', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'vox'), ('SSH_CLIENT', '192.168.1.150 4737 22'), ('XDG_SESSION_TYPE', 'tty'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/opt/ros/iron/opt/rviz_ogre_vendor/lib:/opt/ros/iron/lib/aarch64-linux-gnu:/opt/ros/iron/lib'), ('MOTD_SHOWN', 'pam'), ('HOME', '/home/vox'), ('OLDPWD', '/home/vox'), ('SSH_TTY', '/dev/pts/0'), ('ROS_PYTHON_VERSION', '3'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('ROS_DISTRO', 'iron'), ('LOGNAME', 'vox'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('TERM', 'xterm-256color'), ('XDG_SESSION_ID', '1'), ('PATH', '/opt/ros/iron/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('LANG', 'C.UTF-8'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('ROS_DOMAIN_ID', '42'), ('AMENT_PREFIX_PATH', '/opt/ros/iron'), ('SHELL', '/bin/bash'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('ROS_AUTOMATIC_DISCOVERY_RANGE', 'SUBNET'), ('PWD', '/home/vox/Vox/build/mpu9250driver'), ('SSH_CONNECTION', '192.168.1.150 4737 192.168.1.236 22'), ('XDG_DATA_DIRS', '/usr/local/share:/usr/share:/var/lib/snapd/desktop'), ('PYTHONPATH', '/opt/ros/iron/lib/python3.10/site-packages'), ('COLCON', '1'), ('CMAKE_PREFIX_PATH', '/opt/ros/iron')]), 'shell': False}
+[24.366038] (mpu9250driver) StdoutLine: {'line': b'-- Install configuration: ""\n'}
+[24.367565] (mpu9250driver) StdoutLine: {'line': b'-- Execute custom install script\n'}
+[24.369083] (mpu9250driver) StdoutLine: {'line': b'-- Up-to-date symlink: /home/vox/Vox/install/mpu9250driver/lib/mpu9250driver/mpu9250driver\n'}
+[24.370489] (mpu9250driver) StdoutLine: {'line': b'-- Up-to-date symlink: /home/vox/Vox/install/mpu9250driver/share/mpu9250driver//launch/mpu9250driver_launch.py\n'}
+[24.371715] (mpu9250driver) StdoutLine: {'line': b'-- Up-to-date symlink: /home/vox/Vox/install/mpu9250driver/share/mpu9250driver//params/mpu9250.yaml\n'}
+[24.372720] (mpu9250driver) StdoutLine: {'line': b'-- Up-to-date symlink: /home/vox/Vox/install/mpu9250driver/share/ament_index/resource_index/package_run_dependencies/mpu9250driver\n'}
+[24.373685] (mpu9250driver) StdoutLine: {'line': b'-- Up-to-date symlink: /home/vox/Vox/install/mpu9250driver/share/ament_index/resource_index/parent_prefix_path/mpu9250driver\n'}
+[24.374574] (mpu9250driver) StdoutLine: {'line': b'-- Up-to-date symlink: /home/vox/Vox/install/mpu9250driver/share/mpu9250driver/environment/ament_prefix_path.sh\n'}
+[24.375421] (mpu9250driver) StdoutLine: {'line': b'-- Up-to-date symlink: /home/vox/Vox/install/mpu9250driver/share/mpu9250driver/environment/ament_prefix_path.dsv\n'}
+[24.376287] (mpu9250driver) StdoutLine: {'line': b'-- Up-to-date symlink: /home/vox/Vox/install/mpu9250driver/share/mpu9250driver/environment/path.sh\n'}
+[24.377051] (mpu9250driver) StdoutLine: {'line': b'-- Up-to-date symlink: /home/vox/Vox/install/mpu9250driver/share/mpu9250driver/environment/path.dsv\n'}
+[24.377812] (mpu9250driver) StdoutLine: {'line': b'-- Up-to-date symlink: /home/vox/Vox/install/mpu9250driver/share/mpu9250driver/local_setup.bash\n'}
+[24.378565] (mpu9250driver) StdoutLine: {'line': b'-- Up-to-date symlink: /home/vox/Vox/install/mpu9250driver/share/mpu9250driver/local_setup.sh\n'}
+[24.379350] (mpu9250driver) StdoutLine: {'line': b'-- Up-to-date symlink: /home/vox/Vox/install/mpu9250driver/share/mpu9250driver/local_setup.zsh\n'}
+[24.380084] (mpu9250driver) StdoutLine: {'line': b'-- Up-to-date symlink: /home/vox/Vox/install/mpu9250driver/share/mpu9250driver/local_setup.dsv\n'}
+[24.380600] (mpu9250driver) StdoutLine: {'line': b'-- Symlinking: /home/vox/Vox/install/mpu9250driver/share/mpu9250driver/package.dsv\n'}
+[24.409895] (-) TimerEvent: {}
+[24.410806] (mpu9250driver) StdoutLine: {'line': b'-- Up-to-date symlink: /home/vox/Vox/install/mpu9250driver/share/ament_index/resource_index/packages/mpu9250driver\n'}
+[24.411721] (mpu9250driver) StdoutLine: {'line': b'-- Up-to-date symlink: /home/vox/Vox/install/mpu9250driver/share/mpu9250driver/cmake/mpu9250driverConfig.cmake\n'}
+[24.412374] (mpu9250driver) StdoutLine: {'line': b'-- Up-to-date symlink: /home/vox/Vox/install/mpu9250driver/share/mpu9250driver/cmake/mpu9250driverConfig-version.cmake\n'}
+[24.413275] (mpu9250driver) StdoutLine: {'line': b'-- Up-to-date symlink: /home/vox/Vox/install/mpu9250driver/share/mpu9250driver/package.xml\n'}
+[24.419993] (mpu9250driver) CommandEnded: {'returncode': 0}
+[24.510104] (-) TimerEvent: {}
+[24.609793] (mpu9250driver) JobEnded: {'identifier': 'mpu9250driver', 'rc': 0}
+[24.613000] (-) TimerEvent: {}
+[24.613524] (-) EventReactorShutdown: {}

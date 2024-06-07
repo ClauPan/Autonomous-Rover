@@ -1,0 +1,1 @@
+/home/vox/Vox/build/mpu9250driver/ament_cmake_core/mpu9250driverConfig.cmake

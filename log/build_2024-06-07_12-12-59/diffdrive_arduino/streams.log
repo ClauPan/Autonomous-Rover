@@ -1,0 +1,44 @@
+[1.563s] Invoking command in '/home/vox/Vox/build/diffdrive_arduino': CMAKE_PREFIX_PATH=/opt/ros/iron /usr/bin/cmake --build /home/vox/Vox/build/diffdrive_arduino -- -j4 -l4
+[1.927s] [100%] Built target diffdrive_arduino
+[1.990s] Invoked command in '/home/vox/Vox/build/diffdrive_arduino' returned '0': CMAKE_PREFIX_PATH=/opt/ros/iron /usr/bin/cmake --build /home/vox/Vox/build/diffdrive_arduino -- -j4 -l4
+[2.167s] Invoking command in '/home/vox/Vox/build/diffdrive_arduino': CMAKE_PREFIX_PATH=/opt/ros/iron /usr/bin/cmake --install /home/vox/Vox/build/diffdrive_arduino
+[2.202s] -- Install configuration: ""
+[2.204s] -- Execute custom install script
+[2.205s] -- Up-to-date symlink: /home/vox/Vox/install/diffdrive_arduino/share/diffdrive_arduino//diffdrive_arduino.xml
+[2.207s] -- Up-to-date symlink: /home/vox/Vox/install/diffdrive_arduino/include/diffdrive_arduino/diffdrive_arduino/arduino_comms.hpp
+[2.208s] -- Up-to-date symlink: /home/vox/Vox/install/diffdrive_arduino/include/diffdrive_arduino/diffdrive_arduino/diffbot_system.hpp
+[2.209s] -- Up-to-date symlink: /home/vox/Vox/install/diffdrive_arduino/include/diffdrive_arduino/diffdrive_arduino/visibility_control.h
+[2.210s] -- Up-to-date symlink: /home/vox/Vox/install/diffdrive_arduino/include/diffdrive_arduino/diffdrive_arduino/wheel.hpp
+[2.212s] -- Up-to-date symlink: /home/vox/Vox/install/diffdrive_arduino/share/diffdrive_arduino/launch/view_robot.launch.py
+[2.213s] -- Up-to-date symlink: /home/vox/Vox/install/diffdrive_arduino/share/diffdrive_arduino/ros2_control/diffbot.ros2_control.xacro
+[2.215s] -- Up-to-date symlink: /home/vox/Vox/install/diffdrive_arduino/share/diffdrive_arduino/urdf/diffbot.materials.xacro
+[2.215s] -- Up-to-date symlink: /home/vox/Vox/install/diffdrive_arduino/share/diffdrive_arduino/urdf/diffbot.urdf.xacro
+[2.217s] -- Up-to-date symlink: /home/vox/Vox/install/diffdrive_arduino/share/diffdrive_arduino/urdf/diffbot_description.urdf.xacro
+[2.218s] -- Up-to-date symlink: /home/vox/Vox/install/diffdrive_arduino/share/diffdrive_arduino/rviz/diffbot.rviz
+[2.220s] -- Up-to-date symlink: /home/vox/Vox/install/diffdrive_arduino/share/diffdrive_arduino/rviz/diffbot_view.rviz
+[2.221s] -- Up-to-date symlink: /home/vox/Vox/install/diffdrive_arduino/share/diffdrive_arduino/launch/diffbot.launch.py
+[2.223s] -- Up-to-date symlink: /home/vox/Vox/install/diffdrive_arduino/share/diffdrive_arduino/config/diffbot_controllers.yaml
+[2.225s] -- Up-to-date symlink: /home/vox/Vox/install/diffdrive_arduino/share/diffdrive_arduino/environment/library_path.sh
+[2.226s] -- Up-to-date symlink: /home/vox/Vox/install/diffdrive_arduino/share/diffdrive_arduino/environment/library_path.dsv
+[2.227s] -- Up-to-date symlink: /home/vox/Vox/install/diffdrive_arduino/share/ament_index/resource_index/package_run_dependencies/diffdrive_arduino
+[2.229s] -- Up-to-date symlink: /home/vox/Vox/install/diffdrive_arduino/share/ament_index/resource_index/parent_prefix_path/diffdrive_arduino
+[2.230s] -- Up-to-date symlink: /home/vox/Vox/install/diffdrive_arduino/share/diffdrive_arduino/environment/ament_prefix_path.sh
+[2.231s] -- Up-to-date symlink: /home/vox/Vox/install/diffdrive_arduino/share/diffdrive_arduino/environment/ament_prefix_path.dsv
+[2.233s] -- Up-to-date symlink: /home/vox/Vox/install/diffdrive_arduino/share/diffdrive_arduino/environment/path.sh
+[2.234s] -- Up-to-date symlink: /home/vox/Vox/install/diffdrive_arduino/share/diffdrive_arduino/environment/path.dsv
+[2.235s] -- Up-to-date symlink: /home/vox/Vox/install/diffdrive_arduino/share/diffdrive_arduino/local_setup.bash
+[2.236s] -- Up-to-date symlink: /home/vox/Vox/install/diffdrive_arduino/share/diffdrive_arduino/local_setup.sh
+[2.238s] -- Up-to-date symlink: /home/vox/Vox/install/diffdrive_arduino/share/diffdrive_arduino/local_setup.zsh
+[2.239s] -- Up-to-date symlink: /home/vox/Vox/install/diffdrive_arduino/share/diffdrive_arduino/local_setup.dsv
+[2.240s] -- Symlinking: /home/vox/Vox/install/diffdrive_arduino/share/diffdrive_arduino/package.dsv
+[2.277s] -- Up-to-date symlink: /home/vox/Vox/install/diffdrive_arduino/share/ament_index/resource_index/packages/diffdrive_arduino
+[2.278s] -- Up-to-date symlink: /home/vox/Vox/install/diffdrive_arduino/share/ament_index/resource_index/hardware_interface__pluginlib__plugin/diffdrive_arduino
+[2.279s] -- Up-to-date symlink: /home/vox/Vox/install/diffdrive_arduino/share/diffdrive_arduino/cmake/ament_cmake_export_targets-extras.cmake
+[2.280s] -- Up-to-date symlink: /home/vox/Vox/install/diffdrive_arduino/share/diffdrive_arduino/cmake/ament_cmake_export_dependencies-extras.cmake
+[2.281s] -- Up-to-date symlink: /home/vox/Vox/install/diffdrive_arduino/share/diffdrive_arduino/cmake/diffdrive_arduinoConfig.cmake
+[2.282s] -- Up-to-date symlink: /home/vox/Vox/install/diffdrive_arduino/share/diffdrive_arduino/cmake/diffdrive_arduinoConfig-version.cmake
+[2.283s] -- Up-to-date symlink: /home/vox/Vox/install/diffdrive_arduino/share/diffdrive_arduino/package.xml
+[2.285s] -- Up-to-date: /home/vox/Vox/install/diffdrive_arduino/lib/libdiffdrive_arduino.so
+[2.287s] -- Up-to-date: /home/vox/Vox/install/diffdrive_arduino/share/diffdrive_arduino/cmake/export_diffdrive_arduinoExport.cmake
+[2.288s] -- Up-to-date: /home/vox/Vox/install/diffdrive_arduino/share/diffdrive_arduino/cmake/export_diffdrive_arduinoExport-noconfig.cmake
+[2.304s] Invoked command in '/home/vox/Vox/build/diffdrive_arduino' returned '0': CMAKE_PREFIX_PATH=/opt/ros/iron /usr/bin/cmake --install /home/vox/Vox/build/diffdrive_arduino

@@ -1,0 +1,14 @@
+[1.577s] Invoking command in '/home/vox/Vox/build/mpu9250driver': CMAKE_PREFIX_PATH=/opt/ros/iron /usr/bin/cmake --build /home/vox/Vox/build/mpu9250driver -- -j4 -l4
+[1.915s] [ 33%] Built target mpu9250sensor
+[1.949s] [ 66%] Built target linux_i2c_communicator
+[2.011s] [35m[1mConsolidate compiler generated dependencies of target mpu9250driver[0m
+[2.116s] [ 83%] [32mBuilding CXX object CMakeFiles/mpu9250driver.dir/src/mpu9250driver.cpp.o[0m
+[4.022s] In file included from [01m[K/home/vox/Vox/src/ros2_mpu9250_driver/src/mpu9250driver.cpp:1[m[K:
+[4.023s] [01m[K/home/vox/Vox/src/ros2_mpu9250_driver/include/mpu9250driver/mpu9250driver.h:7:10:[m[K [01;31m[Kfatal error: [m[Kgeomegry_msgs/msg/twist.hpp: No such file or directory
+[4.024s]     7 | #include [01;31m[K"geomegry_msgs/msg/twist.hpp"[m[K
+[4.026s]       |          [01;31m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[4.027s] compilation terminated.
+[4.037s] gmake[2]: *** [CMakeFiles/mpu9250driver.dir/build.make:76: CMakeFiles/mpu9250driver.dir/src/mpu9250driver.cpp.o] Error 1
+[4.038s] gmake[1]: *** [CMakeFiles/Makefile2:188: CMakeFiles/mpu9250driver.dir/all] Error 2
+[4.041s] gmake: *** [Makefile:146: all] Error 2
+[4.085s] Invoked command in '/home/vox/Vox/build/mpu9250driver' returned '2': CMAKE_PREFIX_PATH=/opt/ros/iron /usr/bin/cmake --build /home/vox/Vox/build/mpu9250driver -- -j4 -l4

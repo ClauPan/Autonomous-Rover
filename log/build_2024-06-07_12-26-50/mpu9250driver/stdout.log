@@ -1,0 +1,4 @@
+[ 33%] Built target mpu9250sensor
+[ 66%] Built target linux_i2c_communicator
+[35m[1mConsolidate compiler generated dependencies of target mpu9250driver[0m
+[ 83%] [32mBuilding CXX object CMakeFiles/mpu9250driver.dir/src/mpu9250driver.cpp.o[0m

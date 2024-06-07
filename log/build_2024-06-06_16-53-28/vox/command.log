@@ -1,0 +1,4 @@
+Invoking command in '/home/vox/Vox/build/vox': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/vox/Vox/install/serial_motor_demo:/home/vox/Vox/install/ball_tracker:/opt/ros/iron /usr/bin/cmake --build /home/vox/Vox/build/vox -- -j4 -l4
+Invoked command in '/home/vox/Vox/build/vox' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/vox/Vox/install/serial_motor_demo:/home/vox/Vox/install/ball_tracker:/opt/ros/iron /usr/bin/cmake --build /home/vox/Vox/build/vox -- -j4 -l4
+Invoking command in '/home/vox/Vox/build/vox': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/vox/Vox/install/serial_motor_demo:/home/vox/Vox/install/ball_tracker:/opt/ros/iron /usr/bin/cmake --install /home/vox/Vox/build/vox
+Invoked command in '/home/vox/Vox/build/vox' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/vox/Vox/install/serial_motor_demo:/home/vox/Vox/install/ball_tracker:/opt/ros/iron /usr/bin/cmake --install /home/vox/Vox/build/vox

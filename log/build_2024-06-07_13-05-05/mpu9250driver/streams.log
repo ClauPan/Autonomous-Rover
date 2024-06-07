@@ -1,0 +1,34 @@
+[1.558s] Invoking command in '/home/vox/Vox/build/mpu9250driver': CMAKE_PREFIX_PATH=/opt/ros/iron /usr/bin/cmake --build /home/vox/Vox/build/mpu9250driver -- -j4 -l4
+[1.851s] [ 33%] Built target mpu9250sensor
+[1.905s] [ 66%] Built target linux_i2c_communicator
+[1.975s] [35m[1mConsolidate compiler generated dependencies of target mpu9250driver[0m
+[2.077s] [ 83%] [32mBuilding CXX object CMakeFiles/mpu9250driver.dir/src/mpu9250driver.cpp.o[0m
+[14.954s] [01m[K/home/vox/Vox/src/ros2_mpu9250_driver/src/mpu9250driver.cpp:[m[K In constructor ‘[01m[KMPU9250Driver::MPU9250Driver()[m[K’:
+[14.955s] [01m[K/home/vox/Vox/src/ros2_mpu9250_driver/src/mpu9250driver.cpp:44:8:[m[K [01;35m[Kwarning: [m[Kvariable ‘[01m[Kcallback[m[K’ set but not used [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-but-set-variable-Wunused-but-set-variable]8;;[m[K]
+[14.955s]    44 |   auto [01;35m[Kcallback[m[K = [this](const geometry_msgs::msg::Twist::SharedPtr msg) -> void {
+[14.955s]       |        [01;35m[K^~~~~~~~[m[K
+[34.885s] [100%] [32m[1mLinking CXX executable mpu9250driver[0m
+[36.879s] [100%] Built target mpu9250driver
+[36.916s] Invoked command in '/home/vox/Vox/build/mpu9250driver' returned '0': CMAKE_PREFIX_PATH=/opt/ros/iron /usr/bin/cmake --build /home/vox/Vox/build/mpu9250driver -- -j4 -l4
+[37.059s] Invoking command in '/home/vox/Vox/build/mpu9250driver': CMAKE_PREFIX_PATH=/opt/ros/iron /usr/bin/cmake --install /home/vox/Vox/build/mpu9250driver
+[37.085s] -- Install configuration: ""
+[37.086s] -- Execute custom install script
+[37.088s] -- Up-to-date symlink: /home/vox/Vox/install/mpu9250driver/lib/mpu9250driver/mpu9250driver
+[37.089s] -- Up-to-date symlink: /home/vox/Vox/install/mpu9250driver/share/mpu9250driver//launch/mpu9250driver_launch.py
+[37.090s] -- Up-to-date symlink: /home/vox/Vox/install/mpu9250driver/share/mpu9250driver//params/mpu9250.yaml
+[37.091s] -- Up-to-date symlink: /home/vox/Vox/install/mpu9250driver/share/ament_index/resource_index/package_run_dependencies/mpu9250driver
+[37.092s] -- Up-to-date symlink: /home/vox/Vox/install/mpu9250driver/share/ament_index/resource_index/parent_prefix_path/mpu9250driver
+[37.093s] -- Up-to-date symlink: /home/vox/Vox/install/mpu9250driver/share/mpu9250driver/environment/ament_prefix_path.sh
+[37.094s] -- Up-to-date symlink: /home/vox/Vox/install/mpu9250driver/share/mpu9250driver/environment/ament_prefix_path.dsv
+[37.095s] -- Up-to-date symlink: /home/vox/Vox/install/mpu9250driver/share/mpu9250driver/environment/path.sh
+[37.096s] -- Up-to-date symlink: /home/vox/Vox/install/mpu9250driver/share/mpu9250driver/environment/path.dsv
+[37.096s] -- Up-to-date symlink: /home/vox/Vox/install/mpu9250driver/share/mpu9250driver/local_setup.bash
+[37.097s] -- Up-to-date symlink: /home/vox/Vox/install/mpu9250driver/share/mpu9250driver/local_setup.sh
+[37.098s] -- Up-to-date symlink: /home/vox/Vox/install/mpu9250driver/share/mpu9250driver/local_setup.zsh
+[37.099s] -- Up-to-date symlink: /home/vox/Vox/install/mpu9250driver/share/mpu9250driver/local_setup.dsv
+[37.099s] -- Symlinking: /home/vox/Vox/install/mpu9250driver/share/mpu9250driver/package.dsv
+[37.130s] -- Up-to-date symlink: /home/vox/Vox/install/mpu9250driver/share/ament_index/resource_index/packages/mpu9250driver
+[37.131s] -- Up-to-date symlink: /home/vox/Vox/install/mpu9250driver/share/mpu9250driver/cmake/mpu9250driverConfig.cmake
+[37.132s] -- Up-to-date symlink: /home/vox/Vox/install/mpu9250driver/share/mpu9250driver/cmake/mpu9250driverConfig-version.cmake
+[37.133s] -- Up-to-date symlink: /home/vox/Vox/install/mpu9250driver/share/mpu9250driver/package.xml
+[37.141s] Invoked command in '/home/vox/Vox/build/mpu9250driver' returned '0': CMAKE_PREFIX_PATH=/opt/ros/iron /usr/bin/cmake --install /home/vox/Vox/build/mpu9250driver

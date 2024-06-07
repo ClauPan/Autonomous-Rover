@@ -1,0 +1,23 @@
+[3.732s] Invoking command in '/home/vox/Vox/build/ball_tracker': PYTHONPATH=/home/vox/Vox/build/ball_tracker/prefix_override:/home/vox/Vox/install/ball_tracker/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py develop --editable --build-directory /home/vox/Vox/build/ball_tracker/build --no-deps symlink_data
+[4.800s] /usr/lib/python3/dist-packages/setuptools/dist.py:723: UserWarning: Usage of dash-separated 'script-dir' will not be supported in future versions. Please use the underscore name 'script_dir' instead
+[4.800s]   warnings.warn(
+[4.960s] running develop
+[4.961s] /usr/lib/python3/dist-packages/setuptools/command/easy_install.py:158: EasyInstallDeprecationWarning: easy_install command is deprecated. Use build and pip and other standards-based tools.
+[4.962s]   warnings.warn(
+[5.829s] running egg_info
+[5.830s] writing ball_tracker.egg-info/PKG-INFO
+[5.831s] writing dependency_links to ball_tracker.egg-info/dependency_links.txt
+[5.832s] writing entry points to ball_tracker.egg-info/entry_points.txt
+[5.833s] writing requirements to ball_tracker.egg-info/requires.txt
+[5.834s] writing top-level names to ball_tracker.egg-info/top_level.txt
+[5.842s] reading manifest file 'ball_tracker.egg-info/SOURCES.txt'
+[5.845s] writing manifest file 'ball_tracker.egg-info/SOURCES.txt'
+[5.851s] running build_ext
+[5.852s] Creating /home/vox/Vox/install/ball_tracker/lib/python3.10/site-packages/ball-tracker.egg-link (link to .)
+[5.855s] Installing detect_ball script to /home/vox/Vox/install/ball_tracker/lib/ball_tracker
+[5.856s] Installing detect_ball_3d script to /home/vox/Vox/install/ball_tracker/lib/ball_tracker
+[5.857s] Installing follow_ball script to /home/vox/Vox/install/ball_tracker/lib/ball_tracker
+[5.859s] 
+[5.859s] Installed /home/vox/Vox/build/ball_tracker
+[5.860s] running symlink_data
+[6.008s] Invoked command in '/home/vox/Vox/build/ball_tracker' returned '0': PYTHONPATH=/home/vox/Vox/build/ball_tracker/prefix_override:/home/vox/Vox/install/ball_tracker/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py develop --editable --build-directory /home/vox/Vox/build/ball_tracker/build --no-deps symlink_data
