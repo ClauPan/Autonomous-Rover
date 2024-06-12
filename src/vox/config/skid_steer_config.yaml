@@ -3,13 +3,13 @@ controller_manager:
     update_rate: 50
     # use_sim_time: true
 
-    diff_cont:
+    skid_steer:
       type: diff_drive_controller/DiffDriveController
 
-    joint_broad:
+    broadcaster:
       type: joint_state_broadcaster/JointStateBroadcaster
 
-diff_cont:
+skid_steer:
   ros__parameters:
 
     publish_rate: 50.0

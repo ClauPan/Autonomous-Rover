@@ -9,14 +9,34 @@ from launch_ros.actions import Node
 
 def generate_launch_description():
 	package_name = "vox"
+	rsp = IncludeLaunchDescription(
+		PythonLaunchDescriptionSource([
+			os.path.join(get_package_share_directory(package_name), "launch", "rsp.launch.py")
+		]),
+	)
 
-	params = {"robot_description": Command(['xacro ', os.path.join(package_path, "description", "robot.urdf.xacro")])}
-	
-	robot_state_publisher = Node(
-		package="robot_state_publisher",
-		executable="robot_state_publisher",
-		output="screen",
-		parameters=[robot_description_config]
+	joystick_parameters = os.path.join(get_package_share_directory('vox'), 'config', 'joystick.yaml')
+
+    joystick_node = Node(
+		package='joy',
+		executable='joy_node',
+		parameters=[joy_params],
+	)
+
+    joystick_teleop = Node(
+		package='teleop_twist_joy',
+		executable='teleop_node',
+		name='teleop_node',
+		parameters=[joy_params],
+		remappings=[('/cmd_vel','/cmd_vel_joy')]
+	)
+
+	mux_params = os.path.join(get_package_share_directory(package_name), 'config' ,'twist_mux.yaml')
+	mux = Node(
+		package="twist_mux",
+		executable="twist_mux",
+		parameters=[mux_params],
+		remappings=[('/cmd_vel_out','/diff_cont/cmd_vel_unstamped')]
 	)
 
 	robot_description = Command(['ros2 param get --hide-type /robot_state_publisher robot_description'])
@@ -28,7 +48,7 @@ def generate_launch_description():
 			package="controller_manager",
 			executable="ros2_control_node",
 			parameters=[{"robot_description": robot_description}, controller_params_file]
-		)]
+		)]	
 	)
 
 	interface = RegisterEventHandler(
@@ -37,7 +57,7 @@ def generate_launch_description():
 			on_start=[Node(
 				package="controller_manager",
 				executable="spawner",
-				arguments=["skid_steer"],
+				arguments=["diff_cont"],
 			)]
 		)
 	)
@@ -48,7 +68,7 @@ def generate_launch_description():
 			on_start=[Node(
 				package="controller_manager",
 				executable="spawner",
-				arguments=["broadcaster"],
+				arguments=["joint_broad"],
 			)]
 		)
 	)
@@ -80,7 +100,10 @@ def generate_launch_description():
 	)
 
 	return LaunchDescription([
-		robot_state_publisher,
+		rsp,
+		joystick_node,
+		joystick_teleop,
+		mux
 		manager,
 		interface,
 		joint,

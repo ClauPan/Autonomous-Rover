@@ -9,18 +9,17 @@ from launch.actions import DeclareLaunchArgument
 
 
 def generate_launch_description():
-
     my_package_name='vox'
     sim_mode = LaunchConfiguration('sim_mode')
     sim_mode_dec = DeclareLaunchArgument('sim_mode', default_value='false')
 
-    tracker_params = os.path.join(get_package_share_directory(my_package_name),'config','ball_tracker_params.yaml')
+    tracker_params = os.path.join(get_package_share_directory(my_package_name),'config','tracker.yaml')
 
     params_path = PythonExpression(['"', tracker_params, '"'])
 
     tracker_launch = IncludeLaunchDescription(
                 PythonLaunchDescriptionSource([os.path.join(
-                    get_package_share_directory('ball_tracker'), 'launch', 'ball_tracker.launch.py')]),
+                    get_package_share_directory('tracker'), 'launch', 'tracker.launch.py')]),
                     launch_arguments={'params_file': params_path,
                                     'image_topic': '/camera/image_raw',
                                     'cmd_vel_topic': '/cmd_vel_tracker',
