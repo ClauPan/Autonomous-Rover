@@ -1,23 +1,9 @@
-# Copyright 2023 Josh Newans
-#
-# Licensed under the Apache License, Version 2.0 (the "License");
-# you may not use this file except in compliance with the License.
-# You may obtain a copy of the License at
-#
-#     http://www.apache.org/licenses/LICENSE-2.0
-#
-# Unless required by applicable law or agreed to in writing, software
-# distributed under the License is distributed on an "AS IS" BASIS,
-# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-# See the License for the specific language governing permissions and
-# limitations under the License.
-
 import rclpy
 from rclpy.node import Node
 from sensor_msgs.msg        import Image
 from geometry_msgs.msg      import Point
 from cv_bridge              import CvBridge, CvBridgeError
-import ball_tracker.process_image as proc
+import tracker.process_image as proc
 
 class DetectBall(Node):
 
@@ -32,33 +18,33 @@ class DetectBall(Node):
 
         self.declare_parameter('tuning_mode', False)
 
-        self.declare_parameter("x_min",0)
-        self.declare_parameter("x_max",100)
-        self.declare_parameter("y_min",0)
-        self.declare_parameter("y_max",100)
-        self.declare_parameter("h_min",0)
-        self.declare_parameter("h_max",180)
-        self.declare_parameter("s_min",0)
-        self.declare_parameter("s_max",255)
-        self.declare_parameter("v_min",0)
-        self.declare_parameter("v_max",255)
-        self.declare_parameter("sz_min",0)
-        self.declare_parameter("sz_max",100)
+        self.declare_parameter("x", 0)
+        self.declare_parameter("y", 0)
+        self.declare_parameter("width", 100)
+        self.declare_parameter("height", 100)
+        self.declare_parameter("min_size", 0)
+        self.declare_parameter("max_size", 100)
+        self.declare_parameter("min_hue", 0)
+        self.declare_parameter("max_hue", 180)
+        self.declare_parameter("min_sat", 0)
+        self.declare_parameter("max_sat", 255)
+        self.declare_parameter("min_val", 0)
+        self.declare_parameter("max_val", 255)
         
         self.tuning_mode = self.get_parameter('tuning_mode').get_parameter_value().bool_value
         self.tuning_params = {
-            'x_min': self.get_parameter('x_min').get_parameter_value().integer_value,
-            'x_max': self.get_parameter('x_max').get_parameter_value().integer_value,
-            'y_min': self.get_parameter('y_min').get_parameter_value().integer_value,
-            'y_max': self.get_parameter('y_max').get_parameter_value().integer_value,
-            'h_min': self.get_parameter('h_min').get_parameter_value().integer_value,
-            'h_max': self.get_parameter('h_max').get_parameter_value().integer_value,
-            's_min': self.get_parameter('s_min').get_parameter_value().integer_value,
-            's_max': self.get_parameter('s_max').get_parameter_value().integer_value,
-            'v_min': self.get_parameter('v_min').get_parameter_value().integer_value,
-            'v_max': self.get_parameter('v_max').get_parameter_value().integer_value,
-            'sz_min': self.get_parameter('sz_min').get_parameter_value().integer_value,
-            'sz_max': self.get_parameter('sz_max').get_parameter_value().integer_value
+            'x':        self.get_parameter('x').get_parameter_value().integer_value,
+            'y':        self.get_parameter('y').get_parameter_value().integer_value,
+            'width':    self.get_parameter('width').get_parameter_value().integer_value,
+            'height':   self.get_parameter('height').get_parameter_value().integer_value,
+            'min_size': self.get_parameter('min_size').get_parameter_value().integer_value,
+            'max_size': self.get_parameter('max_size').get_parameter_value().integer_value,
+            'min_hue':  self.get_parameter('min_hue').get_parameter_value().integer_value,
+            'max_hue':  self.get_parameter('max_hue').get_parameter_value().integer_value,
+            'min_sat':  self.get_parameter('min_sat').get_parameter_value().integer_value,
+            'max_sat':  self.get_parameter('max_sat').get_parameter_value().integer_value,
+            'min_val':  self.get_parameter('min_val').get_parameter_value().integer_value,
+            'max_val':  self.get_parameter('max_val').get_parameter_value().integer_value
         }
 
         self.bridge = CvBridge()
