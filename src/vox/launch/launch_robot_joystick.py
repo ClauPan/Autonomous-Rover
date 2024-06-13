@@ -9,29 +9,32 @@ from launch_ros.actions import Node
 
 def generate_launch_description():
 	package_name = "vox"
-	rsp = IncludeLaunchDescription(
-		PythonLaunchDescriptionSource([
-			os.path.join(get_package_share_directory(package_name), "launch", "rsp.launch.py")
-		]),
+	package_path = os.path.join(get_package_share_directory(package_name))
+
+	robot_state_publisher = Node(
+		package="robot_state_publisher",
+		executable="robot_state_publisher",
+		output="screen",
+		parameters=[{"robot_description": Command(['xacro ', os.path.join(package_path, "description", "main.urdf.xacro")])}]
 	)
 
-	joystick_parameters = os.path.join(get_package_share_directory('vox'), 'config', 'joystick.yaml')
+	joystick_parameters = os.path.join(package_path, 'config', 'joystick.yaml')
 
     joystick_node = Node(
 		package='joy',
 		executable='joy_node',
-		parameters=[joy_params],
+		parameters=[joystick_parameters],
 	)
 
     joystick_teleop = Node(
 		package='teleop_twist_joy',
 		executable='teleop_node',
 		name='teleop_node',
-		parameters=[joy_params],
+		parameters=[joystick_parameters],
 		remappings=[('/cmd_vel','/cmd_vel_joy')]
 	)
 
-	mux_params = os.path.join(get_package_share_directory(package_name), 'config' ,'twist_mux.yaml')
+	mux_params = os.path.join(package_path, 'config' ,'twist_mux.yaml')
 	mux = Node(
 		package="twist_mux",
 		executable="twist_mux",
@@ -39,36 +42,36 @@ def generate_launch_description():
 		remappings=[('/cmd_vel_out','/diff_cont/cmd_vel_unstamped')]
 	)
 
-	robot_description = Command(['ros2 param get --hide-type /robot_state_publisher robot_description'])
-	controller_params_file = os.path.join(get_package_share_directory(package_name), "config", "skid_steer_config.yaml")
-
 	manager = TimerAction(
 		period=3.0, 
 		actions=[Node(
 			package="controller_manager",
 			executable="ros2_control_node",
-			parameters=[{"robot_description": robot_description}, controller_params_file]
-		)]	
+			parameters=[
+				{"robot_description": Command(['ros2 param get --hide-type /robot_state_publisher robot_description'])}, 
+				os.path.join(package_path, "config", "skid_steer.yaml")
+			]
+		)]
 	)
 
 	interface = RegisterEventHandler(
 		event_handler=OnProcessStart(
-			target_action=controller_manager,
+			target_action=manager,
 			on_start=[Node(
 				package="controller_manager",
 				executable="spawner",
-				arguments=["diff_cont"],
+				arguments=["skid_steer"],
 			)]
 		)
 	)
 
 	joint = RegisterEventHandler(
 		event_handler=OnProcessStart(
-			target_action=controller_manager,
+			target_action=manager,
 			on_start=[Node(
 				package="controller_manager",
 				executable="spawner",
-				arguments=["joint_broad"],
+				arguments=["broadcaster"],
 			)]
 		)
 	)
@@ -100,7 +103,7 @@ def generate_launch_description():
 	)
 
 	return LaunchDescription([
-		rsp,
+		robot_state_publisher,
 		joystick_node,
 		joystick_teleop,
 		mux
