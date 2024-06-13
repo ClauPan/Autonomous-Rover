@@ -15,19 +15,16 @@ def generate_launch_description():
 		package="robot_state_publisher",
 		executable="robot_state_publisher",
 		output="screen",
-		parameters=[{"robot_description": Command(['xacro ', os.path.join(package_path, "description", "robot.urdf.xacro")])}]
+		parameters=[{"robot_description": Command(['xacro ', os.path.join(package_path, "description", "main.urdf.xacro")])}]
 	)
 
-	manager = TimerAction(
-		period=3.0, 
-		actions=[Node(
-			package="controller_manager",
-			executable="ros2_control_node",
-			parameters=[
-				{"robot_description": Command(['ros2 param get --hide-type /robot_state_publisher robot_description'])}, 
-				os.path.join(package_path, "config", "skid_steer.yaml")
-			]
-		)]
+	manager = Node(
+		package="controller_manager",
+		executable="ros2_control_node",
+		parameters=[
+			{"robot_description": Command(['ros2 param get --hide-type /robot_state_publisher robot_description'])}, 
+			os.path.join(package_path, "config", "skid_steer.yaml")
+		]
 	)
 
 	interface = RegisterEventHandler(
@@ -80,7 +77,7 @@ def generate_launch_description():
 
 	return LaunchDescription([
 		robot_state_publisher,
-		manager,
+		TimerAction(period=3.0, actions=[manager]),
 		interface,
 		joint,
 		lidar,

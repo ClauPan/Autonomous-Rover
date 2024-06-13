@@ -42,16 +42,13 @@ def generate_launch_description():
 		remappings=[('/cmd_vel_out','/diff_cont/cmd_vel_unstamped')]
 	)
 
-	manager = TimerAction(
-		period=3.0, 
-		actions=[Node(
-			package="controller_manager",
-			executable="ros2_control_node",
-			parameters=[
-				{"robot_description": Command(['ros2 param get --hide-type /robot_state_publisher robot_description'])}, 
-				os.path.join(package_path, "config", "skid_steer.yaml")
-			]
-		)]
+	manager = Node(
+		package="controller_manager",
+		executable="ros2_control_node",
+		parameters=[
+			{"robot_description": Command(['ros2 param get --hide-type /robot_state_publisher robot_description'])}, 
+			os.path.join(package_path, "config", "skid_steer.yaml")
+		]
 	)
 
 	interface = RegisterEventHandler(
@@ -107,7 +104,7 @@ def generate_launch_description():
 		joystick_node,
 		joystick_teleop,
 		mux
-		manager,
+		TimerAction(period=3.0, actions=[manager]),
 		interface,
 		joint,
 		lidar,
