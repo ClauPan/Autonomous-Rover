@@ -18,9 +18,9 @@ public:
 
 	Motor() = default;
 
-	void setup(int enc_fw, int enc_ba) {
-		this->enc_fw = enc_fw;
-		this->enc_ba = enc_ba;
+	void setup(double enc_fw_, double enc_ba_) {
+		enc_fw = enc_fw_;
+		enc_ba = enc_ba_;
 	}
 
 	double get_encoder_angle() {

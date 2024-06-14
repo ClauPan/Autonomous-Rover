@@ -44,7 +44,7 @@ MPU9250Driver::MPU9250Driver() : Node("mpu9250publisher")
   //auto callback = [this](const geometry_msgs::msg::Twist::SharedPtr msg) -> void {
   //  this->readVel(msg);
   //};
-  subscriber_ = this->create_subscription<geometry_msgs::msg::Twist>("diff_cont/cmd_vel_unstamped", 10, std::bind(&MPU9250Driver::readVel, this, std::placeholders::_1));
+  subscriber_ = this->create_subscription<geometry_msgs::msg::Twist>("/skid_steer/cmd_vel_unstamped", 10, std::bind(&MPU9250Driver::readVel, this, std::placeholders::_1));
 }
 
 void MPU9250Driver::handleInput() {

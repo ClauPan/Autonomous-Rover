@@ -40,7 +40,7 @@ target_link_libraries(skid_steer_controller PUBLIC serial)
 
 # Causes the visibility macros to use dllexport rather than dllimport,
 # which is appropriate when building the dll but not consuming it.
-target_compile_definitions(${PROJECT_NAME} PRIVATE "DISKID_STEER_CONTROLLER_BUILDING_DLL")
+target_compile_definitions(${PROJECT_NAME} PRIVATE "SKID_STEER_CONTROLLER_BUILDING_DLL")
 
 # Export hardware plugins
 pluginlib_export_plugin_description_file(hardware_interface skid_steer_controller.xml)
