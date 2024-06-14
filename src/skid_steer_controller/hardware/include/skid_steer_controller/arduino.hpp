@@ -34,11 +34,12 @@ public:
 		}
 		catch (const LibSerial::ReadTimeout&) {
 			std::cerr << "Communication timeout\n";
+			return "";
 		}
 	}
 
 	void read(int &motor_l, int &motor_r) {
-		std::string response = send_msg("e\r");
+		std::string response = send("e\r");
 
 		size_t del_pos = response.find(" ");
 		motor_l = std::atoi(response.substr(0, del_pos).c_str());
@@ -47,7 +48,7 @@ public:
 	
 	void set_motors(int motor_l, int motor_r) {
 		std::stringstream ss;
-		ss << "m " << motor_l << " " << motor_l << "\r";
+		ss << "m " << motor_l << " " << motor_r << "\r";
 		send(ss.str());
 	}
 

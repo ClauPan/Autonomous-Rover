@@ -37,10 +37,10 @@ hardware_interface::CallbackReturn SkidSteerControllerHardware::on_init(const ha
 
     int enc_counts_per_rev_fw = std::stoi(info_.hardware_parameters["enc_counts_per_rev_fw"]);
     int enc_counts_per_rev_ba = std::stoi(info_.hardware_parameters["enc_counts_per_rev_ba"]);
-    wheel_fl_.setup((2*M_PI)/enc_counts_per_rev_fw, (2*M_PI)/enc_counts_per_rev_ba);
-    wheel_bl_.setup((2*M_PI)/enc_counts_per_rev_fw, (2*M_PI)/enc_counts_per_rev_ba);
-    wheel_fr_.setup((2*M_PI)/enc_counts_per_rev_fw, (2*M_PI)/enc_counts_per_rev_ba);
-    wheel_br_.setup((2*M_PI)/enc_counts_per_rev_fw, (2*M_PI)/enc_counts_per_rev_ba);
+    motor_fl.setup((2*M_PI)/enc_counts_per_rev_fw, (2*M_PI)/enc_counts_per_rev_ba);
+    motor_bl.setup((2*M_PI)/enc_counts_per_rev_fw, (2*M_PI)/enc_counts_per_rev_ba);
+    motor_fr.setup((2*M_PI)/enc_counts_per_rev_fw, (2*M_PI)/enc_counts_per_rev_ba);
+    motor_br.setup((2*M_PI)/enc_counts_per_rev_fw, (2*M_PI)/enc_counts_per_rev_ba);
 
     vel_mult_linear = std::stof(info_.hardware_parameters["vel_mult_linear"]);
     vel_mult_angular = std::stof(info_.hardware_parameters["vel_mult_angular"]);
@@ -99,24 +99,24 @@ std::vector<hardware_interface::StateInterface> SkidSteerControllerHardware::exp
     std::vector<hardware_interface::StateInterface> state_interfaces;
 
     state_interfaces.emplace_back(hardware_interface::StateInterface(
-        front_left_wheel_joint, hardware_interface::HW_IF_POSITION, &wheel_fl_.pos));
+        front_left_wheel_joint, hardware_interface::HW_IF_POSITION, &motor_fl.pos));
     state_interfaces.emplace_back(hardware_interface::StateInterface(
-        front_left_wheel_joint, hardware_interface::HW_IF_VELOCITY, &wheel_fl_.vel));
+        front_left_wheel_joint, hardware_interface::HW_IF_VELOCITY, &motor_fl.vel));
 
     state_interfaces.emplace_back(hardware_interface::StateInterface(
-        back_left_wheel_joint, hardware_interface::HW_IF_POSITION, &wheel_bl_.pos));
+        back_left_wheel_joint, hardware_interface::HW_IF_POSITION, &motor_bl.pos));
     state_interfaces.emplace_back(hardware_interface::StateInterface(
-        back_left_wheel_joint, hardware_interface::HW_IF_VELOCITY, &wheel_bl_.vel));
+        back_left_wheel_joint, hardware_interface::HW_IF_VELOCITY, &motor_bl.vel));
 
     state_interfaces.emplace_back(hardware_interface::StateInterface(
-        front_right_wheel_joint, hardware_interface::HW_IF_POSITION, &wheel_fr_.pos));
+        front_right_wheel_joint, hardware_interface::HW_IF_POSITION, &motor_fr.pos));
     state_interfaces.emplace_back(hardware_interface::StateInterface(
-        front_right_wheel_joint, hardware_interface::HW_IF_VELOCITY, &wheel_fr_.vel));
+        front_right_wheel_joint, hardware_interface::HW_IF_VELOCITY, &motor_fr.vel));
 
     state_interfaces.emplace_back(hardware_interface::StateInterface(
-        back_right_wheel_joint, hardware_interface::HW_IF_POSITION, &wheel_br_.pos));
+        back_right_wheel_joint, hardware_interface::HW_IF_POSITION, &motor_br.pos));
     state_interfaces.emplace_back(hardware_interface::StateInterface(
-        back_right_wheel_joint, hardware_interface::HW_IF_VELOCITY, &wheel_br_.vel));
+        back_right_wheel_joint, hardware_interface::HW_IF_VELOCITY, &motor_br.vel));
 
     return state_interfaces;
 }
@@ -125,16 +125,16 @@ std::vector<hardware_interface::CommandInterface> SkidSteerControllerHardware::e
     std::vector<hardware_interface::CommandInterface> command_interfaces;
 
     command_interfaces.emplace_back(hardware_interface::CommandInterface(
-        front_left_wheel_joint, hardware_interface::HW_IF_VELOCITY, &wheel_fl_.cmd));
+        front_left_wheel_joint, hardware_interface::HW_IF_VELOCITY, &motor_fl.cmd));
 
     command_interfaces.emplace_back(hardware_interface::CommandInterface(
-        back_left_wheel_joint, hardware_interface::HW_IF_VELOCITY, &wheel_bl_.cmd));
+        back_left_wheel_joint, hardware_interface::HW_IF_VELOCITY, &motor_bl.cmd));
 
     command_interfaces.emplace_back(hardware_interface::CommandInterface(
-        front_right_wheel_joint, hardware_interface::HW_IF_VELOCITY, &wheel_fr_.cmd));
+        front_right_wheel_joint, hardware_interface::HW_IF_VELOCITY, &motor_fr.cmd));
 
     command_interfaces.emplace_back(hardware_interface::CommandInterface(
-        back_right_wheel_joint, hardware_interface::HW_IF_VELOCITY, &wheel_br_.cmd));
+        back_right_wheel_joint, hardware_interface::HW_IF_VELOCITY, &motor_br.cmd));
 
     return command_interfaces;
 }
@@ -196,26 +196,26 @@ hardware_interface::return_type SkidSteerControllerHardware::read(
 
     double dt = period.seconds();
     
-    arduino.read(wheel_fl_.enc, wheel_fr_.enc);
+    arduino.read(motor_fl.enc, motor_fr.enc);
 
-    double pos_prev = wheel_fl_.pos;
-    wheel_fl_.pos = wheel_fl_.get_encoder_angle();
-    wheel_fl_.vel = (wheel_fl_.pos - pos_prev) / dt;
+    double pos_prev = motor_fl.pos;
+    motor_fl.pos = motor_fl.get_encoder_angle();
+    motor_fl.vel = (motor_fl.pos - pos_prev) / dt;
 
-    wheel_bl_.pos = wheel_fl_.pos;
-    wheel_bl_.vel = wheel_fl_.vel;
+    motor_bl.pos = motor_fl.pos;
+    motor_bl.vel = motor_fl.vel;
 
-    pos_prev = wheel_fr_.pos;
-    wheel_fr_.pos = wheel_fr_.get_encoder_angle();
-    wheel_fr_.vel = (wheel_fr_.pos - pos_prev) / dt;
+    pos_prev = motor_fr.pos;
+    motor_fr.pos = motor_fr.get_encoder_angle();
+    motor_fr.vel = (motor_fr.pos - pos_prev) / dt;
 
-    wheel_br_.pos = wheel_fr_.pos;
-    wheel_br_.vel = wheel_fr_.vel;
+    motor_br.pos = motor_fr.pos;
+    motor_br.vel = motor_fr.vel;
 
     return hardware_interface::return_type::OK;
 }
 
-hardware_interface::return_type diffdrive_arduino ::SkidSteerControllerHardware::write(
+hardware_interface::return_type skid_steer_controller::SkidSteerControllerHardware::write(
     const rclcpp::Time & /*time*/, const rclcpp::Duration & /*period*/) 
 {
     
@@ -223,15 +223,15 @@ hardware_interface::return_type diffdrive_arduino ::SkidSteerControllerHardware:
         return hardware_interface::return_type::ERROR;
     }
 
-    int motor_l = wheel_fl_.get_counts_per_loop();
-    int motor_r = wheel_fr_.get_counts_per_loop();
+    int motor_l = motor_fl.get_counts_per_loop();
+    int motor_r = motor_fr.get_counts_per_loop();
 
     if (motor_l == motor_r) {
         motor_l *= vel_mult_linear;
         motor_r *= vel_mult_linear;
 
     }
-    else if (motor_l_counts_per_loop == -motor_r_counts_per_loop) {
+    else if (motor_l == -motor_r) {
         motor_l *= vel_mult_angular;
         motor_r *= vel_mult_angular;
     }

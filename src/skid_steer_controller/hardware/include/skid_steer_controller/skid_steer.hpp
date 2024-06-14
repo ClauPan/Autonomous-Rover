@@ -32,7 +32,7 @@
 
 #include "skid_steer_controller/visibility_control.h"
 #include "skid_steer_controller/arduino.hpp"
-#include "skid_steer_controller/wheel.hpp"
+#include "skid_steer_controller/motor.hpp"
 
 namespace skid_steer_controller {
 
@@ -41,38 +41,38 @@ class SkidSteerControllerHardware : public hardware_interface::SystemInterface{
 public:
     RCLCPP_SHARED_PTR_DEFINITIONS(SkidSteerControllerHardware);
 
-    DIFFDRIVE_ARDUINO_PUBLIC
+    SKID_STEER_CONTROLLER_PUBLIC
     hardware_interface::CallbackReturn on_init(
         const hardware_interface::HardwareInfo & info) override;
 
-    DIFFDRIVE_ARDUINO_PUBLIC
+    SKID_STEER_CONTROLLER_PUBLIC
     std::vector<hardware_interface::StateInterface> export_state_interfaces() override;
 
-    DIFFDRIVE_ARDUINO_PUBLIC
+    SKID_STEER_CONTROLLER_PUBLIC
     std::vector<hardware_interface::CommandInterface> export_command_interfaces() override;
 
-    DIFFDRIVE_ARDUINO_PUBLIC
+    SKID_STEER_CONTROLLER_PUBLIC
     hardware_interface::CallbackReturn on_configure(
         const rclcpp_lifecycle::State & previous_state) override;
 
-    DIFFDRIVE_ARDUINO_PUBLIC
+    SKID_STEER_CONTROLLER_PUBLIC
     hardware_interface::CallbackReturn on_cleanup(
         const rclcpp_lifecycle::State & previous_state) override;
 
 
-    DIFFDRIVE_ARDUINO_PUBLIC
+    SKID_STEER_CONTROLLER_PUBLIC
     hardware_interface::CallbackReturn on_activate(
         const rclcpp_lifecycle::State & previous_state) override;
 
-    DIFFDRIVE_ARDUINO_PUBLIC
+    SKID_STEER_CONTROLLER_PUBLIC
     hardware_interface::CallbackReturn on_deactivate(
         const rclcpp_lifecycle::State & previous_state) override;
 
-    DIFFDRIVE_ARDUINO_PUBLIC
+    SKID_STEER_CONTROLLER_PUBLIC
     hardware_interface::return_type read(
         const rclcpp::Time & time, const rclcpp::Duration & period) override;
 
-    DIFFDRIVE_ARDUINO_PUBLIC
+    SKID_STEER_CONTROLLER_PUBLIC
     hardware_interface::return_type write(
         const rclcpp::Time & time, const rclcpp::Duration & period) override;
 
@@ -86,10 +86,10 @@ private:
     float vel_mult_linear = 1.0;
     float vel_mult_angular = 1.0;
 
-    Wheel wheel_fl;
-    Wheel wheel_bl;
-    Wheel wheel_fr;
-    Wheel wheel_br;
+    Motor motor_fl;
+    Motor motor_bl;
+    Motor motor_fr;
+    Motor motor_br;
 };
 
 }  

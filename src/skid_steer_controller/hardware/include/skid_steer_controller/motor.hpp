@@ -19,8 +19,8 @@ public:
 	Motor() = default;
 
 	void setup(int enc_fw, int enc_ba) {
-		this.enc_fw = enc_fw;
-		this.enc_ba = enc_ba;
+		this->enc_fw = enc_fw;
+		this->enc_ba = enc_ba;
 	}
 
 	double get_encoder_angle() {
@@ -40,6 +40,9 @@ public:
 		}
 		else if (cmd < 0) {
 			return cmd / enc_ba / 30;
+		}
+		else {
+			return 0;
 		}
 	}
 
