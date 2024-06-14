@@ -49,7 +49,7 @@ class CalibrationParameters:
         self.height = height
         self.min_size = min_size
         self.max_size = max_size
-        self.min_hue = max_hue
+        self.min_hue = min_hue
         self.max_hue = max_hue
         self.min_sat = min_sat
         self.max_sat = max_sat
@@ -58,7 +58,7 @@ class CalibrationParameters:
 
         self.calibrating = calibrating
 
-    def read_from_gui():
+    def read_from_gui(self):
         self.x = cv2.getTrackbarPos("x", "Calibration Parameters")
         self.y = cv2.getTrackbarPos("y", "Calibration Parameters")
         self.width = cv2.getTrackbarPos("width", "Calibration Parameters")
@@ -201,13 +201,13 @@ class Tracker(Node):
                 msg.linear.x = self.forward_chase_speed
             msg.angular.z = -self.angular_chase_multiplier*self.target_val
         else:
-            if lost_ct == 0:
+            if self.lost_ct == 0:
                 self.get_logger().info('Target lost...')
             
             self.lost_ct += 1
 
             if self.lost_ct > 20:
-                msg.angular.z = self.search_angular_speed
+                msg.angular.z = -self.search_angular_speed
         self.cmd_vel_pub.publish(msg)
 
 
