@@ -1,1 +1,1 @@
-/home/vox/Vox/src/serial_motor_demo/serial_motor_demo_msgs/msg/EncoderVals.msg
+/home/vox/vox_test/Vox-Robot/src/serial_motor_demo/serial_motor_demo_msgs/msg/EncoderVals.msg

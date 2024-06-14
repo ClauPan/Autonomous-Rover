@@ -53,10 +53,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/vox/Vox/src/vox
+CMAKE_SOURCE_DIR = /home/vox/vox_test/Vox-Robot/src/vox
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/vox/Vox/build/vox
+CMAKE_BINARY_DIR = /home/vox/vox_test/Vox-Robot/build/vox
 
 # Utility rule file for vox_uninstall.
 
@@ -67,7 +67,7 @@ include CMakeFiles/vox_uninstall.dir/compiler_depend.make
 include CMakeFiles/vox_uninstall.dir/progress.make
 
 CMakeFiles/vox_uninstall:
-	/usr/bin/cmake -P /home/vox/Vox/build/vox/ament_cmake_uninstall_target/ament_cmake_uninstall_target.cmake
+	/usr/bin/cmake -P /home/vox/vox_test/Vox-Robot/build/vox/ament_cmake_uninstall_target/ament_cmake_uninstall_target.cmake
 
 vox_uninstall: CMakeFiles/vox_uninstall
 vox_uninstall: CMakeFiles/vox_uninstall.dir/build.make
@@ -82,6 +82,6 @@ CMakeFiles/vox_uninstall.dir/clean:
 .PHONY : CMakeFiles/vox_uninstall.dir/clean
 
 CMakeFiles/vox_uninstall.dir/depend:
-	cd /home/vox/Vox/build/vox && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/vox/Vox/src/vox /home/vox/Vox/src/vox /home/vox/Vox/build/vox /home/vox/Vox/build/vox /home/vox/Vox/build/vox/CMakeFiles/vox_uninstall.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/vox/vox_test/Vox-Robot/build/vox && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/vox/vox_test/Vox-Robot/src/vox /home/vox/vox_test/Vox-Robot/src/vox /home/vox/vox_test/Vox-Robot/build/vox /home/vox/vox_test/Vox-Robot/build/vox /home/vox/vox_test/Vox-Robot/build/vox/CMakeFiles/vox_uninstall.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/vox_uninstall.dir/depend
 

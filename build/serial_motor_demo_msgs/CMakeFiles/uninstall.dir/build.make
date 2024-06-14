@@ -53,10 +53,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/vox/Vox/src/serial_motor_demo/serial_motor_demo_msgs
+CMAKE_SOURCE_DIR = /home/vox/vox_test/Vox-Robot/src/serial_motor_demo/serial_motor_demo_msgs
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/vox/Vox/build/serial_motor_demo_msgs
+CMAKE_BINARY_DIR = /home/vox/vox_test/Vox-Robot/build/serial_motor_demo_msgs
 
 # Utility rule file for uninstall.
 
@@ -78,6 +78,6 @@ CMakeFiles/uninstall.dir/clean:
 .PHONY : CMakeFiles/uninstall.dir/clean
 
 CMakeFiles/uninstall.dir/depend:
-	cd /home/vox/Vox/build/serial_motor_demo_msgs && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/vox/Vox/src/serial_motor_demo/serial_motor_demo_msgs /home/vox/Vox/src/serial_motor_demo/serial_motor_demo_msgs /home/vox/Vox/build/serial_motor_demo_msgs /home/vox/Vox/build/serial_motor_demo_msgs /home/vox/Vox/build/serial_motor_demo_msgs/CMakeFiles/uninstall.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/vox/vox_test/Vox-Robot/build/serial_motor_demo_msgs && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/vox/vox_test/Vox-Robot/src/serial_motor_demo/serial_motor_demo_msgs /home/vox/vox_test/Vox-Robot/src/serial_motor_demo/serial_motor_demo_msgs /home/vox/vox_test/Vox-Robot/build/serial_motor_demo_msgs /home/vox/vox_test/Vox-Robot/build/serial_motor_demo_msgs /home/vox/vox_test/Vox-Robot/build/serial_motor_demo_msgs/CMakeFiles/uninstall.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/uninstall.dir/depend
 

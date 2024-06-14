@@ -1,9 +1,9 @@
 {
   "package_name": "serial_motor_demo_msgs",
-  "output_dir": "/home/vox/Vox/build/serial_motor_demo_msgs/rosidl_generator_type_description/serial_motor_demo_msgs",
+  "output_dir": "/home/vox/vox_test/Vox-Robot/build/serial_motor_demo_msgs/rosidl_generator_type_description/serial_motor_demo_msgs",
   "idl_tuples": [
-    "/home/vox/Vox/build/serial_motor_demo_msgs/rosidl_adapter/serial_motor_demo_msgs:msg/MotorCommand.idl",
-    "/home/vox/Vox/build/serial_motor_demo_msgs/rosidl_adapter/serial_motor_demo_msgs:msg/MotorVels.idl",
-    "/home/vox/Vox/build/serial_motor_demo_msgs/rosidl_adapter/serial_motor_demo_msgs:msg/EncoderVals.idl"
+    "/home/vox/vox_test/Vox-Robot/build/serial_motor_demo_msgs/rosidl_adapter/serial_motor_demo_msgs:msg/MotorCommand.idl",
+    "/home/vox/vox_test/Vox-Robot/build/serial_motor_demo_msgs/rosidl_adapter/serial_motor_demo_msgs:msg/MotorVels.idl",
+    "/home/vox/vox_test/Vox-Robot/build/serial_motor_demo_msgs/rosidl_adapter/serial_motor_demo_msgs:msg/EncoderVals.idl"
   ]
 }

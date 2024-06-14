@@ -1,8 +1,8 @@
 lib/i2c/CMakeFiles/linux_i2c_communicator.dir/src/LinuxI2cCommunicator.cpp.o: \
- /home/vox/Vox/src/imu/lib/i2c/src/LinuxI2cCommunicator.cpp \
+ /home/vox/vox_test/Vox-Robot/src/imu/lib/i2c/src/LinuxI2cCommunicator.cpp \
  /usr/include/stdc-predef.h \
- /home/vox/Vox/src/imu/lib/i2c/include/linux_i2c_communicator/LinuxI2cCommunicator.h \
- /home/vox/Vox/src/imu/lib/i2c/include/i2c_comm_interface/I2cCommunicator.h \
+ /home/vox/vox_test/Vox-Robot/src/imu/lib/i2c/include/linux_i2c_communicator/LinuxI2cCommunicator.h \
+ /home/vox/vox_test/Vox-Robot/src/imu/lib/i2c/include/i2c_comm_interface/I2cCommunicator.h \
  /usr/include/errno.h /usr/include/features.h \
  /usr/include/features-time64.h \
  /usr/include/aarch64-linux-gnu/bits/wordsize.h \

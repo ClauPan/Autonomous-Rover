@@ -1,1 +1,1 @@
-/home/vox/Vox/build/serial_motor_demo_msgs/ament_cmake_environment_hooks/local_setup.sh
+/home/vox/vox_test/Vox-Robot/build/serial_motor_demo_msgs/ament_cmake_environment_hooks/local_setup.sh

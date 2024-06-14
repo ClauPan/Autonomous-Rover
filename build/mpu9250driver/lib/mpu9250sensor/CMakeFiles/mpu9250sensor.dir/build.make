@@ -53,10 +53,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/vox/Vox/src/imu
+CMAKE_SOURCE_DIR = /home/vox/vox_test/Vox-Robot/src/imu
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/vox/Vox/build/mpu9250driver
+CMAKE_BINARY_DIR = /home/vox/vox_test/Vox-Robot/build/mpu9250driver
 
 # Include any dependencies generated for this target.
 include lib/mpu9250sensor/CMakeFiles/mpu9250sensor.dir/depend.make
@@ -70,18 +70,18 @@ include lib/mpu9250sensor/CMakeFiles/mpu9250sensor.dir/progress.make
 include lib/mpu9250sensor/CMakeFiles/mpu9250sensor.dir/flags.make
 
 lib/mpu9250sensor/CMakeFiles/mpu9250sensor.dir/src/mpu9250sensor.cpp.o: lib/mpu9250sensor/CMakeFiles/mpu9250sensor.dir/flags.make
-lib/mpu9250sensor/CMakeFiles/mpu9250sensor.dir/src/mpu9250sensor.cpp.o: /home/vox/Vox/src/imu/lib/mpu9250sensor/src/mpu9250sensor.cpp
+lib/mpu9250sensor/CMakeFiles/mpu9250sensor.dir/src/mpu9250sensor.cpp.o: /home/vox/vox_test/Vox-Robot/src/imu/lib/mpu9250sensor/src/mpu9250sensor.cpp
 lib/mpu9250sensor/CMakeFiles/mpu9250sensor.dir/src/mpu9250sensor.cpp.o: lib/mpu9250sensor/CMakeFiles/mpu9250sensor.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/vox/Vox/build/mpu9250driver/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object lib/mpu9250sensor/CMakeFiles/mpu9250sensor.dir/src/mpu9250sensor.cpp.o"
-	cd /home/vox/Vox/build/mpu9250driver/lib/mpu9250sensor && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT lib/mpu9250sensor/CMakeFiles/mpu9250sensor.dir/src/mpu9250sensor.cpp.o -MF CMakeFiles/mpu9250sensor.dir/src/mpu9250sensor.cpp.o.d -o CMakeFiles/mpu9250sensor.dir/src/mpu9250sensor.cpp.o -c /home/vox/Vox/src/imu/lib/mpu9250sensor/src/mpu9250sensor.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/vox/vox_test/Vox-Robot/build/mpu9250driver/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object lib/mpu9250sensor/CMakeFiles/mpu9250sensor.dir/src/mpu9250sensor.cpp.o"
+	cd /home/vox/vox_test/Vox-Robot/build/mpu9250driver/lib/mpu9250sensor && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT lib/mpu9250sensor/CMakeFiles/mpu9250sensor.dir/src/mpu9250sensor.cpp.o -MF CMakeFiles/mpu9250sensor.dir/src/mpu9250sensor.cpp.o.d -o CMakeFiles/mpu9250sensor.dir/src/mpu9250sensor.cpp.o -c /home/vox/vox_test/Vox-Robot/src/imu/lib/mpu9250sensor/src/mpu9250sensor.cpp
 
 lib/mpu9250sensor/CMakeFiles/mpu9250sensor.dir/src/mpu9250sensor.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/mpu9250sensor.dir/src/mpu9250sensor.cpp.i"
-	cd /home/vox/Vox/build/mpu9250driver/lib/mpu9250sensor && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/vox/Vox/src/imu/lib/mpu9250sensor/src/mpu9250sensor.cpp > CMakeFiles/mpu9250sensor.dir/src/mpu9250sensor.cpp.i
+	cd /home/vox/vox_test/Vox-Robot/build/mpu9250driver/lib/mpu9250sensor && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/vox/vox_test/Vox-Robot/src/imu/lib/mpu9250sensor/src/mpu9250sensor.cpp > CMakeFiles/mpu9250sensor.dir/src/mpu9250sensor.cpp.i
 
 lib/mpu9250sensor/CMakeFiles/mpu9250sensor.dir/src/mpu9250sensor.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/mpu9250sensor.dir/src/mpu9250sensor.cpp.s"
-	cd /home/vox/Vox/build/mpu9250driver/lib/mpu9250sensor && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/vox/Vox/src/imu/lib/mpu9250sensor/src/mpu9250sensor.cpp -o CMakeFiles/mpu9250sensor.dir/src/mpu9250sensor.cpp.s
+	cd /home/vox/vox_test/Vox-Robot/build/mpu9250driver/lib/mpu9250sensor && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/vox/vox_test/Vox-Robot/src/imu/lib/mpu9250sensor/src/mpu9250sensor.cpp -o CMakeFiles/mpu9250sensor.dir/src/mpu9250sensor.cpp.s
 
 # Object files for target mpu9250sensor
 mpu9250sensor_OBJECTS = \
@@ -93,19 +93,19 @@ mpu9250sensor_EXTERNAL_OBJECTS =
 lib/mpu9250sensor/libmpu9250sensor.a: lib/mpu9250sensor/CMakeFiles/mpu9250sensor.dir/src/mpu9250sensor.cpp.o
 lib/mpu9250sensor/libmpu9250sensor.a: lib/mpu9250sensor/CMakeFiles/mpu9250sensor.dir/build.make
 lib/mpu9250sensor/libmpu9250sensor.a: lib/mpu9250sensor/CMakeFiles/mpu9250sensor.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/vox/Vox/build/mpu9250driver/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX static library libmpu9250sensor.a"
-	cd /home/vox/Vox/build/mpu9250driver/lib/mpu9250sensor && $(CMAKE_COMMAND) -P CMakeFiles/mpu9250sensor.dir/cmake_clean_target.cmake
-	cd /home/vox/Vox/build/mpu9250driver/lib/mpu9250sensor && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/mpu9250sensor.dir/link.txt --verbose=$(VERBOSE)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/vox/vox_test/Vox-Robot/build/mpu9250driver/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX static library libmpu9250sensor.a"
+	cd /home/vox/vox_test/Vox-Robot/build/mpu9250driver/lib/mpu9250sensor && $(CMAKE_COMMAND) -P CMakeFiles/mpu9250sensor.dir/cmake_clean_target.cmake
+	cd /home/vox/vox_test/Vox-Robot/build/mpu9250driver/lib/mpu9250sensor && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/mpu9250sensor.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
 lib/mpu9250sensor/CMakeFiles/mpu9250sensor.dir/build: lib/mpu9250sensor/libmpu9250sensor.a
 .PHONY : lib/mpu9250sensor/CMakeFiles/mpu9250sensor.dir/build
 
 lib/mpu9250sensor/CMakeFiles/mpu9250sensor.dir/clean:
-	cd /home/vox/Vox/build/mpu9250driver/lib/mpu9250sensor && $(CMAKE_COMMAND) -P CMakeFiles/mpu9250sensor.dir/cmake_clean.cmake
+	cd /home/vox/vox_test/Vox-Robot/build/mpu9250driver/lib/mpu9250sensor && $(CMAKE_COMMAND) -P CMakeFiles/mpu9250sensor.dir/cmake_clean.cmake
 .PHONY : lib/mpu9250sensor/CMakeFiles/mpu9250sensor.dir/clean
 
 lib/mpu9250sensor/CMakeFiles/mpu9250sensor.dir/depend:
-	cd /home/vox/Vox/build/mpu9250driver && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/vox/Vox/src/imu /home/vox/Vox/src/imu/lib/mpu9250sensor /home/vox/Vox/build/mpu9250driver /home/vox/Vox/build/mpu9250driver/lib/mpu9250sensor /home/vox/Vox/build/mpu9250driver/lib/mpu9250sensor/CMakeFiles/mpu9250sensor.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/vox/vox_test/Vox-Robot/build/mpu9250driver && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/vox/vox_test/Vox-Robot/src/imu /home/vox/vox_test/Vox-Robot/src/imu/lib/mpu9250sensor /home/vox/vox_test/Vox-Robot/build/mpu9250driver /home/vox/vox_test/Vox-Robot/build/mpu9250driver/lib/mpu9250sensor /home/vox/vox_test/Vox-Robot/build/mpu9250driver/lib/mpu9250sensor/CMakeFiles/mpu9250sensor.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : lib/mpu9250sensor/CMakeFiles/mpu9250sensor.dir/depend
 

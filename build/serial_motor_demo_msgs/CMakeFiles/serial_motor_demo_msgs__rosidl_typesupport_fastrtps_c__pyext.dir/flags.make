@@ -4,7 +4,7 @@
 # compile C with /usr/bin/cc
 C_DEFINES = -DFASTCDR_DYN_LINK -DROS_PACKAGE_NAME=\"serial_motor_demo_msgs\" -Dserial_motor_demo_msgs__rosidl_typesupport_fastrtps_c__pyext_EXPORTS
 
-C_INCLUDES = -I/home/vox/Vox/build/serial_motor_demo_msgs/rosidl_generator_c -I/home/vox/Vox/build/serial_motor_demo_msgs/rosidl_generator_py -I/usr/include/python3.10 -I/home/vox/Vox/build/serial_motor_demo_msgs/rosidl_typesupport_fastrtps_c -isystem /opt/ros/iron/include/rosidl_runtime_c -isystem /opt/ros/iron/include/rosidl_typesupport_c -isystem /opt/ros/iron/include/rosidl_typesupport_interface -isystem /opt/ros/iron/include/rmw -isystem /opt/ros/iron/include/rcutils -isystem /opt/ros/iron/include -isystem /opt/ros/iron/include/rosidl_runtime_cpp -isystem /opt/ros/iron/include/rosidl_typesupport_fastrtps_cpp -isystem /opt/ros/iron/include/rosidl_dynamic_typesupport -isystem /opt/ros/iron/include/rosidl_typesupport_fastrtps_c
+C_INCLUDES = -I/home/vox/vox_test/Vox-Robot/build/serial_motor_demo_msgs/rosidl_generator_c -I/home/vox/vox_test/Vox-Robot/build/serial_motor_demo_msgs/rosidl_generator_py -I/usr/include/python3.10 -I/home/vox/vox_test/Vox-Robot/build/serial_motor_demo_msgs/rosidl_typesupport_fastrtps_c -isystem /opt/ros/iron/include/rosidl_runtime_c -isystem /opt/ros/iron/include/rosidl_typesupport_c -isystem /opt/ros/iron/include/rosidl_typesupport_interface -isystem /opt/ros/iron/include/rmw -isystem /opt/ros/iron/include/rcutils -isystem /opt/ros/iron/include -isystem /opt/ros/iron/include/rosidl_runtime_cpp -isystem /opt/ros/iron/include/rosidl_typesupport_fastrtps_cpp -isystem /opt/ros/iron/include/rosidl_dynamic_typesupport -isystem /opt/ros/iron/include/rosidl_typesupport_fastrtps_c
 
 C_FLAGS = -fPIC -Wall -Wextra -std=gnu99
 

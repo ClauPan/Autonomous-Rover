@@ -23,7 +23,7 @@ function(ament_cmake_symlink_install_directory cmake_current_source_dir)
 
   # make destination absolute path and ensure that it exists
   if(NOT IS_ABSOLUTE "${ARG_DESTINATION}")
-    set(ARG_DESTINATION "/home/vox/Vox/install/mpu9250driver/${ARG_DESTINATION}")
+    set(ARG_DESTINATION "/home/vox/vox_test/Vox-Robot/install/mpu9250driver/${ARG_DESTINATION}")
   endif()
   if(NOT EXISTS "${ARG_DESTINATION}")
     file(MAKE_DIRECTORY "${ARG_DESTINATION}")
@@ -123,7 +123,7 @@ function(ament_cmake_symlink_install_files cmake_current_source_dir)
 
   # make destination an absolute path and ensure that it exists
   if(NOT IS_ABSOLUTE "${ARG_DESTINATION}")
-    set(ARG_DESTINATION "/home/vox/Vox/install/mpu9250driver/${ARG_DESTINATION}")
+    set(ARG_DESTINATION "/home/vox/vox_test/Vox-Robot/install/mpu9250driver/${ARG_DESTINATION}")
   endif()
   if(NOT EXISTS "${ARG_DESTINATION}")
     file(MAKE_DIRECTORY "${ARG_DESTINATION}")
@@ -181,7 +181,7 @@ function(ament_cmake_symlink_install_programs cmake_current_source_dir)
 
   # make destination an absolute path and ensure that it exists
   if(NOT IS_ABSOLUTE "${ARG_DESTINATION}")
-    set(ARG_DESTINATION "/home/vox/Vox/install/mpu9250driver/${ARG_DESTINATION}")
+    set(ARG_DESTINATION "/home/vox/vox_test/Vox-Robot/install/mpu9250driver/${ARG_DESTINATION}")
   endif()
   if(NOT EXISTS "${ARG_DESTINATION}")
     file(MAKE_DIRECTORY "${ARG_DESTINATION}")
@@ -251,7 +251,7 @@ function(ament_cmake_symlink_install_targets)
 
     # make destination an absolute path and ensure that it exists
     if(NOT IS_ABSOLUTE "${destination}")
-      set(destination "/home/vox/Vox/install/mpu9250driver/${destination}")
+      set(destination "/home/vox/vox_test/Vox-Robot/install/mpu9250driver/${destination}")
     endif()
     if(NOT EXISTS "${destination}")
       file(MAKE_DIRECTORY "${destination}")
@@ -311,49 +311,49 @@ message(STATUS "Execute custom install script")
 # begin of custom install code
 
 # install("TARGETS" "mpu9250driver" "DESTINATION" "lib/mpu9250driver")
-include("/home/vox/Vox/build/mpu9250driver/ament_cmake_symlink_install_targets_0_${CMAKE_INSTALL_CONFIG_NAME}.cmake")
+include("/home/vox/vox_test/Vox-Robot/build/mpu9250driver/ament_cmake_symlink_install_targets_0_${CMAKE_INSTALL_CONFIG_NAME}.cmake")
 
 # install(DIRECTORY "launch" "params" "DESTINATION" "share/mpu9250driver/")
-ament_cmake_symlink_install_directory("/home/vox/Vox/src/imu" DIRECTORY "launch" "params" "DESTINATION" "share/mpu9250driver/")
+ament_cmake_symlink_install_directory("/home/vox/vox_test/Vox-Robot/src/imu" DIRECTORY "launch" "params" "DESTINATION" "share/mpu9250driver/")
 
-# install(FILES "/home/vox/Vox/build/mpu9250driver/ament_cmake_index/share/ament_index/resource_index/package_run_dependencies/mpu9250driver" "DESTINATION" "share/ament_index/resource_index/package_run_dependencies")
-ament_cmake_symlink_install_files("/home/vox/Vox/src/imu" FILES "/home/vox/Vox/build/mpu9250driver/ament_cmake_index/share/ament_index/resource_index/package_run_dependencies/mpu9250driver" "DESTINATION" "share/ament_index/resource_index/package_run_dependencies")
+# install(FILES "/home/vox/vox_test/Vox-Robot/build/mpu9250driver/ament_cmake_index/share/ament_index/resource_index/package_run_dependencies/mpu9250driver" "DESTINATION" "share/ament_index/resource_index/package_run_dependencies")
+ament_cmake_symlink_install_files("/home/vox/vox_test/Vox-Robot/src/imu" FILES "/home/vox/vox_test/Vox-Robot/build/mpu9250driver/ament_cmake_index/share/ament_index/resource_index/package_run_dependencies/mpu9250driver" "DESTINATION" "share/ament_index/resource_index/package_run_dependencies")
 
-# install(FILES "/home/vox/Vox/build/mpu9250driver/ament_cmake_index/share/ament_index/resource_index/parent_prefix_path/mpu9250driver" "DESTINATION" "share/ament_index/resource_index/parent_prefix_path")
-ament_cmake_symlink_install_files("/home/vox/Vox/src/imu" FILES "/home/vox/Vox/build/mpu9250driver/ament_cmake_index/share/ament_index/resource_index/parent_prefix_path/mpu9250driver" "DESTINATION" "share/ament_index/resource_index/parent_prefix_path")
+# install(FILES "/home/vox/vox_test/Vox-Robot/build/mpu9250driver/ament_cmake_index/share/ament_index/resource_index/parent_prefix_path/mpu9250driver" "DESTINATION" "share/ament_index/resource_index/parent_prefix_path")
+ament_cmake_symlink_install_files("/home/vox/vox_test/Vox-Robot/src/imu" FILES "/home/vox/vox_test/Vox-Robot/build/mpu9250driver/ament_cmake_index/share/ament_index/resource_index/parent_prefix_path/mpu9250driver" "DESTINATION" "share/ament_index/resource_index/parent_prefix_path")
 
 # install(FILES "/opt/ros/iron/share/ament_cmake_core/cmake/environment_hooks/environment/ament_prefix_path.sh" "DESTINATION" "share/mpu9250driver/environment")
-ament_cmake_symlink_install_files("/home/vox/Vox/src/imu" FILES "/opt/ros/iron/share/ament_cmake_core/cmake/environment_hooks/environment/ament_prefix_path.sh" "DESTINATION" "share/mpu9250driver/environment")
+ament_cmake_symlink_install_files("/home/vox/vox_test/Vox-Robot/src/imu" FILES "/opt/ros/iron/share/ament_cmake_core/cmake/environment_hooks/environment/ament_prefix_path.sh" "DESTINATION" "share/mpu9250driver/environment")
 
-# install(FILES "/home/vox/Vox/build/mpu9250driver/ament_cmake_environment_hooks/ament_prefix_path.dsv" "DESTINATION" "share/mpu9250driver/environment")
-ament_cmake_symlink_install_files("/home/vox/Vox/src/imu" FILES "/home/vox/Vox/build/mpu9250driver/ament_cmake_environment_hooks/ament_prefix_path.dsv" "DESTINATION" "share/mpu9250driver/environment")
+# install(FILES "/home/vox/vox_test/Vox-Robot/build/mpu9250driver/ament_cmake_environment_hooks/ament_prefix_path.dsv" "DESTINATION" "share/mpu9250driver/environment")
+ament_cmake_symlink_install_files("/home/vox/vox_test/Vox-Robot/src/imu" FILES "/home/vox/vox_test/Vox-Robot/build/mpu9250driver/ament_cmake_environment_hooks/ament_prefix_path.dsv" "DESTINATION" "share/mpu9250driver/environment")
 
 # install(FILES "/opt/ros/iron/share/ament_cmake_core/cmake/environment_hooks/environment/path.sh" "DESTINATION" "share/mpu9250driver/environment")
-ament_cmake_symlink_install_files("/home/vox/Vox/src/imu" FILES "/opt/ros/iron/share/ament_cmake_core/cmake/environment_hooks/environment/path.sh" "DESTINATION" "share/mpu9250driver/environment")
+ament_cmake_symlink_install_files("/home/vox/vox_test/Vox-Robot/src/imu" FILES "/opt/ros/iron/share/ament_cmake_core/cmake/environment_hooks/environment/path.sh" "DESTINATION" "share/mpu9250driver/environment")
 
-# install(FILES "/home/vox/Vox/build/mpu9250driver/ament_cmake_environment_hooks/path.dsv" "DESTINATION" "share/mpu9250driver/environment")
-ament_cmake_symlink_install_files("/home/vox/Vox/src/imu" FILES "/home/vox/Vox/build/mpu9250driver/ament_cmake_environment_hooks/path.dsv" "DESTINATION" "share/mpu9250driver/environment")
+# install(FILES "/home/vox/vox_test/Vox-Robot/build/mpu9250driver/ament_cmake_environment_hooks/path.dsv" "DESTINATION" "share/mpu9250driver/environment")
+ament_cmake_symlink_install_files("/home/vox/vox_test/Vox-Robot/src/imu" FILES "/home/vox/vox_test/Vox-Robot/build/mpu9250driver/ament_cmake_environment_hooks/path.dsv" "DESTINATION" "share/mpu9250driver/environment")
 
-# install(FILES "/home/vox/Vox/build/mpu9250driver/ament_cmake_environment_hooks/local_setup.bash" "DESTINATION" "share/mpu9250driver")
-ament_cmake_symlink_install_files("/home/vox/Vox/src/imu" FILES "/home/vox/Vox/build/mpu9250driver/ament_cmake_environment_hooks/local_setup.bash" "DESTINATION" "share/mpu9250driver")
+# install(FILES "/home/vox/vox_test/Vox-Robot/build/mpu9250driver/ament_cmake_environment_hooks/local_setup.bash" "DESTINATION" "share/mpu9250driver")
+ament_cmake_symlink_install_files("/home/vox/vox_test/Vox-Robot/src/imu" FILES "/home/vox/vox_test/Vox-Robot/build/mpu9250driver/ament_cmake_environment_hooks/local_setup.bash" "DESTINATION" "share/mpu9250driver")
 
-# install(FILES "/home/vox/Vox/build/mpu9250driver/ament_cmake_environment_hooks/local_setup.sh" "DESTINATION" "share/mpu9250driver")
-ament_cmake_symlink_install_files("/home/vox/Vox/src/imu" FILES "/home/vox/Vox/build/mpu9250driver/ament_cmake_environment_hooks/local_setup.sh" "DESTINATION" "share/mpu9250driver")
+# install(FILES "/home/vox/vox_test/Vox-Robot/build/mpu9250driver/ament_cmake_environment_hooks/local_setup.sh" "DESTINATION" "share/mpu9250driver")
+ament_cmake_symlink_install_files("/home/vox/vox_test/Vox-Robot/src/imu" FILES "/home/vox/vox_test/Vox-Robot/build/mpu9250driver/ament_cmake_environment_hooks/local_setup.sh" "DESTINATION" "share/mpu9250driver")
 
-# install(FILES "/home/vox/Vox/build/mpu9250driver/ament_cmake_environment_hooks/local_setup.zsh" "DESTINATION" "share/mpu9250driver")
-ament_cmake_symlink_install_files("/home/vox/Vox/src/imu" FILES "/home/vox/Vox/build/mpu9250driver/ament_cmake_environment_hooks/local_setup.zsh" "DESTINATION" "share/mpu9250driver")
+# install(FILES "/home/vox/vox_test/Vox-Robot/build/mpu9250driver/ament_cmake_environment_hooks/local_setup.zsh" "DESTINATION" "share/mpu9250driver")
+ament_cmake_symlink_install_files("/home/vox/vox_test/Vox-Robot/src/imu" FILES "/home/vox/vox_test/Vox-Robot/build/mpu9250driver/ament_cmake_environment_hooks/local_setup.zsh" "DESTINATION" "share/mpu9250driver")
 
-# install(FILES "/home/vox/Vox/build/mpu9250driver/ament_cmake_environment_hooks/local_setup.dsv" "DESTINATION" "share/mpu9250driver")
-ament_cmake_symlink_install_files("/home/vox/Vox/src/imu" FILES "/home/vox/Vox/build/mpu9250driver/ament_cmake_environment_hooks/local_setup.dsv" "DESTINATION" "share/mpu9250driver")
+# install(FILES "/home/vox/vox_test/Vox-Robot/build/mpu9250driver/ament_cmake_environment_hooks/local_setup.dsv" "DESTINATION" "share/mpu9250driver")
+ament_cmake_symlink_install_files("/home/vox/vox_test/Vox-Robot/src/imu" FILES "/home/vox/vox_test/Vox-Robot/build/mpu9250driver/ament_cmake_environment_hooks/local_setup.dsv" "DESTINATION" "share/mpu9250driver")
 
-# install(FILES "/home/vox/Vox/build/mpu9250driver/ament_cmake_environment_hooks/package.dsv" "DESTINATION" "share/mpu9250driver")
-ament_cmake_symlink_install_files("/home/vox/Vox/src/imu" FILES "/home/vox/Vox/build/mpu9250driver/ament_cmake_environment_hooks/package.dsv" "DESTINATION" "share/mpu9250driver")
+# install(FILES "/home/vox/vox_test/Vox-Robot/build/mpu9250driver/ament_cmake_environment_hooks/package.dsv" "DESTINATION" "share/mpu9250driver")
+ament_cmake_symlink_install_files("/home/vox/vox_test/Vox-Robot/src/imu" FILES "/home/vox/vox_test/Vox-Robot/build/mpu9250driver/ament_cmake_environment_hooks/package.dsv" "DESTINATION" "share/mpu9250driver")
 
-# install(FILES "/home/vox/Vox/build/mpu9250driver/ament_cmake_index/share/ament_index/resource_index/packages/mpu9250driver" "DESTINATION" "share/ament_index/resource_index/packages")
-ament_cmake_symlink_install_files("/home/vox/Vox/src/imu" FILES "/home/vox/Vox/build/mpu9250driver/ament_cmake_index/share/ament_index/resource_index/packages/mpu9250driver" "DESTINATION" "share/ament_index/resource_index/packages")
+# install(FILES "/home/vox/vox_test/Vox-Robot/build/mpu9250driver/ament_cmake_index/share/ament_index/resource_index/packages/mpu9250driver" "DESTINATION" "share/ament_index/resource_index/packages")
+ament_cmake_symlink_install_files("/home/vox/vox_test/Vox-Robot/src/imu" FILES "/home/vox/vox_test/Vox-Robot/build/mpu9250driver/ament_cmake_index/share/ament_index/resource_index/packages/mpu9250driver" "DESTINATION" "share/ament_index/resource_index/packages")
 
-# install(FILES "/home/vox/Vox/build/mpu9250driver/ament_cmake_core/mpu9250driverConfig.cmake" "/home/vox/Vox/build/mpu9250driver/ament_cmake_core/mpu9250driverConfig-version.cmake" "DESTINATION" "share/mpu9250driver/cmake")
-ament_cmake_symlink_install_files("/home/vox/Vox/src/imu" FILES "/home/vox/Vox/build/mpu9250driver/ament_cmake_core/mpu9250driverConfig.cmake" "/home/vox/Vox/build/mpu9250driver/ament_cmake_core/mpu9250driverConfig-version.cmake" "DESTINATION" "share/mpu9250driver/cmake")
+# install(FILES "/home/vox/vox_test/Vox-Robot/build/mpu9250driver/ament_cmake_core/mpu9250driverConfig.cmake" "/home/vox/vox_test/Vox-Robot/build/mpu9250driver/ament_cmake_core/mpu9250driverConfig-version.cmake" "DESTINATION" "share/mpu9250driver/cmake")
+ament_cmake_symlink_install_files("/home/vox/vox_test/Vox-Robot/src/imu" FILES "/home/vox/vox_test/Vox-Robot/build/mpu9250driver/ament_cmake_core/mpu9250driverConfig.cmake" "/home/vox/vox_test/Vox-Robot/build/mpu9250driver/ament_cmake_core/mpu9250driverConfig-version.cmake" "DESTINATION" "share/mpu9250driver/cmake")
 
-# install(FILES "/home/vox/Vox/src/imu/package.xml" "DESTINATION" "share/mpu9250driver")
-ament_cmake_symlink_install_files("/home/vox/Vox/src/imu" FILES "/home/vox/Vox/src/imu/package.xml" "DESTINATION" "share/mpu9250driver")
+# install(FILES "/home/vox/vox_test/Vox-Robot/src/imu/package.xml" "DESTINATION" "share/mpu9250driver")
+ament_cmake_symlink_install_files("/home/vox/vox_test/Vox-Robot/src/imu" FILES "/home/vox/vox_test/Vox-Robot/src/imu/package.xml" "DESTINATION" "share/mpu9250driver")

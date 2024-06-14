@@ -1,8 +1,8 @@
-# Install script for directory: /home/vox/Vox/build/serial_motor_demo_msgs/serial_motor_demo_msgs__py
+# Install script for directory: /home/vox/vox_test/Vox-Robot/build/serial_motor_demo_msgs/serial_motor_demo_msgs__py
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "/home/vox/Vox/install/serial_motor_demo_msgs")
+  set(CMAKE_INSTALL_PREFIX "/home/vox/vox_test/Vox-Robot/install/serial_motor_demo_msgs")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 

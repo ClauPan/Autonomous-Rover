@@ -4,7 +4,7 @@
 # compile C with /usr/bin/cc
 C_DEFINES = -DROS_PACKAGE_NAME=\"serial_motor_demo_msgs\" -Dserial_motor_demo_msgs__rosidl_generator_py_EXPORTS
 
-C_INCLUDES = -I/home/vox/Vox/build/serial_motor_demo_msgs/rosidl_generator_c -I/home/vox/Vox/build/serial_motor_demo_msgs/rosidl_generator_py -I/usr/include/python3.10 -isystem /opt/ros/iron/include/rosidl_runtime_c -isystem /opt/ros/iron/include/rcutils -isystem /opt/ros/iron/include/rosidl_typesupport_interface
+C_INCLUDES = -I/home/vox/vox_test/Vox-Robot/build/serial_motor_demo_msgs/rosidl_generator_c -I/home/vox/vox_test/Vox-Robot/build/serial_motor_demo_msgs/rosidl_generator_py -I/usr/include/python3.10 -isystem /opt/ros/iron/include/rosidl_runtime_c -isystem /opt/ros/iron/include/rcutils -isystem /opt/ros/iron/include/rosidl_typesupport_interface
 
 C_FLAGS = -fPIC -Wall -Wextra -std=gnu99
 

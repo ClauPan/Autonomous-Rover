@@ -1,1 +1,1 @@
-/home/vox/Vox/build/vox/ament_cmake_environment_hooks/local_setup.sh
+/home/vox/vox_test/Vox-Robot/build/vox/ament_cmake_environment_hooks/local_setup.sh

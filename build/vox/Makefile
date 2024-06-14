@@ -57,10 +57,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/vox/Vox/src/vox
+CMAKE_SOURCE_DIR = /home/vox/vox_test/Vox-Robot/src/vox
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/vox/Vox/build/vox
+CMAKE_BINARY_DIR = /home/vox/vox_test/Vox-Robot/build/vox
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -142,9 +142,9 @@ install/strip/fast: preinstall/fast
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/vox/Vox/build/vox/CMakeFiles /home/vox/Vox/build/vox//CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/vox/vox_test/Vox-Robot/build/vox/CMakeFiles /home/vox/vox_test/Vox-Robot/build/vox//CMakeFiles/progress.marks
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/vox/Vox/build/vox/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/vox/vox_test/Vox-Robot/build/vox/CMakeFiles 0
 .PHONY : all
 
 # The main clean target

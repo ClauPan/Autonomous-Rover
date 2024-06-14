@@ -1,8 +1,8 @@
 {
   "package_name": "serial_motor_demo_msgs",
   "non_idl_tuples": [
-    "/home/vox/Vox/src/serial_motor_demo/serial_motor_demo_msgs:msg/MotorCommand.msg",
-    "/home/vox/Vox/src/serial_motor_demo/serial_motor_demo_msgs:msg/MotorVels.msg",
-    "/home/vox/Vox/src/serial_motor_demo/serial_motor_demo_msgs:msg/EncoderVals.msg"
+    "/home/vox/vox_test/Vox-Robot/src/serial_motor_demo/serial_motor_demo_msgs:msg/MotorCommand.msg",
+    "/home/vox/vox_test/Vox-Robot/src/serial_motor_demo/serial_motor_demo_msgs:msg/MotorVels.msg",
+    "/home/vox/vox_test/Vox-Robot/src/serial_motor_demo/serial_motor_demo_msgs:msg/EncoderVals.msg"
   ]
 }

@@ -1,6 +1,7 @@
 import cv2
 import time
 import rclpy
+import random
 import numpy as np;
 from rclpy.node import Node
 from sensor_msgs.msg import Image
@@ -115,7 +116,7 @@ class Tracker(Node):
             self.get_parameter('max_sat').get_parameter_value().integer_value,
             self.get_parameter('min_val').get_parameter_value().integer_value,
             self.get_parameter('max_val').get_parameter_value().integer_value,
-            self.get_parameter('experiment_mode').get_parameter_value().bool_value
+            self.get_parameter('experiment_mode').get_parameter_value().bool_value,
             self.get_parameter('calibration_mode').get_parameter_value().bool_value
         )
 
@@ -135,7 +136,8 @@ class Tracker(Node):
             camera_feed_topic = "/camera/image_raw/uncompressed"
 
         self.camera_feed = self.create_subscription(Image, camera_feed_topic, self.detect, rclpy.qos.QoSPresetProfiles.SENSOR_DATA.value, callback_group=self.camera_feed_cb_group)
-        self.follower = self.create_timer(0.1, self.follow, callback_group=self.follower_cb_group)
+        if not self.calibration_params.experimenting:
+            self.follower = self.create_timer(0.1, self.follow, callback_group=self.follower_cb_group)
 
         self.image_out_pub = self.create_publisher(Image, "/detection_overlay", 1)
         self.image_cal_pub = self.create_publisher(Image, "/camera_calibration", 1)
@@ -149,7 +151,7 @@ class Tracker(Node):
         self.blank_frames = []
         self.prev_eta = -1
         self.eta = -1
-        self.countdown = 10
+        self.countdown = 5
         self.max_frames = 100
         self.switch_threshold = 20
         self.frame_count = 0
@@ -168,12 +170,12 @@ class Tracker(Node):
             if self.calibration_params.calibrating:
                 self.calibration_params.read_from_gui() 
 
-            if self.experimenting:
-                self.get_logger().info("Staring tracker in 'EXPERIMENT_MODE'")
+            if self.calibration_params.experimenting:
                 if len(self.blank_frames) < 30:
                     if len(self.blank_frames) == 0:
+                        self.get_logger().info("Staring tracker in 'EXPERIMENT_MODE'")
                         self.get_logger().info("Gathering blank frames...")
-                    blank_frames.append(frame)
+                    self.blank_frames.append(frame)
                     if len(self.blank_frames) == 30:
                         self.get_logger().info("Blank frames acquired. Place the object in the center of the camera")
                 else:
@@ -182,20 +184,20 @@ class Tracker(Node):
 
                     if self.eta == -1:
                         self.eta = time.time()
-                    
+
                     eta = time.time() - self.eta
                     if eta > self.countdown:
-                        if self.frame_count % self.switch_threshold % 2 == 0:
+                        if int(self.frame_count / self.switch_threshold) % 2 == 0:
                             frame = random.choice(self.blank_frames)
-                        
+
                         self.frame_count += 1
-                            
+
 
                     else:
                         if int(eta) > self.prev_eta:
                             self.prev_eta = int(eta)
                             self.get_logger().info(f"Starting experiment in {10 - self.prev_eta}...")
-
+                        frame = random.choice(self.blank_frames)
 
 
 
@@ -352,6 +354,7 @@ def main(args=None):
             rclpy.spin_once(tracker)
         except SystemExit: 
             rclpy.logging.get_logger("tracker").info('Ending experiment...')
+            break
         cv2.waitKey(2)
 
     tracker.destroy_node()

@@ -1,8 +1,8 @@
-# Install script for directory: /home/vox/Vox/src/imu/lib/mpu9250sensor
+# Install script for directory: /home/vox/vox_test/Vox-Robot/src/imu/lib/mpu9250sensor
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "/home/vox/Vox/install/mpu9250driver")
+  set(CMAKE_INSTALL_PREFIX "/home/vox/vox_test/Vox-Robot/install/mpu9250driver")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 

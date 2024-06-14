@@ -23,7 +23,7 @@ function(ament_cmake_symlink_install_directory cmake_current_source_dir)
 
   # make destination absolute path and ensure that it exists
   if(NOT IS_ABSOLUTE "${ARG_DESTINATION}")
-    set(ARG_DESTINATION "/home/vox/Vox/install/vox/${ARG_DESTINATION}")
+    set(ARG_DESTINATION "/home/vox/vox_test/Vox-Robot/install/vox/${ARG_DESTINATION}")
   endif()
   if(NOT EXISTS "${ARG_DESTINATION}")
     file(MAKE_DIRECTORY "${ARG_DESTINATION}")
@@ -123,7 +123,7 @@ function(ament_cmake_symlink_install_files cmake_current_source_dir)
 
   # make destination an absolute path and ensure that it exists
   if(NOT IS_ABSOLUTE "${ARG_DESTINATION}")
-    set(ARG_DESTINATION "/home/vox/Vox/install/vox/${ARG_DESTINATION}")
+    set(ARG_DESTINATION "/home/vox/vox_test/Vox-Robot/install/vox/${ARG_DESTINATION}")
   endif()
   if(NOT EXISTS "${ARG_DESTINATION}")
     file(MAKE_DIRECTORY "${ARG_DESTINATION}")
@@ -181,7 +181,7 @@ function(ament_cmake_symlink_install_programs cmake_current_source_dir)
 
   # make destination an absolute path and ensure that it exists
   if(NOT IS_ABSOLUTE "${ARG_DESTINATION}")
-    set(ARG_DESTINATION "/home/vox/Vox/install/vox/${ARG_DESTINATION}")
+    set(ARG_DESTINATION "/home/vox/vox_test/Vox-Robot/install/vox/${ARG_DESTINATION}")
   endif()
   if(NOT EXISTS "${ARG_DESTINATION}")
     file(MAKE_DIRECTORY "${ARG_DESTINATION}")
@@ -251,7 +251,7 @@ function(ament_cmake_symlink_install_targets)
 
     # make destination an absolute path and ensure that it exists
     if(NOT IS_ABSOLUTE "${destination}")
-      set(destination "/home/vox/Vox/install/vox/${destination}")
+      set(destination "/home/vox/vox_test/Vox-Robot/install/vox/${destination}")
     endif()
     if(NOT EXISTS "${destination}")
       file(MAKE_DIRECTORY "${destination}")
@@ -311,46 +311,46 @@ message(STATUS "Execute custom install script")
 # begin of custom install code
 
 # install(DIRECTORY "config" "description" "launch" "worlds" "DESTINATION" "share/vox")
-ament_cmake_symlink_install_directory("/home/vox/Vox/src/vox" DIRECTORY "config" "description" "launch" "worlds" "DESTINATION" "share/vox")
+ament_cmake_symlink_install_directory("/home/vox/vox_test/Vox-Robot/src/vox" DIRECTORY "config" "description" "launch" "worlds" "DESTINATION" "share/vox")
 
-# install(FILES "/home/vox/Vox/build/vox/ament_cmake_index/share/ament_index/resource_index/package_run_dependencies/vox" "DESTINATION" "share/ament_index/resource_index/package_run_dependencies")
-ament_cmake_symlink_install_files("/home/vox/Vox/src/vox" FILES "/home/vox/Vox/build/vox/ament_cmake_index/share/ament_index/resource_index/package_run_dependencies/vox" "DESTINATION" "share/ament_index/resource_index/package_run_dependencies")
+# install(FILES "/home/vox/vox_test/Vox-Robot/build/vox/ament_cmake_index/share/ament_index/resource_index/package_run_dependencies/vox" "DESTINATION" "share/ament_index/resource_index/package_run_dependencies")
+ament_cmake_symlink_install_files("/home/vox/vox_test/Vox-Robot/src/vox" FILES "/home/vox/vox_test/Vox-Robot/build/vox/ament_cmake_index/share/ament_index/resource_index/package_run_dependencies/vox" "DESTINATION" "share/ament_index/resource_index/package_run_dependencies")
 
-# install(FILES "/home/vox/Vox/build/vox/ament_cmake_index/share/ament_index/resource_index/parent_prefix_path/vox" "DESTINATION" "share/ament_index/resource_index/parent_prefix_path")
-ament_cmake_symlink_install_files("/home/vox/Vox/src/vox" FILES "/home/vox/Vox/build/vox/ament_cmake_index/share/ament_index/resource_index/parent_prefix_path/vox" "DESTINATION" "share/ament_index/resource_index/parent_prefix_path")
+# install(FILES "/home/vox/vox_test/Vox-Robot/build/vox/ament_cmake_index/share/ament_index/resource_index/parent_prefix_path/vox" "DESTINATION" "share/ament_index/resource_index/parent_prefix_path")
+ament_cmake_symlink_install_files("/home/vox/vox_test/Vox-Robot/src/vox" FILES "/home/vox/vox_test/Vox-Robot/build/vox/ament_cmake_index/share/ament_index/resource_index/parent_prefix_path/vox" "DESTINATION" "share/ament_index/resource_index/parent_prefix_path")
 
 # install(FILES "/opt/ros/iron/share/ament_cmake_core/cmake/environment_hooks/environment/ament_prefix_path.sh" "DESTINATION" "share/vox/environment")
-ament_cmake_symlink_install_files("/home/vox/Vox/src/vox" FILES "/opt/ros/iron/share/ament_cmake_core/cmake/environment_hooks/environment/ament_prefix_path.sh" "DESTINATION" "share/vox/environment")
+ament_cmake_symlink_install_files("/home/vox/vox_test/Vox-Robot/src/vox" FILES "/opt/ros/iron/share/ament_cmake_core/cmake/environment_hooks/environment/ament_prefix_path.sh" "DESTINATION" "share/vox/environment")
 
-# install(FILES "/home/vox/Vox/build/vox/ament_cmake_environment_hooks/ament_prefix_path.dsv" "DESTINATION" "share/vox/environment")
-ament_cmake_symlink_install_files("/home/vox/Vox/src/vox" FILES "/home/vox/Vox/build/vox/ament_cmake_environment_hooks/ament_prefix_path.dsv" "DESTINATION" "share/vox/environment")
+# install(FILES "/home/vox/vox_test/Vox-Robot/build/vox/ament_cmake_environment_hooks/ament_prefix_path.dsv" "DESTINATION" "share/vox/environment")
+ament_cmake_symlink_install_files("/home/vox/vox_test/Vox-Robot/src/vox" FILES "/home/vox/vox_test/Vox-Robot/build/vox/ament_cmake_environment_hooks/ament_prefix_path.dsv" "DESTINATION" "share/vox/environment")
 
 # install(FILES "/opt/ros/iron/share/ament_cmake_core/cmake/environment_hooks/environment/path.sh" "DESTINATION" "share/vox/environment")
-ament_cmake_symlink_install_files("/home/vox/Vox/src/vox" FILES "/opt/ros/iron/share/ament_cmake_core/cmake/environment_hooks/environment/path.sh" "DESTINATION" "share/vox/environment")
+ament_cmake_symlink_install_files("/home/vox/vox_test/Vox-Robot/src/vox" FILES "/opt/ros/iron/share/ament_cmake_core/cmake/environment_hooks/environment/path.sh" "DESTINATION" "share/vox/environment")
 
-# install(FILES "/home/vox/Vox/build/vox/ament_cmake_environment_hooks/path.dsv" "DESTINATION" "share/vox/environment")
-ament_cmake_symlink_install_files("/home/vox/Vox/src/vox" FILES "/home/vox/Vox/build/vox/ament_cmake_environment_hooks/path.dsv" "DESTINATION" "share/vox/environment")
+# install(FILES "/home/vox/vox_test/Vox-Robot/build/vox/ament_cmake_environment_hooks/path.dsv" "DESTINATION" "share/vox/environment")
+ament_cmake_symlink_install_files("/home/vox/vox_test/Vox-Robot/src/vox" FILES "/home/vox/vox_test/Vox-Robot/build/vox/ament_cmake_environment_hooks/path.dsv" "DESTINATION" "share/vox/environment")
 
-# install(FILES "/home/vox/Vox/build/vox/ament_cmake_environment_hooks/local_setup.bash" "DESTINATION" "share/vox")
-ament_cmake_symlink_install_files("/home/vox/Vox/src/vox" FILES "/home/vox/Vox/build/vox/ament_cmake_environment_hooks/local_setup.bash" "DESTINATION" "share/vox")
+# install(FILES "/home/vox/vox_test/Vox-Robot/build/vox/ament_cmake_environment_hooks/local_setup.bash" "DESTINATION" "share/vox")
+ament_cmake_symlink_install_files("/home/vox/vox_test/Vox-Robot/src/vox" FILES "/home/vox/vox_test/Vox-Robot/build/vox/ament_cmake_environment_hooks/local_setup.bash" "DESTINATION" "share/vox")
 
-# install(FILES "/home/vox/Vox/build/vox/ament_cmake_environment_hooks/local_setup.sh" "DESTINATION" "share/vox")
-ament_cmake_symlink_install_files("/home/vox/Vox/src/vox" FILES "/home/vox/Vox/build/vox/ament_cmake_environment_hooks/local_setup.sh" "DESTINATION" "share/vox")
+# install(FILES "/home/vox/vox_test/Vox-Robot/build/vox/ament_cmake_environment_hooks/local_setup.sh" "DESTINATION" "share/vox")
+ament_cmake_symlink_install_files("/home/vox/vox_test/Vox-Robot/src/vox" FILES "/home/vox/vox_test/Vox-Robot/build/vox/ament_cmake_environment_hooks/local_setup.sh" "DESTINATION" "share/vox")
 
-# install(FILES "/home/vox/Vox/build/vox/ament_cmake_environment_hooks/local_setup.zsh" "DESTINATION" "share/vox")
-ament_cmake_symlink_install_files("/home/vox/Vox/src/vox" FILES "/home/vox/Vox/build/vox/ament_cmake_environment_hooks/local_setup.zsh" "DESTINATION" "share/vox")
+# install(FILES "/home/vox/vox_test/Vox-Robot/build/vox/ament_cmake_environment_hooks/local_setup.zsh" "DESTINATION" "share/vox")
+ament_cmake_symlink_install_files("/home/vox/vox_test/Vox-Robot/src/vox" FILES "/home/vox/vox_test/Vox-Robot/build/vox/ament_cmake_environment_hooks/local_setup.zsh" "DESTINATION" "share/vox")
 
-# install(FILES "/home/vox/Vox/build/vox/ament_cmake_environment_hooks/local_setup.dsv" "DESTINATION" "share/vox")
-ament_cmake_symlink_install_files("/home/vox/Vox/src/vox" FILES "/home/vox/Vox/build/vox/ament_cmake_environment_hooks/local_setup.dsv" "DESTINATION" "share/vox")
+# install(FILES "/home/vox/vox_test/Vox-Robot/build/vox/ament_cmake_environment_hooks/local_setup.dsv" "DESTINATION" "share/vox")
+ament_cmake_symlink_install_files("/home/vox/vox_test/Vox-Robot/src/vox" FILES "/home/vox/vox_test/Vox-Robot/build/vox/ament_cmake_environment_hooks/local_setup.dsv" "DESTINATION" "share/vox")
 
-# install(FILES "/home/vox/Vox/build/vox/ament_cmake_environment_hooks/package.dsv" "DESTINATION" "share/vox")
-ament_cmake_symlink_install_files("/home/vox/Vox/src/vox" FILES "/home/vox/Vox/build/vox/ament_cmake_environment_hooks/package.dsv" "DESTINATION" "share/vox")
+# install(FILES "/home/vox/vox_test/Vox-Robot/build/vox/ament_cmake_environment_hooks/package.dsv" "DESTINATION" "share/vox")
+ament_cmake_symlink_install_files("/home/vox/vox_test/Vox-Robot/src/vox" FILES "/home/vox/vox_test/Vox-Robot/build/vox/ament_cmake_environment_hooks/package.dsv" "DESTINATION" "share/vox")
 
-# install(FILES "/home/vox/Vox/build/vox/ament_cmake_index/share/ament_index/resource_index/packages/vox" "DESTINATION" "share/ament_index/resource_index/packages")
-ament_cmake_symlink_install_files("/home/vox/Vox/src/vox" FILES "/home/vox/Vox/build/vox/ament_cmake_index/share/ament_index/resource_index/packages/vox" "DESTINATION" "share/ament_index/resource_index/packages")
+# install(FILES "/home/vox/vox_test/Vox-Robot/build/vox/ament_cmake_index/share/ament_index/resource_index/packages/vox" "DESTINATION" "share/ament_index/resource_index/packages")
+ament_cmake_symlink_install_files("/home/vox/vox_test/Vox-Robot/src/vox" FILES "/home/vox/vox_test/Vox-Robot/build/vox/ament_cmake_index/share/ament_index/resource_index/packages/vox" "DESTINATION" "share/ament_index/resource_index/packages")
 
-# install(FILES "/home/vox/Vox/build/vox/ament_cmake_core/voxConfig.cmake" "/home/vox/Vox/build/vox/ament_cmake_core/voxConfig-version.cmake" "DESTINATION" "share/vox/cmake")
-ament_cmake_symlink_install_files("/home/vox/Vox/src/vox" FILES "/home/vox/Vox/build/vox/ament_cmake_core/voxConfig.cmake" "/home/vox/Vox/build/vox/ament_cmake_core/voxConfig-version.cmake" "DESTINATION" "share/vox/cmake")
+# install(FILES "/home/vox/vox_test/Vox-Robot/build/vox/ament_cmake_core/voxConfig.cmake" "/home/vox/vox_test/Vox-Robot/build/vox/ament_cmake_core/voxConfig-version.cmake" "DESTINATION" "share/vox/cmake")
+ament_cmake_symlink_install_files("/home/vox/vox_test/Vox-Robot/src/vox" FILES "/home/vox/vox_test/Vox-Robot/build/vox/ament_cmake_core/voxConfig.cmake" "/home/vox/vox_test/Vox-Robot/build/vox/ament_cmake_core/voxConfig-version.cmake" "DESTINATION" "share/vox/cmake")
 
-# install(FILES "/home/vox/Vox/src/vox/package.xml" "DESTINATION" "share/vox")
-ament_cmake_symlink_install_files("/home/vox/Vox/src/vox" FILES "/home/vox/Vox/src/vox/package.xml" "DESTINATION" "share/vox")
+# install(FILES "/home/vox/vox_test/Vox-Robot/src/vox/package.xml" "DESTINATION" "share/vox")
+ament_cmake_symlink_install_files("/home/vox/vox_test/Vox-Robot/src/vox" FILES "/home/vox/vox_test/Vox-Robot/src/vox/package.xml" "DESTINATION" "share/vox")

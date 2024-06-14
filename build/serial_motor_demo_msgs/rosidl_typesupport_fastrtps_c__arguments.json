@@ -1,11 +1,11 @@
 {
   "package_name": "serial_motor_demo_msgs",
-  "output_dir": "/home/vox/Vox/build/serial_motor_demo_msgs/rosidl_typesupport_fastrtps_c/serial_motor_demo_msgs",
+  "output_dir": "/home/vox/vox_test/Vox-Robot/build/serial_motor_demo_msgs/rosidl_typesupport_fastrtps_c/serial_motor_demo_msgs",
   "template_dir": "/opt/ros/iron/share/rosidl_typesupport_fastrtps_c/resource",
   "idl_tuples": [
-    "/home/vox/Vox/build/serial_motor_demo_msgs/rosidl_adapter/serial_motor_demo_msgs:msg/MotorCommand.idl",
-    "/home/vox/Vox/build/serial_motor_demo_msgs/rosidl_adapter/serial_motor_demo_msgs:msg/MotorVels.idl",
-    "/home/vox/Vox/build/serial_motor_demo_msgs/rosidl_adapter/serial_motor_demo_msgs:msg/EncoderVals.idl"
+    "/home/vox/vox_test/Vox-Robot/build/serial_motor_demo_msgs/rosidl_adapter/serial_motor_demo_msgs:msg/MotorCommand.idl",
+    "/home/vox/vox_test/Vox-Robot/build/serial_motor_demo_msgs/rosidl_adapter/serial_motor_demo_msgs:msg/MotorVels.idl",
+    "/home/vox/vox_test/Vox-Robot/build/serial_motor_demo_msgs/rosidl_adapter/serial_motor_demo_msgs:msg/EncoderVals.idl"
   ],
   "target_dependencies": [
     "/opt/ros/iron/lib/rosidl_typesupport_fastrtps_c/rosidl_typesupport_fastrtps_c",
@@ -16,8 +16,8 @@
     "/opt/ros/iron/share/rosidl_typesupport_fastrtps_c/resource/msg__type_support_c.cpp.em",
     "/opt/ros/iron/share/rosidl_typesupport_fastrtps_c/resource/srv__rosidl_typesupport_fastrtps_c.h.em",
     "/opt/ros/iron/share/rosidl_typesupport_fastrtps_c/resource/srv__type_support_c.cpp.em",
-    "/home/vox/Vox/build/serial_motor_demo_msgs/rosidl_adapter/serial_motor_demo_msgs/msg/MotorCommand.idl",
-    "/home/vox/Vox/build/serial_motor_demo_msgs/rosidl_adapter/serial_motor_demo_msgs/msg/MotorVels.idl",
-    "/home/vox/Vox/build/serial_motor_demo_msgs/rosidl_adapter/serial_motor_demo_msgs/msg/EncoderVals.idl"
+    "/home/vox/vox_test/Vox-Robot/build/serial_motor_demo_msgs/rosidl_adapter/serial_motor_demo_msgs/msg/MotorCommand.idl",
+    "/home/vox/vox_test/Vox-Robot/build/serial_motor_demo_msgs/rosidl_adapter/serial_motor_demo_msgs/msg/MotorVels.idl",
+    "/home/vox/vox_test/Vox-Robot/build/serial_motor_demo_msgs/rosidl_adapter/serial_motor_demo_msgs/msg/EncoderVals.idl"
   ]
 }

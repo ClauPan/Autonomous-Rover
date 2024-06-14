@@ -1,1 +1,1 @@
-/home/vox/Vox/src/vox/launch/camera.launch.py
+/home/vox/vox_test/Vox-Robot/src/vox/launch/camera.launch.py

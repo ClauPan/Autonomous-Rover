@@ -53,10 +53,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/vox/Vox/src/serial_motor_demo/serial_motor_demo_msgs
+CMAKE_SOURCE_DIR = /home/vox/vox_test/Vox-Robot/src/serial_motor_demo/serial_motor_demo_msgs
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/vox/Vox/build/serial_motor_demo_msgs
+CMAKE_BINARY_DIR = /home/vox/vox_test/Vox-Robot/build/serial_motor_demo_msgs
 
 # Utility rule file for serial_motor_demo_msgs__py.
 
@@ -93,8 +93,8 @@ rosidl_generator_py/serial_motor_demo_msgs/_serial_motor_demo_msgs_s.ep.rosidl_t
 rosidl_generator_py/serial_motor_demo_msgs/_serial_motor_demo_msgs_s.ep.rosidl_typesupport_fastrtps_c.c: rosidl_adapter/serial_motor_demo_msgs/msg/MotorCommand.idl
 rosidl_generator_py/serial_motor_demo_msgs/_serial_motor_demo_msgs_s.ep.rosidl_typesupport_fastrtps_c.c: rosidl_adapter/serial_motor_demo_msgs/msg/MotorVels.idl
 rosidl_generator_py/serial_motor_demo_msgs/_serial_motor_demo_msgs_s.ep.rosidl_typesupport_fastrtps_c.c: rosidl_adapter/serial_motor_demo_msgs/msg/EncoderVals.idl
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/vox/Vox/build/serial_motor_demo_msgs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating Python code for ROS interfaces"
-	cd /home/vox/Vox/build/serial_motor_demo_msgs/serial_motor_demo_msgs__py && /usr/bin/python3 /opt/ros/iron/share/rosidl_generator_py/cmake/../../../lib/rosidl_generator_py/rosidl_generator_py --generator-arguments-file /home/vox/Vox/build/serial_motor_demo_msgs/rosidl_generator_py__arguments.json --typesupport-impls "rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c;rosidl_typesupport_c"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/vox/vox_test/Vox-Robot/build/serial_motor_demo_msgs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating Python code for ROS interfaces"
+	cd /home/vox/vox_test/Vox-Robot/build/serial_motor_demo_msgs/serial_motor_demo_msgs__py && /usr/bin/python3 /opt/ros/iron/share/rosidl_generator_py/cmake/../../../lib/rosidl_generator_py/rosidl_generator_py --generator-arguments-file /home/vox/vox_test/Vox-Robot/build/serial_motor_demo_msgs/rosidl_generator_py__arguments.json --typesupport-impls "rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c;rosidl_typesupport_c"
 
 rosidl_generator_py/serial_motor_demo_msgs/_serial_motor_demo_msgs_s.ep.rosidl_typesupport_introspection_c.c: rosidl_generator_py/serial_motor_demo_msgs/_serial_motor_demo_msgs_s.ep.rosidl_typesupport_fastrtps_c.c
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_py/serial_motor_demo_msgs/_serial_motor_demo_msgs_s.ep.rosidl_typesupport_introspection_c.c
@@ -142,10 +142,10 @@ serial_motor_demo_msgs__py/CMakeFiles/serial_motor_demo_msgs__py.dir/build: seri
 .PHONY : serial_motor_demo_msgs__py/CMakeFiles/serial_motor_demo_msgs__py.dir/build
 
 serial_motor_demo_msgs__py/CMakeFiles/serial_motor_demo_msgs__py.dir/clean:
-	cd /home/vox/Vox/build/serial_motor_demo_msgs/serial_motor_demo_msgs__py && $(CMAKE_COMMAND) -P CMakeFiles/serial_motor_demo_msgs__py.dir/cmake_clean.cmake
+	cd /home/vox/vox_test/Vox-Robot/build/serial_motor_demo_msgs/serial_motor_demo_msgs__py && $(CMAKE_COMMAND) -P CMakeFiles/serial_motor_demo_msgs__py.dir/cmake_clean.cmake
 .PHONY : serial_motor_demo_msgs__py/CMakeFiles/serial_motor_demo_msgs__py.dir/clean
 
 serial_motor_demo_msgs__py/CMakeFiles/serial_motor_demo_msgs__py.dir/depend:
-	cd /home/vox/Vox/build/serial_motor_demo_msgs && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/vox/Vox/src/serial_motor_demo/serial_motor_demo_msgs /home/vox/Vox/build/serial_motor_demo_msgs/serial_motor_demo_msgs__py /home/vox/Vox/build/serial_motor_demo_msgs /home/vox/Vox/build/serial_motor_demo_msgs/serial_motor_demo_msgs__py /home/vox/Vox/build/serial_motor_demo_msgs/serial_motor_demo_msgs__py/CMakeFiles/serial_motor_demo_msgs__py.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/vox/vox_test/Vox-Robot/build/serial_motor_demo_msgs && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/vox/vox_test/Vox-Robot/src/serial_motor_demo/serial_motor_demo_msgs /home/vox/vox_test/Vox-Robot/build/serial_motor_demo_msgs/serial_motor_demo_msgs__py /home/vox/vox_test/Vox-Robot/build/serial_motor_demo_msgs /home/vox/vox_test/Vox-Robot/build/serial_motor_demo_msgs/serial_motor_demo_msgs__py /home/vox/vox_test/Vox-Robot/build/serial_motor_demo_msgs/serial_motor_demo_msgs__py/CMakeFiles/serial_motor_demo_msgs__py.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : serial_motor_demo_msgs__py/CMakeFiles/serial_motor_demo_msgs__py.dir/depend
 

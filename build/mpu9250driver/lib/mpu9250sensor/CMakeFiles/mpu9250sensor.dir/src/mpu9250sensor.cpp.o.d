@@ -1,7 +1,7 @@
 lib/mpu9250sensor/CMakeFiles/mpu9250sensor.dir/src/mpu9250sensor.cpp.o: \
- /home/vox/Vox/src/imu/lib/mpu9250sensor/src/mpu9250sensor.cpp \
+ /home/vox/vox_test/Vox-Robot/src/imu/lib/mpu9250sensor/src/mpu9250sensor.cpp \
  /usr/include/stdc-predef.h \
- /home/vox/Vox/src/imu/lib/mpu9250sensor/include/mpu9250sensor/mpu9250sensor.h \
+ /home/vox/vox_test/Vox-Robot/src/imu/lib/mpu9250sensor/include/mpu9250sensor/mpu9250sensor.h \
  /usr/include/c++/11/memory /usr/include/c++/11/bits/stl_algobase.h \
  /usr/include/aarch64-linux-gnu/c++/11/bits/c++config.h \
  /usr/include/aarch64-linux-gnu/c++/11/bits/os_defines.h \
@@ -151,7 +151,7 @@ lib/mpu9250sensor/CMakeFiles/mpu9250sensor.dir/src/mpu9250sensor.cpp.o: \
  /usr/include/c++/11/bits/enable_special_members.h \
  /usr/include/c++/11/bits/unordered_map.h \
  /usr/include/c++/11/bits/erase_if.h \
- /home/vox/Vox/src/imu/lib/i2c/include/i2c_comm_interface/I2cCommunicator.h \
+ /home/vox/vox_test/Vox-Robot/src/imu/lib/i2c/include/i2c_comm_interface/I2cCommunicator.h \
  /usr/include/linux/i2c-dev.h /usr/include/linux/types.h \
  /usr/include/aarch64-linux-gnu/asm/types.h \
  /usr/include/asm-generic/types.h /usr/include/asm-generic/int-ll64.h \

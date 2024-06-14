@@ -1,1 +1,1 @@
-/home/vox/Vox/build/mpu9250driver/ament_cmake_environment_hooks/local_setup.zsh
+/home/vox/vox_test/Vox-Robot/build/mpu9250driver/ament_cmake_environment_hooks/local_setup.zsh

@@ -1,1 +1,1 @@
-/home/vox/Vox/build/mpu9250driver/ament_cmake_core/mpu9250driverConfig-version.cmake
+/home/vox/vox_test/Vox-Robot/build/mpu9250driver/ament_cmake_core/mpu9250driverConfig-version.cmake

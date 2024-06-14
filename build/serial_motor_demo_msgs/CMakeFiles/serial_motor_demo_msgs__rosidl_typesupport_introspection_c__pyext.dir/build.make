@@ -53,10 +53,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/vox/Vox/src/serial_motor_demo/serial_motor_demo_msgs
+CMAKE_SOURCE_DIR = /home/vox/vox_test/Vox-Robot/src/serial_motor_demo/serial_motor_demo_msgs
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/vox/Vox/build/serial_motor_demo_msgs
+CMAKE_BINARY_DIR = /home/vox/vox_test/Vox-Robot/build/serial_motor_demo_msgs
 
 # Include any dependencies generated for this target.
 include CMakeFiles/serial_motor_demo_msgs__rosidl_typesupport_introspection_c__pyext.dir/depend.make
@@ -72,16 +72,16 @@ include CMakeFiles/serial_motor_demo_msgs__rosidl_typesupport_introspection_c__p
 CMakeFiles/serial_motor_demo_msgs__rosidl_typesupport_introspection_c__pyext.dir/rosidl_generator_py/serial_motor_demo_msgs/_serial_motor_demo_msgs_s.ep.rosidl_typesupport_introspection_c.c.o: CMakeFiles/serial_motor_demo_msgs__rosidl_typesupport_introspection_c__pyext.dir/flags.make
 CMakeFiles/serial_motor_demo_msgs__rosidl_typesupport_introspection_c__pyext.dir/rosidl_generator_py/serial_motor_demo_msgs/_serial_motor_demo_msgs_s.ep.rosidl_typesupport_introspection_c.c.o: rosidl_generator_py/serial_motor_demo_msgs/_serial_motor_demo_msgs_s.ep.rosidl_typesupport_introspection_c.c
 CMakeFiles/serial_motor_demo_msgs__rosidl_typesupport_introspection_c__pyext.dir/rosidl_generator_py/serial_motor_demo_msgs/_serial_motor_demo_msgs_s.ep.rosidl_typesupport_introspection_c.c.o: CMakeFiles/serial_motor_demo_msgs__rosidl_typesupport_introspection_c__pyext.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/vox/Vox/build/serial_motor_demo_msgs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object CMakeFiles/serial_motor_demo_msgs__rosidl_typesupport_introspection_c__pyext.dir/rosidl_generator_py/serial_motor_demo_msgs/_serial_motor_demo_msgs_s.ep.rosidl_typesupport_introspection_c.c.o"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/serial_motor_demo_msgs__rosidl_typesupport_introspection_c__pyext.dir/rosidl_generator_py/serial_motor_demo_msgs/_serial_motor_demo_msgs_s.ep.rosidl_typesupport_introspection_c.c.o -MF CMakeFiles/serial_motor_demo_msgs__rosidl_typesupport_introspection_c__pyext.dir/rosidl_generator_py/serial_motor_demo_msgs/_serial_motor_demo_msgs_s.ep.rosidl_typesupport_introspection_c.c.o.d -o CMakeFiles/serial_motor_demo_msgs__rosidl_typesupport_introspection_c__pyext.dir/rosidl_generator_py/serial_motor_demo_msgs/_serial_motor_demo_msgs_s.ep.rosidl_typesupport_introspection_c.c.o -c /home/vox/Vox/build/serial_motor_demo_msgs/rosidl_generator_py/serial_motor_demo_msgs/_serial_motor_demo_msgs_s.ep.rosidl_typesupport_introspection_c.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/vox/vox_test/Vox-Robot/build/serial_motor_demo_msgs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object CMakeFiles/serial_motor_demo_msgs__rosidl_typesupport_introspection_c__pyext.dir/rosidl_generator_py/serial_motor_demo_msgs/_serial_motor_demo_msgs_s.ep.rosidl_typesupport_introspection_c.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/serial_motor_demo_msgs__rosidl_typesupport_introspection_c__pyext.dir/rosidl_generator_py/serial_motor_demo_msgs/_serial_motor_demo_msgs_s.ep.rosidl_typesupport_introspection_c.c.o -MF CMakeFiles/serial_motor_demo_msgs__rosidl_typesupport_introspection_c__pyext.dir/rosidl_generator_py/serial_motor_demo_msgs/_serial_motor_demo_msgs_s.ep.rosidl_typesupport_introspection_c.c.o.d -o CMakeFiles/serial_motor_demo_msgs__rosidl_typesupport_introspection_c__pyext.dir/rosidl_generator_py/serial_motor_demo_msgs/_serial_motor_demo_msgs_s.ep.rosidl_typesupport_introspection_c.c.o -c /home/vox/vox_test/Vox-Robot/build/serial_motor_demo_msgs/rosidl_generator_py/serial_motor_demo_msgs/_serial_motor_demo_msgs_s.ep.rosidl_typesupport_introspection_c.c
 
 CMakeFiles/serial_motor_demo_msgs__rosidl_typesupport_introspection_c__pyext.dir/rosidl_generator_py/serial_motor_demo_msgs/_serial_motor_demo_msgs_s.ep.rosidl_typesupport_introspection_c.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/serial_motor_demo_msgs__rosidl_typesupport_introspection_c__pyext.dir/rosidl_generator_py/serial_motor_demo_msgs/_serial_motor_demo_msgs_s.ep.rosidl_typesupport_introspection_c.c.i"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/vox/Vox/build/serial_motor_demo_msgs/rosidl_generator_py/serial_motor_demo_msgs/_serial_motor_demo_msgs_s.ep.rosidl_typesupport_introspection_c.c > CMakeFiles/serial_motor_demo_msgs__rosidl_typesupport_introspection_c__pyext.dir/rosidl_generator_py/serial_motor_demo_msgs/_serial_motor_demo_msgs_s.ep.rosidl_typesupport_introspection_c.c.i
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/vox/vox_test/Vox-Robot/build/serial_motor_demo_msgs/rosidl_generator_py/serial_motor_demo_msgs/_serial_motor_demo_msgs_s.ep.rosidl_typesupport_introspection_c.c > CMakeFiles/serial_motor_demo_msgs__rosidl_typesupport_introspection_c__pyext.dir/rosidl_generator_py/serial_motor_demo_msgs/_serial_motor_demo_msgs_s.ep.rosidl_typesupport_introspection_c.c.i
 
 CMakeFiles/serial_motor_demo_msgs__rosidl_typesupport_introspection_c__pyext.dir/rosidl_generator_py/serial_motor_demo_msgs/_serial_motor_demo_msgs_s.ep.rosidl_typesupport_introspection_c.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/serial_motor_demo_msgs__rosidl_typesupport_introspection_c__pyext.dir/rosidl_generator_py/serial_motor_demo_msgs/_serial_motor_demo_msgs_s.ep.rosidl_typesupport_introspection_c.c.s"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/vox/Vox/build/serial_motor_demo_msgs/rosidl_generator_py/serial_motor_demo_msgs/_serial_motor_demo_msgs_s.ep.rosidl_typesupport_introspection_c.c -o CMakeFiles/serial_motor_demo_msgs__rosidl_typesupport_introspection_c__pyext.dir/rosidl_generator_py/serial_motor_demo_msgs/_serial_motor_demo_msgs_s.ep.rosidl_typesupport_introspection_c.c.s
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/vox/vox_test/Vox-Robot/build/serial_motor_demo_msgs/rosidl_generator_py/serial_motor_demo_msgs/_serial_motor_demo_msgs_s.ep.rosidl_typesupport_introspection_c.c -o CMakeFiles/serial_motor_demo_msgs__rosidl_typesupport_introspection_c__pyext.dir/rosidl_generator_py/serial_motor_demo_msgs/_serial_motor_demo_msgs_s.ep.rosidl_typesupport_introspection_c.c.s
 
 # Object files for target serial_motor_demo_msgs__rosidl_typesupport_introspection_c__pyext
 serial_motor_demo_msgs__rosidl_typesupport_introspection_c__pyext_OBJECTS = \
@@ -104,7 +104,7 @@ rosidl_generator_py/serial_motor_demo_msgs/serial_motor_demo_msgs_s__rosidl_type
 rosidl_generator_py/serial_motor_demo_msgs/serial_motor_demo_msgs_s__rosidl_typesupport_introspection_c.cpython-310-aarch64-linux-gnu.so: /opt/ros/iron/lib/librosidl_runtime_c.so
 rosidl_generator_py/serial_motor_demo_msgs/serial_motor_demo_msgs_s__rosidl_typesupport_introspection_c.cpython-310-aarch64-linux-gnu.so: /opt/ros/iron/lib/librcutils.so
 rosidl_generator_py/serial_motor_demo_msgs/serial_motor_demo_msgs_s__rosidl_typesupport_introspection_c.cpython-310-aarch64-linux-gnu.so: CMakeFiles/serial_motor_demo_msgs__rosidl_typesupport_introspection_c__pyext.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/vox/Vox/build/serial_motor_demo_msgs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking C shared library rosidl_generator_py/serial_motor_demo_msgs/serial_motor_demo_msgs_s__rosidl_typesupport_introspection_c.cpython-310-aarch64-linux-gnu.so"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/vox/vox_test/Vox-Robot/build/serial_motor_demo_msgs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking C shared library rosidl_generator_py/serial_motor_demo_msgs/serial_motor_demo_msgs_s__rosidl_typesupport_introspection_c.cpython-310-aarch64-linux-gnu.so"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/serial_motor_demo_msgs__rosidl_typesupport_introspection_c__pyext.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -116,6 +116,6 @@ CMakeFiles/serial_motor_demo_msgs__rosidl_typesupport_introspection_c__pyext.dir
 .PHONY : CMakeFiles/serial_motor_demo_msgs__rosidl_typesupport_introspection_c__pyext.dir/clean
 
 CMakeFiles/serial_motor_demo_msgs__rosidl_typesupport_introspection_c__pyext.dir/depend:
-	cd /home/vox/Vox/build/serial_motor_demo_msgs && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/vox/Vox/src/serial_motor_demo/serial_motor_demo_msgs /home/vox/Vox/src/serial_motor_demo/serial_motor_demo_msgs /home/vox/Vox/build/serial_motor_demo_msgs /home/vox/Vox/build/serial_motor_demo_msgs /home/vox/Vox/build/serial_motor_demo_msgs/CMakeFiles/serial_motor_demo_msgs__rosidl_typesupport_introspection_c__pyext.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/vox/vox_test/Vox-Robot/build/serial_motor_demo_msgs && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/vox/vox_test/Vox-Robot/src/serial_motor_demo/serial_motor_demo_msgs /home/vox/vox_test/Vox-Robot/src/serial_motor_demo/serial_motor_demo_msgs /home/vox/vox_test/Vox-Robot/build/serial_motor_demo_msgs /home/vox/vox_test/Vox-Robot/build/serial_motor_demo_msgs /home/vox/vox_test/Vox-Robot/build/serial_motor_demo_msgs/CMakeFiles/serial_motor_demo_msgs__rosidl_typesupport_introspection_c__pyext.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/serial_motor_demo_msgs__rosidl_typesupport_introspection_c__pyext.dir/depend
 

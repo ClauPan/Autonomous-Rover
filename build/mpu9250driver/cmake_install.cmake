@@ -1,8 +1,8 @@
-# Install script for directory: /home/vox/Vox/src/imu
+# Install script for directory: /home/vox/vox_test/Vox-Robot/src/imu
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "/home/vox/Vox/install/mpu9250driver")
+  set(CMAKE_INSTALL_PREFIX "/home/vox/vox_test/Vox-Robot/install/mpu9250driver")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -43,12 +43,12 @@ if(NOT DEFINED CMAKE_OBJDUMP)
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  include("/home/vox/Vox/build/mpu9250driver/ament_cmake_symlink_install/ament_cmake_symlink_install.cmake")
+  include("/home/vox/vox_test/Vox-Robot/build/mpu9250driver/ament_cmake_symlink_install/ament_cmake_symlink_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
-  include("/home/vox/Vox/build/mpu9250driver/lib/cmake_install.cmake")
+  include("/home/vox/vox_test/Vox-Robot/build/mpu9250driver/lib/cmake_install.cmake")
 
 endif()
 
@@ -60,5 +60,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/home/vox/Vox/build/mpu9250driver/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/home/vox/vox_test/Vox-Robot/build/mpu9250driver/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")
