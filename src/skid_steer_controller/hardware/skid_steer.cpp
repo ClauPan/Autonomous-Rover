@@ -35,12 +35,12 @@ hardware_interface::CallbackReturn SkidSteerControllerHardware::on_init(const ha
     front_right_wheel_joint = info_.hardware_parameters["front_right_wheel_joint"];
     back_right_wheel_joint = info_.hardware_parameters["back_right_wheel_joint"];
 
-    int enc_counts_per_rev_fw = std::stoi(info_.hardware_parameters["enc_counts_per_rev_fw"]);
-    int enc_counts_per_rev_ba = std::stoi(info_.hardware_parameters["enc_counts_per_rev_ba"]);
-    motor_fl.setup((2*M_PI)/enc_counts_per_rev_fw, (2*M_PI)/enc_counts_per_rev_ba);
-    motor_bl.setup((2*M_PI)/enc_counts_per_rev_fw, (2*M_PI)/enc_counts_per_rev_ba);
-    motor_fr.setup((2*M_PI)/enc_counts_per_rev_fw, (2*M_PI)/enc_counts_per_rev_ba);
-    motor_br.setup((2*M_PI)/enc_counts_per_rev_fw, (2*M_PI)/enc_counts_per_rev_ba);
+    double enc_counts_per_rev_fw = (2 * M_PI) / std::stoi(info_.hardware_parameters["enc_counts_per_rev_fw"]);
+    double enc_counts_per_rev_ba = (2 * M_PI) / std::stoi(info_.hardware_parameters["enc_counts_per_rev_ba"]);
+    motor_fl.setup(enc_counts_per_rev_fw, enc_counts_per_rev_ba);
+    motor_bl.setup(enc_counts_per_rev_fw, enc_counts_per_rev_ba);
+    motor_fr.setup(enc_counts_per_rev_fw, enc_counts_per_rev_ba);
+    motor_br.setup(enc_counts_per_rev_fw, enc_counts_per_rev_ba);
 
     vel_mult_linear = std::stof(info_.hardware_parameters["vel_mult_linear"]);
     vel_mult_angular = std::stof(info_.hardware_parameters["vel_mult_angular"]);
