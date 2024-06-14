@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.16)
-project(diffdrive_arduino LANGUAGES CXX)
+project(skid_steer_controller LANGUAGES CXX)
 
 if(CMAKE_CXX_COMPILER_ID MATCHES "(GNU|Clang)")
   add_compile_options(-Wall -Wextra)
@@ -40,7 +40,7 @@ target_link_libraries(skid_steer_controller PUBLIC serial)
 
 # Causes the visibility macros to use dllexport rather than dllimport,
 # which is appropriate when building the dll but not consuming it.
-target_compile_definitions(${PROJECT_NAME} PRIVATE "DIFFDRIVE_ARDUINO_BUILDING_DLL")
+target_compile_definitions(${PROJECT_NAME} PRIVATE "DISKID_STEER_CONTROLLER_BUILDING_DLL")
 
 # Export hardware plugins
 pluginlib_export_plugin_description_file(hardware_interface skid_steer_controller.xml)
@@ -70,6 +70,6 @@ if(BUILD_TESTING)
 endif()
 
 ## EXPORTS
-ament_export_targets(export_diffdrive_arduino HAS_LIBRARY_TARGET)
+ament_export_targets(export_skid_steer_controller HAS_LIBRARY_TARGET)
 ament_export_dependencies(${THIS_PACKAGE_INCLUDE_DEPENDS})
 ament_package()
