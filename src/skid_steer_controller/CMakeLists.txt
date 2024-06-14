@@ -22,44 +22,44 @@ endforeach()
 
 ## COMPILE
 add_library(
-  diffdrive_arduino
+  skid_steer_controller
   SHARED
-  hardware/diffbot_system.cpp
+  hardware/skid_steer.cpp
 )
-target_compile_features(diffdrive_arduino PUBLIC cxx_std_17)
-target_include_directories(diffdrive_arduino PUBLIC
+target_compile_features(skid_steer_controller PUBLIC cxx_std_17)
+target_include_directories(skid_steer_controller PUBLIC
 $<BUILD_INTERFACE:${PROJECT_SOURCE_DIR}/hardware/include>
-$<INSTALL_INTERFACE:include/diffdrive_arduino>
+$<INSTALL_INTERFACE:include/skid_steer_controller>
 )
 ament_target_dependencies(
-  diffdrive_arduino PUBLIC
+  skid_steer_controller PUBLIC
   ${THIS_PACKAGE_INCLUDE_DEPENDS}
 )
 
-target_link_libraries(diffdrive_arduino PUBLIC serial)
+target_link_libraries(skid_steer_controller PUBLIC serial)
 
 # Causes the visibility macros to use dllexport rather than dllimport,
 # which is appropriate when building the dll but not consuming it.
 target_compile_definitions(${PROJECT_NAME} PRIVATE "DIFFDRIVE_ARDUINO_BUILDING_DLL")
 
 # Export hardware plugins
-pluginlib_export_plugin_description_file(hardware_interface diffdrive_arduino.xml)
+pluginlib_export_plugin_description_file(hardware_interface skid_steer_controller.xml)
 
 # INSTALL
 install(
   DIRECTORY hardware/include/
-  DESTINATION include/diffdrive_arduino
+  DESTINATION include/skid_steer_controller
 )
 install(
   DIRECTORY description/launch description/ros2_control description/urdf description/rviz
-  DESTINATION share/diffdrive_arduino
+  DESTINATION share/skid_steer_controller
 )
 install(
   DIRECTORY bringup/launch bringup/config
-  DESTINATION share/diffdrive_arduino
+  DESTINATION share/skid_steer_controller
 )
-install(TARGETS diffdrive_arduino
-  EXPORT export_diffdrive_arduino
+install(TARGETS skid_steer_controller
+  EXPORT export_skid_steer_controller
   ARCHIVE DESTINATION lib
   LIBRARY DESTINATION lib
   RUNTIME DESTINATION bin
