@@ -42,7 +42,7 @@ class Model:
 
 
 class CalibrationParameters:
-    def __init__(self, x, y, width, height, min_size, max_size, min_hue, max_hue, min_sat, max_sat, min_val, max_val, calibrating):
+    def __init__(self, x, y, width, height, min_size, max_size, min_hue, max_hue, min_sat, max_sat, min_val, max_val, experimenting, calibrating):
         self.x = x
         self.y = y
         self.width = width
@@ -56,6 +56,7 @@ class CalibrationParameters:
         self.min_val = min_val
         self.max_val = max_val
 
+        self.experimenting = experimenting
         self.calibrating = calibrating
 
     def read_from_gui(self):
@@ -91,6 +92,7 @@ class Tracker(Node):
         self.declare_parameter("max_sat", 255)
         self.declare_parameter("min_val", 0)
         self.declare_parameter("max_val", 255)
+        self.declare_parameter('experiment_mode', False)
         self.declare_parameter('calibration_mode', False)
 
         self.declare_parameter("rcv_timeout_secs", 1.0)
@@ -113,6 +115,7 @@ class Tracker(Node):
             self.get_parameter('max_sat').get_parameter_value().integer_value,
             self.get_parameter('min_val').get_parameter_value().integer_value,
             self.get_parameter('max_val').get_parameter_value().integer_value,
+            self.get_parameter('experiment_mode').get_parameter_value().bool_value
             self.get_parameter('calibration_mode').get_parameter_value().bool_value
         )
 
@@ -143,6 +146,14 @@ class Tracker(Node):
         self.lastrcvtime = time.time() - 10000
         self.lost_ct = 0
 
+        self.blank_frames = []
+        self.prev_eta = -1
+        self.eta = -1
+        self.countdown = 10
+        self.max_frames = 100
+        self.switch_threshold = 20
+        self.frame_count = 0
+
         self.model = Model("default")
 
         self.bridge = CvBridge()
@@ -154,8 +165,40 @@ class Tracker(Node):
         try:
             frame = self.bridge.imgmsg_to_cv2(data, "bgr8")
 
-            if (self.calibration_params.calibrating):
+            if self.calibration_params.calibrating:
                 self.calibration_params.read_from_gui() 
+
+            if self.experimenting:
+                self.get_logger().info("Staring tracker in 'EXPERIMENT_MODE'")
+                if len(self.blank_frames) < 30:
+                    if len(self.blank_frames) == 0:
+                        self.get_logger().info("Gathering blank frames...")
+                    blank_frames.append(frame)
+                    if len(self.blank_frames) == 30:
+                        self.get_logger().info("Blank frames acquired. Place the object in the center of the camera")
+                else:
+                    if self.frame_count == self.max_frames:
+                        raise SystemExit
+
+                    if self.eta == -1:
+                        self.eta = time.time()
+                    
+                    eta = time.time() - self.eta
+                    if eta > self.countdown:
+                        if self.frame_count % self.switch_threshold % 2 == 0:
+                            frame = random.choice(self.blank_frames)
+                        
+                        self.frame_count += 1
+                            
+
+                    else:
+                        if int(eta) > self.prev_eta:
+                            self.prev_eta = int(eta)
+                            self.get_logger().info(f"Starting experiment in {10 - self.prev_eta}...")
+
+
+
+
 
             keypoints_norm, out_image, tuning_image = detect_objects(frame, self.model, self.calibration_params)
 
@@ -169,8 +212,6 @@ class Tracker(Node):
 
             point_out = Point()
 
-            # Keep the biggest point
-            # They are already converted to normalised coordinates
             for i, kp in enumerate(keypoints_norm):
                 x = kp.pt[0]
                 y = kp.pt[1]
@@ -307,7 +348,10 @@ def main(args=None):
 
     tracker = Tracker()
     while rclpy.ok():
-        rclpy.spin_once(tracker)
+        try:
+            rclpy.spin_once(tracker)
+        except SystemExit: 
+            rclpy.logging.get_logger("tracker").info('Ending experiment...')
         cv2.waitKey(2)
 
     tracker.destroy_node()
