@@ -1,4 +1,5 @@
 import cv2
+import time
 import rclpy
 import numpy as np;
 from rclpy.node import Node
@@ -6,6 +7,7 @@ from sensor_msgs.msg import Image
 from geometry_msgs.msg import Point
 from geometry_msgs.msg import Twist
 from cv_bridge import CvBridge, CvBridgeError
+from rclpy.callback_groups import MutuallyExclusiveCallbackGroup
 
 
 class Model:
@@ -15,28 +17,28 @@ class Model:
         self.net = self.load()
 
     def load(self):
-    if self.model_type == "ssd":
-        pass
+        if self.model_type == "ssd":
+            pass
 
-    elif self.model_type == "yolo":
-        pass
+        elif self.model_type == "yolo":
+            pass
 
-    else:
-        params = cv2.SimpleBlobDetector_Params()
-        
-        params.minThreshold = 0
-        params.maxThreshold = 100
-        params.filterByArea = True
-        params.minArea = 30
-        params.maxArea = 20000
-        params.filterByCircularity = True
-        params.minCircularity = 0.1
-        params.filterByConvexity = True
-        params.minConvexity = 0.5
-        params.filterByInertia =True
-        params.minInertiaRatio = 0.5
+        else:
+            params = cv2.SimpleBlobDetector_Params()
+            
+            params.minThreshold = 0
+            params.maxThreshold = 100
+            params.filterByArea = True
+            params.minArea = 30
+            params.maxArea = 20000
+            params.filterByCircularity = True
+            params.minCircularity = 0.1
+            params.filterByConvexity = True
+            params.minConvexity = 0.5
+            params.filterByInertia =True
+            params.minInertiaRatio = 0.5
 
-        return cv2.SimpleBlobDetector_create(params) 
+            return cv2.SimpleBlobDetector_create(params) 
 
 
 class CalibrationParameters:
@@ -126,11 +128,11 @@ class Tracker(Node):
         self.follower_cb_group = MutuallyExclusiveCallbackGroup()
 
         camera_feed_topic = "/camera/image_raw"
-        if self.calibration_mode:
+        if self.calibration_params.calibrating:
             camera_feed_topic = "/camera/image_raw/uncompressed"
 
-        self.camera_feed = self.create_subscription(Image, camera_feed_topic, self.detect, rclpy.qos.QoSPresetProfiles.SENSOR_DATA.value, callback_group=camera_feed_cb_group)
-        self.follower = self.create_timer(0.1, self.follow, callback_group=follower_cb_group)
+        self.camera_feed = self.create_subscription(Image, camera_feed_topic, self.detect, rclpy.qos.QoSPresetProfiles.SENSOR_DATA.value, callback_group=self.camera_feed_cb_group)
+        self.follower = self.create_timer(0.1, self.follow, callback_group=self.follower_cb_group)
 
         self.image_out_pub = self.create_publisher(Image, "/detection_overlay", 1)
         self.image_cal_pub = self.create_publisher(Image, "/camera_calibration", 1)
@@ -145,14 +147,14 @@ class Tracker(Node):
 
         self.bridge = CvBridge()
 
-        if(self.calibration_mode):
+        if(self.calibration_params.calibrating):
             create_tuning_window(self.calibration_params)
 
     def detect(self, data):
         try:
             frame = self.bridge.imgmsg_to_cv2(data, "bgr8")
 
-            if (self.calibration_mode):
+            if (self.calibration_params.calibrating):
                 self.calibration_params.read_from_gui() 
 
             keypoints_norm, out_image, tuning_image = detect_objects(frame, self.model, self.calibration_params)
@@ -163,7 +165,7 @@ class Tracker(Node):
 
             img_to_pub = self.bridge.cv2_to_imgmsg(tuning_image, "bgr8")
             img_to_pub.header = data.header
-            self.image_tuning_pub.publish(img_to_pub)
+            self.image_cal_pub.publish(img_to_pub)
 
             point_out = Point()
 
@@ -182,8 +184,8 @@ class Tracker(Node):
                     point_out.z = s
 
             if (point_out.z > 0):
-                self.target_val = self.target_val * self.filter_value + msg.x * (1-self.filter_value)
-                self.target_dist = self.target_dist * self.filter_value + msg.z * (1-self.filter_value)
+                self.target_val = self.target_val * self.filter_value + point_out.x * (1-self.filter_value)
+                self.target_dist = self.target_dist * self.filter_value + point_out.z * (1-self.filter_value)
                 self.lastrcvtime = time.time() 
 
         except CvBridgeError as e:
@@ -199,16 +201,19 @@ class Tracker(Node):
                 msg.linear.x = self.forward_chase_speed
             msg.angular.z = -self.angular_chase_multiplier*self.target_val
         else:
-            self.get_logger().info('Target lost')
+            if lost_ct == 0:
+                self.get_logger().info('Target lost...')
+            
             self.lost_ct += 1
+
             if self.lost_ct > 20:
                 msg.angular.z = self.search_angular_speed
-        self.publisher_.publish(msg)
+        self.cmd_vel_pub.publish(msg)
 
 
 
 def run_model_deault(frame, model, calibration_params):
-    search_window = [calibartion_params.x, calibartion_params.y, calibartion_params.width, calibartion_params.height]
+    search_window = [calibration_params.x, calibration_params.y, calibration_params.width, calibration_params.height]
 
     if search_window is None: 
         search_window = [0.0, 0.0, 1.0, 1.0]
@@ -219,8 +224,8 @@ def run_model_deault(frame, model, calibration_params):
     filtered_frame = cv2.cvtColor(filtered_frame, cv2.COLOR_BGR2HSV)        
     filtered_frame = cv2.inRange(
         filtered_frame, 
-        (calibartion_params.min_hue, calibartion_params.min_sat, calibartion_params.min_val), 
-        (calibartion_params.max_hue, calibartion_params.max_sat, calibartion_params.max_val)
+        (calibration_params.min_hue, calibration_params.min_sat, calibration_params.min_val), 
+        (calibration_params.max_hue, calibration_params.max_sat, calibration_params.max_val)
     )
     filtered_frame = cv2.dilate(filtered_frame, None, iterations=2)
     filtered_frame = cv2.erode(filtered_frame, None, iterations=2)
@@ -237,17 +242,15 @@ def run_model_deault(frame, model, calibration_params):
 
     filtered_frame = 255 - (mask)
 
-    filtered_frame = apply_search_window(filtered_frame, search_window)
-
     keypoints = model.net.detect(filtered_frame)
 
-    size_min_px = calibartion_params.min_size * filtered_frame.shape[1] / 100.0
-    size_max_px = calibartion_params.max_size * filtered_frame.shape[1] / 100.0
+    size_min_px = calibration_params.min_size * filtered_frame.shape[1] / 100.0
+    size_max_px = calibration_params.max_size * filtered_frame.shape[1] / 100.0
 
     keypoints = [k for k in keypoints if k.size > size_min_px and k.size < size_max_px]
 
     
-    out_image = cv2.drawKeypoints(image, keypoints, np.array([]), (0, 0, 255), cv2.DRAW_MATCHES_FLAGS_DRAW_RICH_KEYPOINTS)
+    out_image = cv2.drawKeypoints(frame, keypoints, np.array([]), (0, 0, 255), cv2.DRAW_MATCHES_FLAGS_DRAW_RICH_KEYPOINTS)
     out_image = cv2.rectangle(out_image, (search_window_px[0], search_window_px[1]), (search_window_px[2], search_window_px[3]), (255, 0, 0), 5)
 
     tuning_image = cv2.drawKeypoints(tuning_image, keypoints, np.array([]), (0, 0, 255), cv2.DRAW_MATCHES_FLAGS_DRAW_RICH_KEYPOINTS)
@@ -259,7 +262,7 @@ def run_model_deault(frame, model, calibration_params):
     return keypoints_normalised, out_image, tuning_image
 
 
-def detect_objects(frame, model, calibartion_params):
+def detect_objects(frame, model, calibration_params):
     if model.model_type == "ssd":
         pass
     elif model.model_type == "yolo":
@@ -272,30 +275,30 @@ def normalise_keypoint(working_image, keypoint):
     center_x = 0.5 * float(working_image.shape[1])
     center_y = 0.5 * float(working_image.shape[0])
 
-    x = (kp.pt[0] - center_x)/(center_x)
-    y = (kp.pt[1] - center_y)/(center_y)
+    x = (keypoint.pt[0] - center_x)/(center_x)
+    y = (keypoint.pt[1] - center_y)/(center_y)
 
-    return cv2.KeyPoint(x, y, kp.size/working_image.shape[1])
+    return cv2.KeyPoint(x, y, keypoint.size/working_image.shape[1])
 
 
 def nothing(x):
     pass
 
 
-def create_tuning_window(calibartion_params):
+def create_tuning_window(calibration_params):
     cv2.namedWindow("Calibration Parameters", 0)
-    cv2.createTrackbar("x",         "Calibration Parameters", calibartion_params.x,         100, nothing)
-    cv2.createTrackbar("y",         "Calibration Parameters", calibartion_params.y,         100, nothing)
-    cv2.createTrackbar("width",     "Calibration Parameters", calibartion_params.width,     100, nothing)
-    cv2.createTrackbar("height",    "Calibration Parameters", calibartion_params.height,    100, nothing)
-    cv2.createTrackbar("min_size",  "Calibration Parameters", calibartion_params.min_size,  100, nothing)
-    cv2.createTrackbar("max_size",  "Calibration Parameters", calibartion_params.max_size,  100, nothing)
-    cv2.createTrackbar("min_hue",   "Calibration Parameters", calibartion_params.min_hue,   180, nothing)
-    cv2.createTrackbar("max_hue",   "Calibration Parameters", calibartion_params.max_hue,   180, nothing)
-    cv2.createTrackbar("min_sat",   "Calibration Parameters", calibartion_params.min_sat,   255, nothing)
-    cv2.createTrackbar("max_sat",   "Calibration Parameters", calibartion_params.max_sat,   255, nothing)
-    cv2.createTrackbar("min_val",   "Calibration Parameters", calibartion_params.min_val,   255, nothing)
-    cv2.createTrackbar("max_val",   "Calibration Parameters", calibartion_params.max_val,   255, nothing)
+    cv2.createTrackbar("x",         "Calibration Parameters", calibration_params.x,         100, nothing)
+    cv2.createTrackbar("y",         "Calibration Parameters", calibration_params.y,         100, nothing)
+    cv2.createTrackbar("width",     "Calibration Parameters", calibration_params.width,     100, nothing)
+    cv2.createTrackbar("height",    "Calibration Parameters", calibration_params.height,    100, nothing)
+    cv2.createTrackbar("min_size",  "Calibration Parameters", calibration_params.min_size,  100, nothing)
+    cv2.createTrackbar("max_size",  "Calibration Parameters", calibration_params.max_size,  100, nothing)
+    cv2.createTrackbar("min_hue",   "Calibration Parameters", calibration_params.min_hue,   180, nothing)
+    cv2.createTrackbar("max_hue",   "Calibration Parameters", calibration_params.max_hue,   180, nothing)
+    cv2.createTrackbar("min_sat",   "Calibration Parameters", calibration_params.min_sat,   255, nothing)
+    cv2.createTrackbar("max_sat",   "Calibration Parameters", calibration_params.max_sat,   255, nothing)
+    cv2.createTrackbar("min_val",   "Calibration Parameters", calibration_params.min_val,   255, nothing)
+    cv2.createTrackbar("max_val",   "Calibration Parameters", calibration_params.max_val,   255, nothing)
 
 
 def main(args=None):
