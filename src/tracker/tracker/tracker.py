@@ -79,7 +79,7 @@ class Tracker(Node):
     def __init__(self):
         super().__init__('tracker')
 
-        self.get_logger().info('Initializing...')
+        self.get_logger().info('Loading configuration...')
 
         self.declare_parameter("x", 0)
         self.declare_parameter("y", 0)
@@ -95,13 +95,11 @@ class Tracker(Node):
         self.declare_parameter("max_val", 255)
         self.declare_parameter('experiment_mode', False)
         self.declare_parameter('calibration_mode', False)
-
-        self.declare_parameter("rcv_timeout_secs", 1.0)
-        self.declare_parameter("angular_chase_multiplier", 0.7)
-        self.declare_parameter("forward_chase_speed", 0.1)
-        self.declare_parameter("search_angular_speed", 0.5)
-        self.declare_parameter("max_size_thresh", 0.1)
-        self.declare_parameter("filter_value", 0.9)
+        self.declare_parameter("obj_timeout_threshold", 1.0)
+        self.declare_parameter("obj_max_size", 0.1)
+        self.declare_parameter("linear_speed", 0.1)
+        self.declare_parameter("angular_speed", 0.7)
+        self.declare_parameter("search_speed", 0.5)
         
         self.calibration_params = CalibrationParameters(
             self.get_parameter('x').get_parameter_value().integer_value,
@@ -120,14 +118,14 @@ class Tracker(Node):
             self.get_parameter('calibration_mode').get_parameter_value().bool_value
         )
 
-        self.rcv_timeout_secs = self.get_parameter('rcv_timeout_secs').get_parameter_value().double_value
-        self.angular_chase_multiplier = self.get_parameter('angular_chase_multiplier').get_parameter_value().double_value
-        self.forward_chase_speed = self.get_parameter('forward_chase_speed').get_parameter_value().double_value
-        self.search_angular_speed = self.get_parameter('search_angular_speed').get_parameter_value().double_value
-        self.max_size_thresh = self.get_parameter('max_size_thresh').get_parameter_value().double_value
-        self.filter_value = self.get_parameter('filter_value').get_parameter_value().double_value
+        self.obj_timeout_threshold = self.get_parameter('obj_timeout_threshold').get_parameter_value().double_value
+        self.obj_max_size = self.get_parameter('obj_max_size').get_parameter_value().double_value
 
+        self.linear_speed = self.get_parameter('linear_speed').get_parameter_value().double_value
+        self.angular_speed = self.get_parameter('angular_speed').get_parameter_value().double_value
 
+        self.search_speed = self.get_parameter('search_speed').get_parameter_value().double_value
+        
         self.camera_feed_cb_group = MutuallyExclusiveCallbackGroup()
         self.follower_cb_group = MutuallyExclusiveCallbackGroup()
 
@@ -139,19 +137,19 @@ class Tracker(Node):
         if not self.calibration_params.experimenting:
             self.follower = self.create_timer(0.1, self.follow, callback_group=self.follower_cb_group)
 
-        self.image_out_pub = self.create_publisher(Image, "/detection_overlay", 1)
-        self.image_cal_pub = self.create_publisher(Image, "/camera_calibration", 1)
+        self.calibration_pub = self.create_publisher(Image, "/camera_calibration", 1)
+        self.detection_pub = self.create_publisher(Image, "/detection_overlay", 1)
         self.cmd_vel_pub = self.create_publisher(Twist, '/cmd_vel_tracker', 10)
 
-        self.target_val = 0.0
-        self.target_dist = 0.0
-        self.lastrcvtime = time.time() - 10000
+        self.obj_x = 0.0
+        self.obj_z = 0.0
+        self.obj_timeout = time.time() - self.obj_timeout_threshold
         self.lost_ct = 0
 
         self.blank_frames = []
         self.prev_eta = -1
         self.eta = -1
-        self.countdown = 5
+        self.countdown = 10
         self.max_frames = 100
         self.switch_threshold = 20
         self.frame_count = 0
@@ -171,9 +169,9 @@ class Tracker(Node):
                 self.calibration_params.read_from_gui() 
 
             if self.calibration_params.experimenting:
+                self.get_logger().info("Staring tracker in 'EXPERIMENT_MODE'")
                 if len(self.blank_frames) < 30:
                     if len(self.blank_frames) == 0:
-                        self.get_logger().info("Staring tracker in 'EXPERIMENT_MODE'")
                         self.get_logger().info("Gathering blank frames...")
                     self.blank_frames.append(frame)
                     if len(self.blank_frames) == 30:
@@ -184,73 +182,73 @@ class Tracker(Node):
 
                     if self.eta == -1:
                         self.eta = time.time()
-
+                    
                     eta = time.time() - self.eta
                     if eta > self.countdown:
-                        if int(self.frame_count / self.switch_threshold) % 2 == 0:
+                        if self.frame_count % self.switch_threshold % 2 == 0:
                             frame = random.choice(self.blank_frames)
-
+                            
                         self.frame_count += 1
-
+                            
 
                     else:
                         if int(eta) > self.prev_eta:
                             self.prev_eta = int(eta)
-                            self.get_logger().info(f"Starting experiment in {10 - self.prev_eta}...")
-                        frame = random.choice(self.blank_frames)
+                            self.get_logger().info(f"Starting in {10 - self.prev_eta}...")
+                            frame = random.choice(self.blank_frames)
+            
+            keypoints, detection, calibration = detect_objects(frame, self.model, self.calibration_params)
 
+            calibration = self.bridge.cv2_to_imgmsg(calibration, "bgr8")
+            detection = self.bridge.cv2_to_imgmsg(detection, "bgr8")
+            calibration.header detection.header = data.header
+            
+            self.calibration_pub.publish(img_to_pub)
+            self.detection_pub.publish(img_to_pub)
 
+            obj = [0, 0]
+            ct = 0
+            log_entry = ""
 
+            for keypoint in keypoints_norm:
+                log_entry += f"Pt {ct}: ({keypoint.pt[0]},{keypoint.pt[1]},{keypoint.size}); "
+                ct += 1
 
-            keypoints_norm, out_image, tuning_image = detect_objects(frame, self.model, self.calibration_params)
+                if (keypoint.size > obj[2]):
+                    obj[0] = keypoint.pt[0]
+                    obj[1] = keypoint.size
 
-            img_to_pub = self.bridge.cv2_to_imgmsg(out_image, "bgr8")
-            img_to_pub.header = data.header
-            self.image_out_pub.publish(img_to_pub)
+            if (obj[1] > 0):
+                self.obj_x = self.obj_x * 0.9 + obj[0] * 0.1
+                self.obj_z = self.obj_z * 0.9 + obj[1] * 0.1
+                self.obj_timeout = time.time() 
 
-            img_to_pub = self.bridge.cv2_to_imgmsg(tuning_image, "bgr8")
-            img_to_pub.header = data.header
-            self.image_cal_pub.publish(img_to_pub)
+            self.get_logger().info(log_entry)
 
-            point_out = Point()
-
-            for i, kp in enumerate(keypoints_norm):
-                x = kp.pt[0]
-                y = kp.pt[1]
-                s = kp.size
-
-                self.get_logger().info(f"Pt {i}: ({x},{y},{s})")
-
-                if (s > point_out.z):                    
-                    point_out.x = x
-                    point_out.y = y
-                    point_out.z = s
-
-            if (point_out.z > 0):
-                self.target_val = self.target_val * self.filter_value + point_out.x * (1-self.filter_value)
-                self.target_dist = self.target_dist * self.filter_value + point_out.z * (1-self.filter_value)
-                self.lastrcvtime = time.time() 
 
         except CvBridgeError as e:
             print(e)  
 
     def follow(self):
         msg = Twist()
-        if (time.time() - self.lastrcvtime < self.rcv_timeout_secs):
+
+        if (time.time() - self.obj_timeout < self.obj_timeout_threshold):
+            self.get_logger().info(f'Object: {self.obj_x}')
             self.lost_ct = 0
-            self.get_logger().info('Target: {}'.format(self.target_val))
-            print(self.target_dist)
-            if (self.target_dist < self.max_size_thresh):
-                msg.linear.x = self.forward_chase_speed
-            msg.angular.z = -self.angular_chase_multiplier*self.target_val
+            
+            if (self.obj_z < self.obj_max_size):
+                msg.linear.x = self.linear_speed
+            
+            msg.angular.z = -self.angular_speed * self.obj_x
+        
         else:
             if self.lost_ct == 0:
-                self.get_logger().info('Target lost...')
+                self.get_logger().info('Object lost...')
             
             self.lost_ct += 1
-
             if self.lost_ct > 20:
-                msg.angular.z = -self.search_angular_speed
+                msg.angular.z = -self.search_speed
+
         self.cmd_vel_pub.publish(msg)
 
 
@@ -273,7 +271,7 @@ def run_model_deault(frame, model, calibration_params):
     filtered_frame = cv2.dilate(filtered_frame, None, iterations=2)
     filtered_frame = cv2.erode(filtered_frame, None, iterations=2)
 
-    tuning_image = cv2.bitwise_and(frame, frame, mask=filtered_frame)
+    calibration_img = cv2.bitwise_and(frame, frame, mask=filtered_frame)
 
     x = int(filtered_frame.shape[1] * search_window[0] / 100)
     y = int(filtered_frame.shape[0] * search_window[1] / 100)
@@ -287,22 +285,18 @@ def run_model_deault(frame, model, calibration_params):
 
     keypoints = model.net.detect(filtered_frame)
 
-    size_min_px = calibration_params.min_size * filtered_frame.shape[1] / 100.0
-    size_max_px = calibration_params.max_size * filtered_frame.shape[1] / 100.0
+    min_size = calibration_params.min_size * filtered_frame.shape[1] / 100.0
+    max_size = calibration_params.max_size * filtered_frame.shape[1] / 100.0
 
     keypoints = [k for k in keypoints if k.size > size_min_px and k.size < size_max_px]
-
     
-    out_image = cv2.drawKeypoints(frame, keypoints, np.array([]), (0, 0, 255), cv2.DRAW_MATCHES_FLAGS_DRAW_RICH_KEYPOINTS)
-    out_image = cv2.rectangle(out_image, (search_window_px[0], search_window_px[1]), (search_window_px[2], search_window_px[3]), (255, 0, 0), 5)
+    calibration_img = cv2.drawKeypoints(calibration_img, keypoints, np.array([]), (0, 0, 255), cv2.DRAW_MATCHES_FLAGS_DRAW_RICH_KEYPOINTS)
+    calibration_img = cv2.rectangle(calibration_img, (search_window_px[0], search_window_px[1]), (search_window_px[2], search_window_px[3]), (255, 0, 0), 5)
+    
+    detection_img = cv2.drawKeypoints(frame, keypoints, np.array([]), (0, 0, 255), cv2.DRAW_MATCHES_FLAGS_DRAW_RICH_KEYPOINTS)
+    detection_img = cv2.rectangle(detection_img, (search_window_px[0], search_window_px[1]), (search_window_px[2], search_window_px[3]), (255, 0, 0), 5)
 
-    tuning_image = cv2.drawKeypoints(tuning_image, keypoints, np.array([]), (0, 0, 255), cv2.DRAW_MATCHES_FLAGS_DRAW_RICH_KEYPOINTS)
-    tuning_image = cv2.rectangle(tuning_image, (search_window_px[0], search_window_px[1]), (search_window_px[2], search_window_px[3]), (255, 0, 0), 5)
-
-
-    keypoints_normalised = [normalise_keypoint(filtered_frame, k) for k in keypoints]
-
-    return keypoints_normalised, out_image, tuning_image
+    return [normalise_keypoint(filtered_frame, k) for k in keypoints], calibration_img, detection_img
 
 
 def detect_objects(frame, model, calibration_params):
@@ -314,14 +308,14 @@ def detect_objects(frame, model, calibration_params):
         return run_model_deault(frame, model, calibration_params)
 
     
-def normalise_keypoint(working_image, keypoint):
-    center_x = 0.5 * float(working_image.shape[1])
-    center_y = 0.5 * float(working_image.shape[0])
+def normalise_keypoint(filtered_frame, keypoint):
+    center_x = float(working_image.shape[1]) * 0.5
+    center_y = float(working_image.shape[0]) * 0.5
 
-    x = (keypoint.pt[0] - center_x)/(center_x)
-    y = (keypoint.pt[1] - center_y)/(center_y)
+    x = (keypoint.pt[0] - center_x) / center_x
+    y = (keypoint.pt[1] - center_y) / center_y
 
-    return cv2.KeyPoint(x, y, keypoint.size/working_image.shape[1])
+    return cv2.KeyPoint(x, y, keypoint.size/filtered_frame.shape[1])
 
 
 def nothing(x):
@@ -354,7 +348,6 @@ def main(args=None):
             rclpy.spin_once(tracker)
         except SystemExit: 
             rclpy.logging.get_logger("tracker").info('Ending experiment...')
-            break
         cv2.waitKey(2)
 
     tracker.destroy_node()
